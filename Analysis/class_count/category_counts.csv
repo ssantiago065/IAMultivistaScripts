@@ -1,0 +1,9 @@
+Category,Count,Percentage
+DoS,23143924,83.22%
+DDoS,3478814,12.51%
+Recon,442158,1.59%
+Benign,398330,1.43%
+Mirai,174588,0.63%
+Spoofing,157238,0.57%
+Web-Based,11328,0.04%
+Brute Force,3619,0.01%
