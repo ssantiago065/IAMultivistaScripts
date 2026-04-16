@@ -1,0 +1,67 @@
+================================================================================
+MULTIVIEW COMPARING TEST - 20 CORRIDAS CON SEEDS DISTINTOS
+================================================================================
+Dataset: F:\Dataset\dataset_poc_multivista.csv
+Objetivo de balance por clase: 15000
+Corridas: 20
+
+Distribucion original:
+Label
+DDoS          100000
+Mirai         100000
+Recon         100000
+BruteForce    100000
+Web-Based     100000
+DoS           100000
+Spoofing      100000
+Benign        100000
+Name: count, dtype: int64
+Clase Benign: original=100000 -> balanceado=15000
+Clase BruteForce: original=100000 -> balanceado=15000
+Clase DDoS: original=100000 -> balanceado=15000
+Clase DoS: original=100000 -> balanceado=15000
+Clase Mirai: original=100000 -> balanceado=15000
+Clase Recon: original=100000 -> balanceado=15000
+Clase Spoofing: original=100000 -> balanceado=15000
+Clase Web-Based: original=100000 -> balanceado=15000
+
+Distribucion balanceada:
+Label
+Mirai         15000
+DoS           15000
+Benign        15000
+BruteForce    15000
+Spoofing      15000
+Web-Based     15000
+Recon         15000
+DDoS          15000
+Name: count, dtype: int64
+Run 01/20 | seed=858452 | RF acc=0.8759
+Run 02/20 | seed=652783 | RF acc=0.8759
+Run 03/20 | seed=704422 | RF acc=0.8762
+Run 04/20 | seed=851835 | RF acc=0.8772
+Run 05/20 | seed=790511 | RF acc=0.8778
+Run 06/20 | seed=26417 | RF acc=0.8756
+Run 07/20 | seed=298302 | RF acc=0.8753
+Run 08/20 | seed=831053 | RF acc=0.8748
+Run 09/20 | seed=370496 | RF acc=0.8778
+Run 10/20 | seed=79827 | RF acc=0.8731
+Run 11/20 | seed=467261 | RF acc=0.8750
+Run 12/20 | seed=178931 | RF acc=0.8773
+Run 13/20 | seed=721204 | RF acc=0.8762
+Run 14/20 | seed=643444 | RF acc=0.8775
+Run 15/20 | seed=354913 | RF acc=0.8751
+Run 16/20 | seed=365472 | RF acc=0.8770
+Run 17/20 | seed=177352 | RF acc=0.8739
+Run 18/20 | seed=905138 | RF acc=0.8751
+Run 19/20 | seed=98466 | RF acc=0.8752
+Run 20/20 | seed=639902 | RF acc=0.8766
+
+================================================================================
+RESUMEN FINAL
+================================================================================
+       model  runs  accuracy_mean  accuracy_std  accuracy_min  accuracy_max  f1_macro_mean  f1_macro_std  f1_weighted_mean  f1_weighted_std
+RandomForest    20       0.875922      0.001291      0.873083      0.877833       0.876427      0.001265          0.876427         0.001265
+
+Resultados por corrida: F:\Dataset\Analysis\comparing2\multiview_comparing_per_run.csv
+Resumen agregado: F:\Dataset\Analysis\comparing2\multiview_comparing_summary.csv
