@@ -2,20 +2,17 @@ import pandas as pd
 import numpy as np
 from sklearn.preprocessing import LabelEncoder
 from sklearn.model_selection import train_test_split
-from sklearn.metrics import classification_report, accuracy_score
+from sklearn.metrics import classification_report, accuracy_score, f1_score
 from sklearn.preprocessing import MinMaxScaler
 
 # Clasificadores para los modelos base y meta-modelo
 from sklearn.ensemble import RandomForestClassifier
-from sklearn.tree import DecisionTreeClassifier
-from sklearn.naive_bayes import GaussianNB
-from sklearn.neighbors import KNeighborsClassifier
 
 # Importar la librería
 from multiviewstacking import MultiViewStacking
 
 # ==========================================
-# 1. DEFINICIÓN DE VISTAS (Pega tus columnas aquí)
+# DEFINICIÓN DE VISTAS
 # ==========================================
 vista_tiempo = [
     'Flow IAT Min', 'Bwd IAT Max', 'Bwd IAT Std',
@@ -58,110 +55,137 @@ def entrenar_poc():
     print("🚀 INICIANDO ENTRENAMIENTO MULTIVISTA (PoC)")
     print("="*60)
 
-    # 2. CARGAR EL DATASET DE PRUEBA
+    # 1. CARGAR EL DATASET DE PRUEBA
     try:
         df = pd.read_csv('../dataset_poc_multivista.csv')
         print(f"✅ Dataset cargado con {df.shape[0]} filas y {df.shape[1]} columnas.")
     except FileNotFoundError:
-        print("❌ Error: No se encontró 'dataset_poc_multivista.csv'.")
+        print("❌ Error: No se encontró '../dataset_poc_multivista.csv'. Verifica la ruta.")
         return
 
-    # 3. CODIFICAR LAS ETIQUETAS (Requisito de la librería)
+    # 2. CODIFICAR LAS ETIQUETAS
     le = LabelEncoder()
     df['Label_Encoded'] = le.fit_transform(df['Label'])
     
-    # Separar características (X) y variable objetivo (y)
     y = df['Label_Encoded']
-    # Eliminamos la etiqueta original y la codificada para dejar solo características
     X = df.drop(columns=['Label', 'Label_Encoded'])
 
-    # ==========================================
-    # NUEVO: LIMPIEZA DE DATOS (NaNs e Infinitos)
-    # ==========================================
+    # 3. LIMPIEZA DE DATOS
     print("🧹 Limpiando valores Nulos e Infinitos...")
-    
-    # 1. Convertir todo a numérico por si algo se leyó como texto
-    # (errors='coerce' forzará cualquier texto raro a NaN)
     X = X.apply(pd.to_numeric, errors='coerce')
-    
-    # 2. Reemplazar valores Infinitos por NaN
     X = X.replace([np.inf, -np.inf], np.nan)
-    
-    # 3. Rellenar los NaN con la media de su respectiva columna (Imputación)
     X = X.fillna(X.mean())
 
     colnames = list(X.columns)
 
     # 4. OBTENER LOS ÍNDICES DE CADA VISTA
-    # List comprehension que busca el índice numérico de cada columna, 
-    # verificando que exista en X para evitar errores si alguna se eliminó.
     ind_tiempo = [colnames.index(c) for c in vista_tiempo if c in colnames]
     ind_volumen = [colnames.index(c) for c in vista_volumen if c in colnames]
     ind_banderas = [colnames.index(c) for c in vista_banderas if c in colnames]
     ind_topologia = [colnames.index(c) for c in vista_topologia if c in colnames]
 
-    # Validar que las vistas no estén vacías
     if not all([ind_tiempo, ind_volumen, ind_banderas, ind_topologia]):
-        print("⚠️ Advertencia: Una o más vistas están vacías. Asegúrate de pegar los nombres de las columnas.")
+        print("⚠️ Advertencia: Una o más vistas están vacías.")
         return
     
+    # 5. ESCALADO
     print("📏 Escalando los datos...")
     scaler = MinMaxScaler()
     X_scaled = pd.DataFrame(scaler.fit_transform(X), columns=X.columns)
     X = X_scaled
 
-    # 5. SEPARACIÓN EN TRAIN / TEST
+    # 6. SEPARACIÓN EN TRAIN / TEST
     X_train, X_test, y_train, y_test = train_test_split(
         X, y, test_size=0.3, stratify=y, random_state=42
     )
     print(f"✂️  Datos separados: {len(X_train)} Train | {len(X_test)} Test")
 
-    # 6. DEFINICIÓN DE LOS MODELOS (First-Level Learners)
-    # Puedes ajustar estos algoritmos según veas qué funciona mejor para cada vista
-    """"
-    Default
-    modelo_tiempo = RandomForestClassifier(n_estimators=50, random_state=42)
-    modelo_volumen = DecisionTreeClassifier(random_state=42)
-    modelo_banderas = KNeighborsClassifier(n_neighbors=5)
-    modelo_topologia = GaussianNB()
-    """
+    # ==========================================
+    # 7. ENTRENAMIENTO DE MODELOS
+    # ==========================================
+    
+    # 7.1 MODELO MULTIVISTA
+    print("\n⚙️  Entrenando modelo MultiViewStacking...")
     modelo_tiempo = RandomForestClassifier(n_estimators=50, random_state=42)
     modelo_volumen = RandomForestClassifier(n_estimators=50, random_state=42)
     modelo_banderas = RandomForestClassifier(n_estimators=50, random_state=42)
     modelo_topologia = RandomForestClassifier(n_estimators=50, random_state=42)
-
-    # Meta-Learner (El modelo que decide basándose en las predicciones de los 4 anteriores)
     meta_learner = RandomForestClassifier(n_estimators=50, random_state=42)
 
-    # 7. CREACIÓN Y ENTRENAMIENTO DEL ENSAMBLE MULTIVISTA
-    print("\n⚙️  Entrenando modelo MultiViewStacking... (Esto puede tomar unos minutos)")
     modelo_multivista = MultiViewStacking(
         views_indices=[ind_tiempo, ind_volumen, ind_banderas, ind_topologia],
         first_level_learners=[modelo_tiempo, modelo_volumen, modelo_banderas, modelo_topologia],
         meta_learner=meta_learner,
-        k=5, # 5-fold cross-validation interno (suficiente para la PoC)
+        k=5, 
         random_state=42
     )
-
     modelo_multivista.fit(X_train.values, y_train.values)
-    print("✅ Entrenamiento completado.")
+    print("   ✅ MultiViewStacking entrenado.")
 
-    # 8. EVALUACIÓN DEL MODELO
-    print("\n" + "="*60)
-    print("📊 RESULTADOS EN EL CONJUNTO DE PRUEBA")
-    print("="*60)
+    # 7.2 MODELO BASELINE (Todas las características juntas)
+    print("\n⚙️  Entrenando modelo Baseline (Todas las características)...")
+    modelo_baseline = RandomForestClassifier(n_estimators=50, random_state=42)
+    modelo_baseline.fit(X_train.values, y_train.values)
+    print("   ✅ Baseline entrenado.")
+
+    # 7.3 MODELOS INDIVIDUALES POR VISTA
+    print("\n⚙️  Entrenando modelos individuales por vista...")
+    modelos_individuales = []
+    vistas_indices = [ind_tiempo, ind_volumen, ind_banderas, ind_topologia]
+    nombres_vistas = ['Tiempo y Comportamiento', 'Volumen y Tamaño', 'Banderas y Control', 'Topología Local']
     
-    # Se pasa .values porque a veces las librerías construidas sobre numpy
-    # prefieren arrays crudos en lugar de DataFrames de pandas
-    predicciones = modelo_multivista.predict(X_test.values)
-    
-    accuracy = accuracy_score(y_test, predicciones)
-    print(f"🎯 Exactitud Global (Accuracy): {accuracy:.4f}\n")
-    
-    # Convertir las predicciones numéricas de vuelta a sus nombres reales (Benign, DDoS, etc.)
+    for modelo, indices, nombre in zip([modelo_tiempo, modelo_volumen, modelo_banderas, modelo_topologia], vistas_indices, nombres_vistas):
+        # Entrenamos clonando un nuevo modelo para no interferir con el estado interno del MultiView
+        rf_individual = RandomForestClassifier(n_estimators=50, random_state=42)
+        X_train_view = X_train.iloc[:, indices]
+        rf_individual.fit(X_train_view.values, y_train.values)
+        modelos_individuales.append(rf_individual)
+        print(f"   ✅ Modelo '{nombre}' entrenado.")
+
+    # ==========================================
+    # 8. EVALUACIÓN Y COMPARATIVA
+    # ==========================================
+    print("\n" + "="*80)
+    print("📊 COMPARATIVA DE RESULTADOS EN EL CONJUNTO DE PRUEBA")
+    print("="*80)
+
+    diccionario_resultados = {}
+
+    # --- Evaluar Multi-View ---
+    pred_mv = modelo_multivista.predict(X_test.values)
+    diccionario_resultados['Multi-View Stacking'] = {
+        'Accuracy': accuracy_score(y_test, pred_mv),
+        'F1-Macro': f1_score(y_test, pred_mv, average='macro')
+    }
+
+    # --- Evaluar Baseline ---
+    pred_base = modelo_baseline.predict(X_test.values)
+    diccionario_resultados['Baseline (Todas cols)'] = {
+        'Accuracy': accuracy_score(y_test, pred_base),
+        'F1-Macro': f1_score(y_test, pred_base, average='macro')
+    }
+
+    # --- Evaluar Individuales ---
+    for rf_individual, indices, nombre in zip(modelos_individuales, vistas_indices, nombres_vistas):
+        X_test_view = X_test.iloc[:, indices]
+        pred_ind = rf_individual.predict(X_test_view.values)
+        diccionario_resultados[f'Vista: {nombre}'] = {
+            'Accuracy': accuracy_score(y_test, pred_ind),
+            'F1-Macro': f1_score(y_test, pred_ind, average='macro')
+        }
+
+    # --- Imprimir Tabla Comparativa ---
+    print(f"{'Modelo / Enfoque':<30} | {'Accuracy':<10} | {'F1-Macro':<10}")
+    print("-" * 56)
+    for nombre, metricas in diccionario_resultados.items():
+        print(f"{nombre:<30} | {metricas['Accuracy']:.4f}     | {metricas['F1-Macro']:.4f}")
+
+    # --- Reporte Completo del Mejor Enfoque (Opcional, enfocado al Multi-View) ---
+    print("\n" + "="*80)
+    print("📋 REPORTE DETALLADO: MULTI-VIEW STACKING")
+    print("="*80)
     nombres_reales_test = le.inverse_transform(y_test)
-    nombres_reales_pred = le.inverse_transform(predicciones)
-    
+    nombres_reales_pred = le.inverse_transform(pred_mv)
     print(classification_report(nombres_reales_test, nombres_reales_pred))
 
 if __name__ == "__main__":

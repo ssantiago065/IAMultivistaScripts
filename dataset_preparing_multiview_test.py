@@ -9,7 +9,7 @@ FLOW_DIR = PROJECT_ROOT / "cic-iot-diad-2024-dataset" / "FlowBased"
 OUTPUT_FILE = PROJECT_ROOT / "dataset_poc_multivista.csv"
 
 # Parámetros para la Prueba de Concepto (PoC)
-MUESTRAS_POR_CLASE = 5000  # Ajusta este número según lo que necesites para probar
+MUESTRAS_POR_CLASE = 50000  # Ajusta este número según lo que necesites para probar
 
 # Columnas estrictamente prohibidas (identificadores y fugas de tiempo)
 COLUMNAS_A_ELIMINAR = ['Flow ID', 'Src IP', 'Dst IP', 'Timestamp']
