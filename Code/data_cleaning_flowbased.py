@@ -17,7 +17,7 @@ if sys.platform == "win32" and hasattr(sys.stdout, "reconfigure"):
 # --- CONFIGURACION ---
 SCRIPT_DIR = Path(__file__).resolve().parent
 PROJECT_ROOT = SCRIPT_DIR.parent
-FLOW_DIR = PROJECT_ROOT / "Anomaly Detection - Flow Based features"
+FLOW_DIR = PROJECT_ROOT / "FlowBased"
 OUTPUT_DIR = PROJECT_ROOT / "cleaned_dataset_flowbased"
 PROFILING_SUMMARY = PROJECT_ROOT / "Analysis" / "data_profiling" / "profiling_summary_by_category.csv"
 
