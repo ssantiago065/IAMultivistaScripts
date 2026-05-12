@@ -1,8 +1,10 @@
 """
 Script para contar clases del dataset CIC IoT-DIAD 2024.
 Agrupa los archivos en categorías principales y subcategorías.
-"""
 
+Este script recorre un directorio de archivos CSV, determina la categoría y subcategoría de cada archivo,
+cuenta las instancias por clase y subclase, y genera reportes en CSV y un resumen por consola.
+"""
 from pathlib import Path
 from collections import defaultdict
 import argparse
@@ -13,6 +15,9 @@ import pandas as pd
 warnings.filterwarnings("ignore")
 
 # --- CONFIGURACIÓN ---
+###########################################################
+# CONFIGURACIÓN DE RUTAS Y VARIABLES PRINCIPALES
+###########################################################
 SCRIPT_DIR = Path(__file__).resolve().parent
 PROJECT_ROOT = SCRIPT_DIR.parent
 FLOW_DIR = PROJECT_ROOT / "cic-iot-diad-2024-dataset" / "FlowBased"
@@ -22,6 +27,9 @@ OUTPUT_FILE = PROJECT_ROOT / "dataset_poc_multivista.csv"
 FLOW_DIR_FALLBACK = PROJECT_ROOT / "Anomaly Detection - Flow Based features"
 
 
+###########################################################
+# FUNCIONES UTILITARIAS PARA RUTAS Y CATEGORIZACIÓN
+###########################################################
 def resolve_dataset_dir(user_dataset_dir: Path | None = None) -> Path:
     """Resuelve el directorio del dataset usando rutas relativas al script."""
     candidates = []
@@ -151,9 +159,12 @@ def get_output_dir(user_output_dir: Path | None = None) -> Path:
         return user_output_dir.expanduser().resolve()
 
     # OUTPUT_FILE se conserva para mantener consistencia con tus scripts recientes.
-    return OUTPUT_FILE.parent / "Analysis"
+    return OUTPUT_FILE.parent / "Analysis" 
 
 
+###########################################################
+# FUNCIÓN PRINCIPAL DE CONTEO Y REPORTE
+###########################################################
 def count_classes(dataset_dir: Path, output_dir: Path):
     """Cuenta las instancias de cada clase en el dataset."""
     csv_files = sorted(
@@ -255,6 +266,9 @@ def count_classes(dataset_dir: Path, output_dir: Path):
     return category_df, subcategory_df, file_df
 
 
+###########################################################
+# PARSEO DE ARGUMENTOS DE LÍNEA DE COMANDOS
+###########################################################
 def parse_args():
     parser = argparse.ArgumentParser(description="Contar clases del dataset CIC IoT-DIAD 2024")
     parser.add_argument(
@@ -272,6 +286,9 @@ def parse_args():
     return parser.parse_args()
 
 
+###########################################################
+# EJECUCIÓN PRINCIPAL DEL SCRIPT
+###########################################################
 if __name__ == "__main__":
     args = parse_args()
     dataset_dir = resolve_dataset_dir(args.dataset_dir)
