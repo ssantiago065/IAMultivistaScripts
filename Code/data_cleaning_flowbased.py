@@ -1,3 +1,15 @@
+# =============================================================================
+# DATA CLEANING FLOW-BASED SCRIPT
+# -----------------------------------------------------------------------------
+# Este script limpia archivos CSV de tráfico IoT eliminando filas y columnas
+# problemáticas según reglas de profiling, y genera reportes de limpieza.
+# =============================================================================
+# =========================
+# IMPORTACIÓN DE LIBRERÍAS
+# =========================
+# =========================
+# CONFIGURACIÓN DE RUTAS Y VARIABLES PRINCIPALES
+# =========================
 import argparse
 import json
 import sys
@@ -17,12 +29,25 @@ if sys.platform == "win32" and hasattr(sys.stdout, "reconfigure"):
 # --- CONFIGURACION ---
 SCRIPT_DIR = Path(__file__).resolve().parent
 PROJECT_ROOT = SCRIPT_DIR.parent
-FLOW_DIR = PROJECT_ROOT / "FlowBased"
+FLOW_DIR = PROJECT_ROOT / "Anomaly Detection - Flow Based features"
 OUTPUT_DIR = PROJECT_ROOT / "cleaned_dataset_flowbased"
 PROFILING_SUMMARY = PROJECT_ROOT / "Analysis" / "data_profiling" / "profiling_summary_by_category.csv"
 
 
+# =========================
+# CLASE PRINCIPAL DE LIMPIEZA DE DATOS
+# =========================
 class DataCleaner:
+        # Constructor: inicializa rutas, parámetros y columnas a eliminar
+        # Guarda el progreso de archivos procesados en un archivo JSON
+        # Limpia un chunk de datos eliminando filas/columnas según reglas
+        # Construye un archivo limpio vacío si el archivo original no tiene datos
+        # Limpia un archivo CSV por chunks y guarda el resultado incremental
+        # Limpia todos los archivos CSV del dataset manteniendo estructura
+        # Genera reportes CSV y resumen final de la limpieza
+    # =========================
+    # PARSEO DE ARGUMENTOS Y EJECUCIÓN PRINCIPAL
+    # =========================
     def __init__(
         self,
         dataset_dir: Path,

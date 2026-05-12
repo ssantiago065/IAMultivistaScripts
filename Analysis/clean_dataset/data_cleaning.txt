@@ -1,0 +1,2431 @@
+Se detecto profiling summary: F:\Dataset\Analysis\data_profiling\profiling_summary_by_category.csv
+====================================================================================================
+LIMPIEZA COMPLETA DEL DATASET IOT (FLOW-BASED)
+====================================================================================================
+Ruta de entrada: F:\Dataset\Anomaly Detection - Flow Based features
+Ruta de salida: F:\Dataset\cleaned_dataset_flowbased
+Chunk size: 200000
+Modo duplicados: chunk
+====================================================================================================
+
+
+################################################################################
+# CATEGORIA: Benign (4 archivos)
+################################################################################
+
+[Progreso: 1/4]
+
+================================================================================
+Limpiando: BenignTraffic.pcap_Flow.csv
+Tipo de ataque: Benign
+Tamano: 94.62 MB
+================================================================================
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Filas originales: 183,630
+  Filas eliminadas: 42 (0.02%)
+  Filas finales: 183,588
+  Columnas originales: 84
+  Columnas finales: 75
+  Archivo guardado en: F:\Dataset\cleaned_dataset_flowbased\Benign\BenignTraffic.pcap_Flow.csv
+================================================================================
+
+[Progreso: 2/4]
+
+================================================================================
+Limpiando: BenignTraffic1.pcap_Flow.csv
+Tipo de ataque: Benign
+Tamano: 44.29 MB
+================================================================================
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Filas originales: 84,526
+  Filas eliminadas: 39 (0.05%)
+  Filas finales: 84,487
+  Columnas originales: 84
+  Columnas finales: 75
+  Archivo guardado en: F:\Dataset\cleaned_dataset_flowbased\Benign\BenignTraffic1.pcap_Flow.csv
+================================================================================
+
+[Progreso: 3/4]
+
+================================================================================
+Limpiando: BenignTraffic2.pcap_Flow.csv
+Tipo de ataque: Benign
+Tamano: 47.89 MB
+================================================================================
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Filas originales: 91,279
+  Filas eliminadas: 49 (0.05%)
+  Filas finales: 91,230
+  Columnas originales: 84
+  Columnas finales: 75
+  Archivo guardado en: F:\Dataset\cleaned_dataset_flowbased\Benign\BenignTraffic2.pcap_Flow.csv
+================================================================================
+
+[Progreso: 4/4]
+
+================================================================================
+Limpiando: BenignTraffic3.pcap_Flow.csv
+Tipo de ataque: Benign
+Tamano: 20.41 MB
+================================================================================
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Filas originales: 38,895
+  Filas eliminadas: 18 (0.05%)
+  Filas finales: 38,877
+  Columnas originales: 84
+  Columnas finales: 75
+  Archivo guardado en: F:\Dataset\cleaned_dataset_flowbased\Benign\BenignTraffic3.pcap_Flow.csv
+================================================================================
+
+
+################################################################################
+# CATEGORIA: BruteForce (1 archivos)
+################################################################################
+
+[Progreso: 1/1]
+
+================================================================================
+Limpiando: DictionaryBruteForce.pcap_Flow.csv
+Tipo de ataque: BruteForce
+Tamano: 1.67 MB
+================================================================================
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Filas originales: 3,619
+  Filas eliminadas: 0 (0.00%)
+  Filas finales: 3,619
+  Columnas originales: 84
+  Columnas finales: 75
+  Archivo guardado en: F:\Dataset\cleaned_dataset_flowbased\BruteForce\DictionaryBruteForce.pcap_Flow.csv
+================================================================================
+
+
+################################################################################
+# CATEGORIA: DDoS (61 archivos)
+################################################################################
+
+[Progreso: 1/61]
+
+================================================================================
+Limpiando: DDoS-ACK_Fragmentation.pcap_Flow.csv
+Tipo de ataque: DDoS
+Tamano: 152.22 MB
+================================================================================
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Filas originales: 323,886
+  Filas eliminadas: 20 (0.01%)
+  Filas finales: 323,866
+  Columnas originales: 84
+  Columnas finales: 75
+  Archivo guardado en: F:\Dataset\cleaned_dataset_flowbased\DDoS\DDoS ACK Fragmentation\DDoS-ACK_Fragmentation.pcap_Flow.csv
+================================================================================
+
+[Progreso: 2/61]
+
+================================================================================
+Limpiando: DDoS-ACK_Fragmentation1.pcap_Flow.csv
+Tipo de ataque: DDoS
+Tamano: 67.65 MB
+================================================================================
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Filas originales: 137,172
+  Filas eliminadas: 11 (0.01%)
+  Filas finales: 137,161
+  Columnas originales: 84
+  Columnas finales: 75
+  Archivo guardado en: F:\Dataset\cleaned_dataset_flowbased\DDoS\DDoS ACK Fragmentation\DDoS-ACK_Fragmentation1.pcap_Flow.csv
+================================================================================
+
+[Progreso: 3/61]
+
+================================================================================
+Limpiando: DDoS-ACK_Fragmentation10.pcap_Flow.csv
+Tipo de ataque: DDoS
+Tamano: 81.45 MB
+================================================================================
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Filas originales: 166,796
+  Filas eliminadas: 13 (0.01%)
+  Filas finales: 166,783
+  Columnas originales: 84
+  Columnas finales: 75
+  Archivo guardado en: F:\Dataset\cleaned_dataset_flowbased\DDoS\DDoS ACK Fragmentation\DDoS-ACK_Fragmentation10.pcap_Flow.csv
+================================================================================
+
+[Progreso: 4/61]
+
+================================================================================
+Limpiando: DDoS-ACK_Fragmentation11.pcap_Flow.csv
+Tipo de ataque: DDoS
+Tamano: 97.19 MB
+================================================================================
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Filas originales: 198,622
+  Filas eliminadas: 4 (0.00%)
+  Filas finales: 198,618
+  Columnas originales: 84
+  Columnas finales: 75
+  Archivo guardado en: F:\Dataset\cleaned_dataset_flowbased\DDoS\DDoS ACK Fragmentation\DDoS-ACK_Fragmentation11.pcap_Flow.csv
+================================================================================
+
+[Progreso: 5/61]
+
+================================================================================
+Limpiando: DDoS-ACK_Fragmentation12.pcap_Flow.csv
+Tipo de ataque: DDoS
+Tamano: 18.44 MB
+================================================================================
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Filas originales: 37,292
+  Filas eliminadas: 9 (0.02%)
+  Filas finales: 37,283
+  Columnas originales: 84
+  Columnas finales: 75
+  Archivo guardado en: F:\Dataset\cleaned_dataset_flowbased\DDoS\DDoS ACK Fragmentation\DDoS-ACK_Fragmentation12.pcap_Flow.csv
+================================================================================
+
+[PROGRESO GUARDADO: 10 archivos procesados]
+
+[Progreso: 6/61]
+
+================================================================================
+Limpiando: DDoS-ACK_Fragmentation2.pcap_Flow.csv
+Tipo de ataque: DDoS
+Tamano: 59.75 MB
+================================================================================
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Filas originales: 121,409
+  Filas eliminadas: 18 (0.01%)
+  Filas finales: 121,391
+  Columnas originales: 84
+  Columnas finales: 75
+  Archivo guardado en: F:\Dataset\cleaned_dataset_flowbased\DDoS\DDoS ACK Fragmentation\DDoS-ACK_Fragmentation2.pcap_Flow.csv
+================================================================================
+
+[Progreso: 7/61]
+
+================================================================================
+Limpiando: DDoS-ACK_Fragmentation3.pcap_Flow.csv
+Tipo de ataque: DDoS
+Tamano: 84.70 MB
+================================================================================
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Filas originales: 174,443
+  Filas eliminadas: 12 (0.01%)
+  Filas finales: 174,431
+  Columnas originales: 84
+  Columnas finales: 75
+  Archivo guardado en: F:\Dataset\cleaned_dataset_flowbased\DDoS\DDoS ACK Fragmentation\DDoS-ACK_Fragmentation3.pcap_Flow.csv
+================================================================================
+
+[Progreso: 8/61]
+
+================================================================================
+Limpiando: DDoS-ACK_Fragmentation4.pcap_Flow.csv
+Tipo de ataque: DDoS
+Tamano: 74.04 MB
+================================================================================
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Filas originales: 152,216
+  Filas eliminadas: 23 (0.02%)
+  Filas finales: 152,193
+  Columnas originales: 84
+  Columnas finales: 75
+  Archivo guardado en: F:\Dataset\cleaned_dataset_flowbased\DDoS\DDoS ACK Fragmentation\DDoS-ACK_Fragmentation4.pcap_Flow.csv
+================================================================================
+
+[Progreso: 9/61]
+
+================================================================================
+Limpiando: DDoS-ACK_Fragmentation5.pcap_Flow.csv
+Tipo de ataque: DDoS
+Tamano: 102.48 MB
+================================================================================
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Filas originales: 209,344
+  Filas eliminadas: 0 (0.00%)
+  Filas finales: 209,344
+  Columnas originales: 84
+  Columnas finales: 75
+  Archivo guardado en: F:\Dataset\cleaned_dataset_flowbased\DDoS\DDoS ACK Fragmentation\DDoS-ACK_Fragmentation5.pcap_Flow.csv
+================================================================================
+
+[Progreso: 10/61]
+
+================================================================================
+Limpiando: DDoS-ACK_Fragmentation6.pcap_Flow.csv
+Tipo de ataque: DDoS
+Tamano: 103.08 MB
+================================================================================
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Filas originales: 209,790
+  Filas eliminadas: 5 (0.00%)
+  Filas finales: 209,785
+  Columnas originales: 84
+  Columnas finales: 75
+  Archivo guardado en: F:\Dataset\cleaned_dataset_flowbased\DDoS\DDoS ACK Fragmentation\DDoS-ACK_Fragmentation6.pcap_Flow.csv
+================================================================================
+
+[Progreso: 11/61]
+
+================================================================================
+Limpiando: DDoS-ACK_Fragmentation7.pcap_Flow.csv
+Tipo de ataque: DDoS
+Tamano: 63.12 MB
+================================================================================
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Filas originales: 127,543
+  Filas eliminadas: 24 (0.02%)
+  Filas finales: 127,519
+  Columnas originales: 84
+  Columnas finales: 75
+  Archivo guardado en: F:\Dataset\cleaned_dataset_flowbased\DDoS\DDoS ACK Fragmentation\DDoS-ACK_Fragmentation7.pcap_Flow.csv
+================================================================================
+
+[Progreso: 12/61]
+
+================================================================================
+Limpiando: DDoS-ACK_Fragmentation8.pcap_Flow.csv
+Tipo de ataque: DDoS
+Tamano: 86.77 MB
+================================================================================
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Filas originales: 179,379
+  Filas eliminadas: 22 (0.01%)
+  Filas finales: 179,357
+  Columnas originales: 84
+  Columnas finales: 75
+  Archivo guardado en: F:\Dataset\cleaned_dataset_flowbased\DDoS\DDoS ACK Fragmentation\DDoS-ACK_Fragmentation8.pcap_Flow.csv
+================================================================================
+
+[Progreso: 13/61]
+
+================================================================================
+Limpiando: DDoS-ACK_Fragmentation9.pcap_Flow.csv
+Tipo de ataque: DDoS
+Tamano: 189.86 MB
+================================================================================
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Filas originales: 412,194
+  Filas eliminadas: 30 (0.01%)
+  Filas finales: 412,164
+  Columnas originales: 84
+  Columnas finales: 75
+  Archivo guardado en: F:\Dataset\cleaned_dataset_flowbased\DDoS\DDoS ACK Fragmentation\DDoS-ACK_Fragmentation9.pcap_Flow.csv
+================================================================================
+
+[Progreso: 14/61]
+
+================================================================================
+Limpiando: DDoS-ICMP_Flood.pcap_Flow.csv
+Tipo de ataque: DDoS
+Tamano: 5.31 MB
+================================================================================
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Filas originales: 10,415
+  Filas eliminadas: 50 (0.48%)
+  Filas finales: 10,365
+  Columnas originales: 84
+  Columnas finales: 75
+  Archivo guardado en: F:\Dataset\cleaned_dataset_flowbased\DDoS\DDoS ICMP Flood\DDoS-ICMP_Flood.pcap_Flow.csv
+================================================================================
+
+[Progreso: 15/61]
+
+================================================================================
+Limpiando: DDoS-ICMP_Flood1.pcap_Flow.csv
+Tipo de ataque: DDoS
+Tamano: 4.08 MB
+================================================================================
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Filas originales: 8,263
+  Filas eliminadas: 4 (0.05%)
+  Filas finales: 8,259
+  Columnas originales: 84
+  Columnas finales: 75
+  Archivo guardado en: F:\Dataset\cleaned_dataset_flowbased\DDoS\DDoS ICMP Flood\DDoS-ICMP_Flood1.pcap_Flow.csv
+================================================================================
+
+[PROGRESO GUARDADO: 20 archivos procesados]
+
+[Progreso: 16/61]
+
+================================================================================
+Limpiando: DDoS-ICMP_Flood10.pcap_Flow.csv
+Tipo de ataque: DDoS
+Tamano: 3.85 MB
+================================================================================
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Filas originales: 7,558
+  Filas eliminadas: 23 (0.30%)
+  Filas finales: 7,535
+  Columnas originales: 84
+  Columnas finales: 75
+  Archivo guardado en: F:\Dataset\cleaned_dataset_flowbased\DDoS\DDoS ICMP Flood\DDoS-ICMP_Flood10.pcap_Flow.csv
+================================================================================
+
+[Progreso: 17/61]
+
+================================================================================
+Limpiando: DDoS-ICMP_Flood11.pcap_Flow.csv
+Tipo de ataque: DDoS
+Tamano: 4.19 MB
+================================================================================
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Filas originales: 8,312
+  Filas eliminadas: 30 (0.36%)
+  Filas finales: 8,282
+  Columnas originales: 84
+  Columnas finales: 75
+  Archivo guardado en: F:\Dataset\cleaned_dataset_flowbased\DDoS\DDoS ICMP Flood\DDoS-ICMP_Flood11.pcap_Flow.csv
+================================================================================
+
+[Progreso: 18/61]
+
+================================================================================
+Limpiando: DDoS-ICMP_Flood12.pcap_Flow.csv
+Tipo de ataque: DDoS
+Tamano: 3.66 MB
+================================================================================
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Filas originales: 7,204
+  Filas eliminadas: 22 (0.31%)
+  Filas finales: 7,182
+  Columnas originales: 84
+  Columnas finales: 75
+  Archivo guardado en: F:\Dataset\cleaned_dataset_flowbased\DDoS\DDoS ICMP Flood\DDoS-ICMP_Flood12.pcap_Flow.csv
+================================================================================
+
+[Progreso: 19/61]
+
+================================================================================
+Limpiando: DDoS-ICMP_Flood13.pcap_Flow.csv
+Tipo de ataque: DDoS
+Tamano: 2.81 MB
+================================================================================
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Filas originales: 5,552
+  Filas eliminadas: 35 (0.63%)
+  Filas finales: 5,517
+  Columnas originales: 84
+  Columnas finales: 75
+  Archivo guardado en: F:\Dataset\cleaned_dataset_flowbased\DDoS\DDoS ICMP Flood\DDoS-ICMP_Flood13.pcap_Flow.csv
+================================================================================
+
+[Progreso: 20/61]
+
+================================================================================
+Limpiando: DDoS-ICMP_Flood14.pcap_Flow.csv
+Tipo de ataque: DDoS
+Tamano: 3.39 MB
+================================================================================
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Filas originales: 6,572
+  Filas eliminadas: 49 (0.75%)
+  Filas finales: 6,523
+  Columnas originales: 84
+  Columnas finales: 75
+  Archivo guardado en: F:\Dataset\cleaned_dataset_flowbased\DDoS\DDoS ICMP Flood\DDoS-ICMP_Flood14.pcap_Flow.csv
+================================================================================
+
+[Progreso: 21/61]
+
+================================================================================
+Limpiando: DDoS-ICMP_Flood15.pcap_Flow.csv
+Tipo de ataque: DDoS
+Tamano: 5.28 MB
+================================================================================
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Filas originales: 10,323
+  Filas eliminadas: 57 (0.55%)
+  Filas finales: 10,266
+  Columnas originales: 84
+  Columnas finales: 75
+  Archivo guardado en: F:\Dataset\cleaned_dataset_flowbased\DDoS\DDoS ICMP Flood\DDoS-ICMP_Flood15.pcap_Flow.csv
+================================================================================
+
+[Progreso: 22/61]
+
+================================================================================
+Limpiando: DDoS-ICMP_Flood16.pcap_Flow.csv
+Tipo de ataque: DDoS
+Tamano: 5.25 MB
+================================================================================
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Filas originales: 10,270
+  Filas eliminadas: 136 (1.32%)
+  Filas finales: 10,134
+  Columnas originales: 84
+  Columnas finales: 75
+  Archivo guardado en: F:\Dataset\cleaned_dataset_flowbased\DDoS\DDoS ICMP Flood\DDoS-ICMP_Flood16.pcap_Flow.csv
+================================================================================
+
+[Progreso: 23/61]
+
+================================================================================
+Limpiando: DDoS-ICMP_Flood17.pcap_Flow.csv
+Tipo de ataque: DDoS
+Tamano: 2.38 MB
+================================================================================
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Filas originales: 4,643
+  Filas eliminadas: 14 (0.30%)
+  Filas finales: 4,629
+  Columnas originales: 84
+  Columnas finales: 75
+  Archivo guardado en: F:\Dataset\cleaned_dataset_flowbased\DDoS\DDoS ICMP Flood\DDoS-ICMP_Flood17.pcap_Flow.csv
+================================================================================
+
+[Progreso: 24/61]
+
+================================================================================
+Limpiando: DDoS-ICMP_Flood18.pcap_Flow.csv
+Tipo de ataque: DDoS
+Tamano: 2.03 MB
+================================================================================
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Filas originales: 4,062
+  Filas eliminadas: 5 (0.12%)
+  Filas finales: 4,057
+  Columnas originales: 84
+  Columnas finales: 75
+  Archivo guardado en: F:\Dataset\cleaned_dataset_flowbased\DDoS\DDoS ICMP Flood\DDoS-ICMP_Flood18.pcap_Flow.csv
+================================================================================
+
+[Progreso: 25/61]
+
+================================================================================
+Limpiando: DDoS-ICMP_Flood19.pcap_Flow.csv
+Tipo de ataque: DDoS
+Tamano: 4.10 MB
+================================================================================
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Filas originales: 8,121
+  Filas eliminadas: 12 (0.15%)
+  Filas finales: 8,109
+  Columnas originales: 84
+  Columnas finales: 75
+  Archivo guardado en: F:\Dataset\cleaned_dataset_flowbased\DDoS\DDoS ICMP Flood\DDoS-ICMP_Flood19.pcap_Flow.csv
+================================================================================
+
+[PROGRESO GUARDADO: 30 archivos procesados]
+
+[Progreso: 26/61]
+
+================================================================================
+Limpiando: DDoS-ICMP_Flood2.pcap_Flow.csv
+Tipo de ataque: DDoS
+Tamano: 5.42 MB
+================================================================================
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Filas originales: 10,958
+  Filas eliminadas: 19 (0.17%)
+  Filas finales: 10,939
+  Columnas originales: 84
+  Columnas finales: 75
+  Archivo guardado en: F:\Dataset\cleaned_dataset_flowbased\DDoS\DDoS ICMP Flood\DDoS-ICMP_Flood2.pcap_Flow.csv
+================================================================================
+
+[Progreso: 27/61]
+
+================================================================================
+Limpiando: DDoS-ICMP_Flood20.pcap_Flow.csv
+Tipo de ataque: DDoS
+Tamano: 3.74 MB
+================================================================================
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Filas originales: 7,322
+  Filas eliminadas: 20 (0.27%)
+  Filas finales: 7,302
+  Columnas originales: 84
+  Columnas finales: 75
+  Archivo guardado en: F:\Dataset\cleaned_dataset_flowbased\DDoS\DDoS ICMP Flood\DDoS-ICMP_Flood20.pcap_Flow.csv
+================================================================================
+
+[Progreso: 28/61]
+
+================================================================================
+Limpiando: DDoS-ICMP_Flood21.pcap_Flow.csv
+Tipo de ataque: DDoS
+Tamano: 3.65 MB
+================================================================================
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Filas originales: 7,293
+  Filas eliminadas: 19 (0.26%)
+  Filas finales: 7,274
+  Columnas originales: 84
+  Columnas finales: 75
+  Archivo guardado en: F:\Dataset\cleaned_dataset_flowbased\DDoS\DDoS ICMP Flood\DDoS-ICMP_Flood21.pcap_Flow.csv
+================================================================================
+
+[Progreso: 29/61]
+
+================================================================================
+Limpiando: DDoS-ICMP_Flood22.pcap_Flow.csv
+Tipo de ataque: DDoS
+Tamano: 3.07 MB
+================================================================================
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Filas originales: 5,993
+  Filas eliminadas: 8 (0.13%)
+  Filas finales: 5,985
+  Columnas originales: 84
+  Columnas finales: 75
+  Archivo guardado en: F:\Dataset\cleaned_dataset_flowbased\DDoS\DDoS ICMP Flood\DDoS-ICMP_Flood22.pcap_Flow.csv
+================================================================================
+
+[Progreso: 30/61]
+
+================================================================================
+Limpiando: DDoS-ICMP_Flood23.pcap_Flow.csv
+Tipo de ataque: DDoS
+Tamano: 2.61 MB
+================================================================================
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Filas originales: 5,193
+  Filas eliminadas: 10 (0.19%)
+  Filas finales: 5,183
+  Columnas originales: 84
+  Columnas finales: 75
+  Archivo guardado en: F:\Dataset\cleaned_dataset_flowbased\DDoS\DDoS ICMP Flood\DDoS-ICMP_Flood23.pcap_Flow.csv
+================================================================================
+
+[Progreso: 31/61]
+
+================================================================================
+Limpiando: DDoS-ICMP_Flood24.pcap_Flow.csv
+Tipo de ataque: DDoS
+Tamano: 3.08 MB
+================================================================================
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Filas originales: 6,055
+  Filas eliminadas: 28 (0.46%)
+  Filas finales: 6,027
+  Columnas originales: 84
+  Columnas finales: 75
+  Archivo guardado en: F:\Dataset\cleaned_dataset_flowbased\DDoS\DDoS ICMP Flood\DDoS-ICMP_Flood24.pcap_Flow.csv
+================================================================================
+
+[Progreso: 32/61]
+
+================================================================================
+Limpiando: DDoS-ICMP_Flood25.pcap_Flow.csv
+Tipo de ataque: DDoS
+Tamano: 4.79 MB
+================================================================================
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Filas originales: 9,442
+  Filas eliminadas: 19 (0.20%)
+  Filas finales: 9,423
+  Columnas originales: 84
+  Columnas finales: 75
+  Archivo guardado en: F:\Dataset\cleaned_dataset_flowbased\DDoS\DDoS ICMP Flood\DDoS-ICMP_Flood25.pcap_Flow.csv
+================================================================================
+
+[Progreso: 33/61]
+
+================================================================================
+Limpiando: DDoS-ICMP_Flood26.pcap_Flow.csv
+Tipo de ataque: DDoS
+Tamano: 2.71 MB
+================================================================================
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Filas originales: 5,432
+  Filas eliminadas: 0 (0.00%)
+  Filas finales: 5,432
+  Columnas originales: 84
+  Columnas finales: 75
+  Archivo guardado en: F:\Dataset\cleaned_dataset_flowbased\DDoS\DDoS ICMP Flood\DDoS-ICMP_Flood26.pcap_Flow.csv
+================================================================================
+
+[Progreso: 34/61]
+
+================================================================================
+Limpiando: DDoS-ICMP_Flood3.pcap_Flow.csv
+Tipo de ataque: DDoS
+Tamano: 3.97 MB
+================================================================================
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Filas originales: 7,845
+  Filas eliminadas: 53 (0.68%)
+  Filas finales: 7,792
+  Columnas originales: 84
+  Columnas finales: 75
+  Archivo guardado en: F:\Dataset\cleaned_dataset_flowbased\DDoS\DDoS ICMP Flood\DDoS-ICMP_Flood3.pcap_Flow.csv
+================================================================================
+
+[Progreso: 35/61]
+
+================================================================================
+Limpiando: DDoS-ICMP_Flood4.pcap_Flow.csv
+Tipo de ataque: DDoS
+Tamano: 7.85 MB
+================================================================================
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Filas originales: 16,190
+  Filas eliminadas: 43 (0.27%)
+  Filas finales: 16,147
+  Columnas originales: 84
+  Columnas finales: 75
+  Archivo guardado en: F:\Dataset\cleaned_dataset_flowbased\DDoS\DDoS ICMP Flood\DDoS-ICMP_Flood4.pcap_Flow.csv
+================================================================================
+
+[PROGRESO GUARDADO: 40 archivos procesados]
+
+[Progreso: 36/61]
+
+================================================================================
+Limpiando: DDoS-ICMP_Flood5.pcap_Flow.csv
+Tipo de ataque: DDoS
+Tamano: 3.89 MB
+================================================================================
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Filas originales: 7,840
+  Filas eliminadas: 14 (0.18%)
+  Filas finales: 7,826
+  Columnas originales: 84
+  Columnas finales: 75
+  Archivo guardado en: F:\Dataset\cleaned_dataset_flowbased\DDoS\DDoS ICMP Flood\DDoS-ICMP_Flood5.pcap_Flow.csv
+================================================================================
+
+[Progreso: 37/61]
+
+================================================================================
+Limpiando: DDoS-ICMP_Flood6.pcap_Flow.csv
+Tipo de ataque: DDoS
+Tamano: 2.37 MB
+================================================================================
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Filas originales: 4,783
+  Filas eliminadas: 6 (0.13%)
+  Filas finales: 4,777
+  Columnas originales: 84
+  Columnas finales: 75
+  Archivo guardado en: F:\Dataset\cleaned_dataset_flowbased\DDoS\DDoS ICMP Flood\DDoS-ICMP_Flood6.pcap_Flow.csv
+================================================================================
+
+[Progreso: 38/61]
+
+================================================================================
+Limpiando: DDoS-ICMP_Flood7.pcap_Flow.csv
+Tipo de ataque: DDoS
+Tamano: 1.64 MB
+================================================================================
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Filas originales: 3,244
+  Filas eliminadas: 8 (0.25%)
+  Filas finales: 3,236
+  Columnas originales: 84
+  Columnas finales: 75
+  Archivo guardado en: F:\Dataset\cleaned_dataset_flowbased\DDoS\DDoS ICMP Flood\DDoS-ICMP_Flood7.pcap_Flow.csv
+================================================================================
+
+[Progreso: 39/61]
+
+================================================================================
+Limpiando: DDoS-ICMP_Flood8.pcap_Flow.csv
+Tipo de ataque: DDoS
+Tamano: 3.22 MB
+================================================================================
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Filas originales: 6,411
+  Filas eliminadas: 12 (0.19%)
+  Filas finales: 6,399
+  Columnas originales: 84
+  Columnas finales: 75
+  Archivo guardado en: F:\Dataset\cleaned_dataset_flowbased\DDoS\DDoS ICMP Flood\DDoS-ICMP_Flood8.pcap_Flow.csv
+================================================================================
+
+[Progreso: 40/61]
+
+================================================================================
+Limpiando: DDoS-ICMP_Flood9.pcap_Flow.csv
+Tipo de ataque: DDoS
+Tamano: 3.51 MB
+================================================================================
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Filas originales: 6,955
+  Filas eliminadas: 14 (0.20%)
+  Filas finales: 6,941
+  Columnas originales: 84
+  Columnas finales: 75
+  Archivo guardado en: F:\Dataset\cleaned_dataset_flowbased\DDoS\DDoS ICMP Flood\DDoS-ICMP_Flood9.pcap_Flow.csv
+================================================================================
+
+[Progreso: 41/61]
+
+================================================================================
+Limpiando: DDoS-HTTP_Flood-.pcap_Flow.csv
+Tipo de ataque: DDoS
+Tamano: 234.88 MB
+================================================================================
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Filas originales: 505,720
+  Filas eliminadas: 5,659 (1.12%)
+  Filas finales: 500,061
+  Columnas originales: 84
+  Columnas finales: 75
+  Archivo guardado en: F:\Dataset\cleaned_dataset_flowbased\DDoS\DDoS-HTTP Flood\DDoS-HTTP_Flood-.pcap_Flow.csv
+================================================================================
+
+[Progreso: 42/61]
+
+================================================================================
+Limpiando: DDoS-ICMP_Fragmentation.pcap_Flow.csv
+Tipo de ataque: DDoS
+Tamano: 7.11 MB
+================================================================================
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Filas originales: 14,479
+  Filas eliminadas: 22 (0.15%)
+  Filas finales: 14,457
+  Columnas originales: 84
+  Columnas finales: 75
+  Archivo guardado en: F:\Dataset\cleaned_dataset_flowbased\DDoS\DDoS-ICMP_Fragmentation\DDoS-ICMP_Fragmentation.pcap_Flow.csv
+================================================================================
+
+[Progreso: 43/61]
+
+================================================================================
+Limpiando: DDoS-ICMP_Fragmentation1.pcap_Flow.csv
+Tipo de ataque: DDoS
+Tamano: 8.75 MB
+================================================================================
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Filas originales: 17,480
+  Filas eliminadas: 46 (0.26%)
+  Filas finales: 17,434
+  Columnas originales: 84
+  Columnas finales: 75
+  Archivo guardado en: F:\Dataset\cleaned_dataset_flowbased\DDoS\DDoS-ICMP_Fragmentation\DDoS-ICMP_Fragmentation1.pcap_Flow.csv
+================================================================================
+
+[Progreso: 44/61]
+
+================================================================================
+Limpiando: DDoS-ICMP_Fragmentation10.pcap_Flow.csv
+Tipo de ataque: DDoS
+Tamano: 7.31 MB
+================================================================================
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Filas originales: 14,420
+  Filas eliminadas: 6 (0.04%)
+  Filas finales: 14,414
+  Columnas originales: 84
+  Columnas finales: 75
+  Archivo guardado en: F:\Dataset\cleaned_dataset_flowbased\DDoS\DDoS-ICMP_Fragmentation\DDoS-ICMP_Fragmentation10.pcap_Flow.csv
+================================================================================
+
+[Progreso: 45/61]
+
+================================================================================
+Limpiando: DDoS-ICMP_Fragmentation11.pcap_Flow.csv
+Tipo de ataque: DDoS
+Tamano: 5.84 MB
+================================================================================
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Filas originales: 11,479
+  Filas eliminadas: 7 (0.06%)
+  Filas finales: 11,472
+  Columnas originales: 84
+  Columnas finales: 75
+  Archivo guardado en: F:\Dataset\cleaned_dataset_flowbased\DDoS\DDoS-ICMP_Fragmentation\DDoS-ICMP_Fragmentation11.pcap_Flow.csv
+================================================================================
+
+[PROGRESO GUARDADO: 50 archivos procesados]
+
+[Progreso: 46/61]
+
+================================================================================
+Limpiando: DDoS-ICMP_Fragmentation12.pcap_Flow.csv
+Tipo de ataque: DDoS
+Tamano: 8.98 MB
+================================================================================
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Filas originales: 18,026
+  Filas eliminadas: 35 (0.19%)
+  Filas finales: 17,991
+  Columnas originales: 84
+  Columnas finales: 75
+  Archivo guardado en: F:\Dataset\cleaned_dataset_flowbased\DDoS\DDoS-ICMP_Fragmentation\DDoS-ICMP_Fragmentation12.pcap_Flow.csv
+================================================================================
+
+[Progreso: 47/61]
+
+================================================================================
+Limpiando: DDoS-ICMP_Fragmentation13.pcap_Flow.csv
+Tipo de ataque: DDoS
+Tamano: 6.53 MB
+================================================================================
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Filas originales: 12,980
+  Filas eliminadas: 3 (0.02%)
+  Filas finales: 12,977
+  Columnas originales: 84
+  Columnas finales: 75
+  Archivo guardado en: F:\Dataset\cleaned_dataset_flowbased\DDoS\DDoS-ICMP_Fragmentation\DDoS-ICMP_Fragmentation13.pcap_Flow.csv
+================================================================================
+
+[Progreso: 48/61]
+
+================================================================================
+Limpiando: DDoS-ICMP_Fragmentation14.pcap_Flow.csv
+Tipo de ataque: DDoS
+Tamano: 6.75 MB
+================================================================================
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Filas originales: 13,411
+  Filas eliminadas: 57 (0.43%)
+  Filas finales: 13,354
+  Columnas originales: 84
+  Columnas finales: 75
+  Archivo guardado en: F:\Dataset\cleaned_dataset_flowbased\DDoS\DDoS-ICMP_Fragmentation\DDoS-ICMP_Fragmentation14.pcap_Flow.csv
+================================================================================
+
+[Progreso: 49/61]
+
+================================================================================
+Limpiando: DDoS-ICMP_Fragmentation15.pcap_Flow.csv
+Tipo de ataque: DDoS
+Tamano: 4.86 MB
+================================================================================
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Filas originales: 9,890
+  Filas eliminadas: 13 (0.13%)
+  Filas finales: 9,877
+  Columnas originales: 84
+  Columnas finales: 75
+  Archivo guardado en: F:\Dataset\cleaned_dataset_flowbased\DDoS\DDoS-ICMP_Fragmentation\DDoS-ICMP_Fragmentation15.pcap_Flow.csv
+================================================================================
+
+[Progreso: 50/61]
+
+================================================================================
+Limpiando: DDoS-ICMP_Fragmentation16.pcap_Flow.csv
+Tipo de ataque: DDoS
+Tamano: 8.27 MB
+================================================================================
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Filas originales: 16,489
+  Filas eliminadas: 34 (0.21%)
+  Filas finales: 16,455
+  Columnas originales: 84
+  Columnas finales: 75
+  Archivo guardado en: F:\Dataset\cleaned_dataset_flowbased\DDoS\DDoS-ICMP_Fragmentation\DDoS-ICMP_Fragmentation16.pcap_Flow.csv
+================================================================================
+
+[Progreso: 51/61]
+
+================================================================================
+Limpiando: DDoS-ICMP_Fragmentation17.pcap_Flow.csv
+Tipo de ataque: DDoS
+Tamano: 20.93 MB
+================================================================================
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Filas originales: 41,632
+  Filas eliminadas: 71 (0.17%)
+  Filas finales: 41,561
+  Columnas originales: 84
+  Columnas finales: 75
+  Archivo guardado en: F:\Dataset\cleaned_dataset_flowbased\DDoS\DDoS-ICMP_Fragmentation\DDoS-ICMP_Fragmentation17.pcap_Flow.csv
+================================================================================
+
+[Progreso: 52/61]
+
+================================================================================
+Limpiando: DDoS-ICMP_Fragmentation18.pcap_Flow.csv
+Tipo de ataque: DDoS
+Tamano: 4.69 MB
+================================================================================
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Filas originales: 9,106
+  Filas eliminadas: 7 (0.08%)
+  Filas finales: 9,099
+  Columnas originales: 84
+  Columnas finales: 75
+  Archivo guardado en: F:\Dataset\cleaned_dataset_flowbased\DDoS\DDoS-ICMP_Fragmentation\DDoS-ICMP_Fragmentation18.pcap_Flow.csv
+================================================================================
+
+[Progreso: 53/61]
+
+================================================================================
+Limpiando: DDoS-ICMP_Fragmentation19.pcap_Flow.csv
+Tipo de ataque: DDoS
+Tamano: 5.52 MB
+================================================================================
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Filas originales: 10,963
+  Filas eliminadas: 9 (0.08%)
+  Filas finales: 10,954
+  Columnas originales: 84
+  Columnas finales: 75
+  Archivo guardado en: F:\Dataset\cleaned_dataset_flowbased\DDoS\DDoS-ICMP_Fragmentation\DDoS-ICMP_Fragmentation19.pcap_Flow.csv
+================================================================================
+
+[Progreso: 54/61]
+
+================================================================================
+Limpiando: DDoS-ICMP_Fragmentation2.pcap_Flow.csv
+Tipo de ataque: DDoS
+Tamano: 6.80 MB
+================================================================================
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Filas originales: 13,462
+  Filas eliminadas: 8 (0.06%)
+  Filas finales: 13,454
+  Columnas originales: 84
+  Columnas finales: 75
+  Archivo guardado en: F:\Dataset\cleaned_dataset_flowbased\DDoS\DDoS-ICMP_Fragmentation\DDoS-ICMP_Fragmentation2.pcap_Flow.csv
+================================================================================
+
+[Progreso: 55/61]
+
+================================================================================
+Limpiando: DDoS-ICMP_Fragmentation3.pcap_Flow.csv
+Tipo de ataque: DDoS
+Tamano: 11.84 MB
+================================================================================
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Filas originales: 23,405
+  Filas eliminadas: 32 (0.14%)
+  Filas finales: 23,373
+  Columnas originales: 84
+  Columnas finales: 75
+  Archivo guardado en: F:\Dataset\cleaned_dataset_flowbased\DDoS\DDoS-ICMP_Fragmentation\DDoS-ICMP_Fragmentation3.pcap_Flow.csv
+================================================================================
+
+[PROGRESO GUARDADO: 60 archivos procesados]
+
+[Progreso: 56/61]
+
+================================================================================
+Limpiando: DDoS-ICMP_Fragmentation4.pcap_Flow.csv
+Tipo de ataque: DDoS
+Tamano: 12.91 MB
+================================================================================
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Filas originales: 25,593
+  Filas eliminadas: 55 (0.21%)
+  Filas finales: 25,538
+  Columnas originales: 84
+  Columnas finales: 75
+  Archivo guardado en: F:\Dataset\cleaned_dataset_flowbased\DDoS\DDoS-ICMP_Fragmentation\DDoS-ICMP_Fragmentation4.pcap_Flow.csv
+================================================================================
+
+[Progreso: 57/61]
+
+================================================================================
+Limpiando: DDoS-ICMP_Fragmentation5.pcap_Flow.csv
+Tipo de ataque: DDoS
+Tamano: 5.41 MB
+================================================================================
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Filas originales: 10,617
+  Filas eliminadas: 18 (0.17%)
+  Filas finales: 10,599
+  Columnas originales: 84
+  Columnas finales: 75
+  Archivo guardado en: F:\Dataset\cleaned_dataset_flowbased\DDoS\DDoS-ICMP_Fragmentation\DDoS-ICMP_Fragmentation5.pcap_Flow.csv
+================================================================================
+
+[Progreso: 58/61]
+
+================================================================================
+Limpiando: DDoS-ICMP_Fragmentation6.pcap_Flow.csv
+Tipo de ataque: DDoS
+Tamano: 5.08 MB
+================================================================================
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Filas originales: 10,138
+  Filas eliminadas: 0 (0.00%)
+  Filas finales: 10,138
+  Columnas originales: 84
+  Columnas finales: 75
+  Archivo guardado en: F:\Dataset\cleaned_dataset_flowbased\DDoS\DDoS-ICMP_Fragmentation\DDoS-ICMP_Fragmentation6.pcap_Flow.csv
+================================================================================
+
+[Progreso: 59/61]
+
+================================================================================
+Limpiando: DDoS-ICMP_Fragmentation7.pcap_Flow.csv
+Tipo de ataque: DDoS
+Tamano: 7.16 MB
+================================================================================
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Filas originales: 14,235
+  Filas eliminadas: 10 (0.07%)
+  Filas finales: 14,225
+  Columnas originales: 84
+  Columnas finales: 75
+  Archivo guardado en: F:\Dataset\cleaned_dataset_flowbased\DDoS\DDoS-ICMP_Fragmentation\DDoS-ICMP_Fragmentation7.pcap_Flow.csv
+================================================================================
+
+[Progreso: 60/61]
+
+================================================================================
+Limpiando: DDoS-ICMP_Fragmentation8.pcap_Flow.csv
+Tipo de ataque: DDoS
+Tamano: 6.23 MB
+================================================================================
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Filas originales: 12,572
+  Filas eliminadas: 8 (0.06%)
+  Filas finales: 12,564
+  Columnas originales: 84
+  Columnas finales: 75
+  Archivo guardado en: F:\Dataset\cleaned_dataset_flowbased\DDoS\DDoS-ICMP_Fragmentation\DDoS-ICMP_Fragmentation8.pcap_Flow.csv
+================================================================================
+
+[Progreso: 61/61]
+
+================================================================================
+Limpiando: DDoS-ICMP_Fragmentation9.pcap_Flow.csv
+Tipo de ataque: DDoS
+Tamano: 10.41 MB
+================================================================================
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Filas originales: 20,380
+  Filas eliminadas: 24 (0.12%)
+  Filas finales: 20,356
+  Columnas originales: 84
+  Columnas finales: 75
+  Archivo guardado en: F:\Dataset\cleaned_dataset_flowbased\DDoS\DDoS-ICMP_Fragmentation\DDoS-ICMP_Fragmentation9.pcap_Flow.csv
+================================================================================
+
+
+################################################################################
+# CATEGORIA: DoS (30 archivos)
+################################################################################
+
+[Progreso: 1/30]
+
+================================================================================
+Limpiando: DoS-SYN_Flood.pcap_Flow.csv
+Tipo de ataque: DoS
+Tamano: 1970.07 MB
+================================================================================
+   Progreso chunk 10 | filas leidas: 2,000,000
+   Progreso chunk 20 | filas leidas: 3,990,181
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Filas originales: 3,990,181
+  Filas eliminadas: 268 (0.01%)
+  Filas finales: 3,989,913
+  Columnas originales: 84
+  Columnas finales: 75
+  Archivo guardado en: F:\Dataset\cleaned_dataset_flowbased\DoS\DoS SYN Flood\DoS-SYN_Flood.pcap_Flow.csv
+================================================================================
+
+[Progreso: 2/30]
+
+================================================================================
+Limpiando: DoS-SYN_Flood1.pcap_Flow.csv
+Tipo de ataque: DoS
+Tamano: 713.41 MB
+================================================================================
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Filas originales: 1,373,103
+  Filas eliminadas: 340 (0.02%)
+  Filas finales: 1,372,763
+  Columnas originales: 84
+  Columnas finales: 75
+  Archivo guardado en: F:\Dataset\cleaned_dataset_flowbased\DoS\DoS SYN Flood\DoS-SYN_Flood1.pcap_Flow.csv
+================================================================================
+
+[Progreso: 3/30]
+
+================================================================================
+Limpiando: DoS-SYN_Flood2.pcap_Flow.csv
+Tipo de ataque: DoS
+Tamano: 1076.62 MB
+================================================================================
+   Progreso chunk 10 | filas leidas: 2,000,000
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Filas originales: 2,130,835
+  Filas eliminadas: 414 (0.02%)
+  Filas finales: 2,130,421
+  Columnas originales: 84
+  Columnas finales: 75
+  Archivo guardado en: F:\Dataset\cleaned_dataset_flowbased\DoS\DoS SYN Flood\DoS-SYN_Flood2.pcap_Flow.csv
+================================================================================
+
+[Progreso: 4/30]
+
+================================================================================
+Limpiando: DoS-SYN_Flood3.pcap_Flow.csv
+Tipo de ataque: DoS
+Tamano: 972.32 MB
+================================================================================
+   Progreso chunk 10 | filas leidas: 1,923,524
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Filas originales: 1,923,524
+  Filas eliminadas: 549 (0.03%)
+  Filas finales: 1,922,975
+  Columnas originales: 84
+  Columnas finales: 75
+  Archivo guardado en: F:\Dataset\cleaned_dataset_flowbased\DoS\DoS SYN Flood\DoS-SYN_Flood3.pcap_Flow.csv
+================================================================================
+
+[PROGRESO GUARDADO: 70 archivos procesados]
+
+[Progreso: 5/30]
+
+================================================================================
+Limpiando: DoS-SYN_Flood4.pcap_Flow.csv
+Tipo de ataque: DoS
+Tamano: 1113.49 MB
+================================================================================
+   Progreso chunk 10 | filas leidas: 2,000,000
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Filas originales: 2,169,821
+  Filas eliminadas: 513 (0.02%)
+  Filas finales: 2,169,308
+  Columnas originales: 84
+  Columnas finales: 75
+  Archivo guardado en: F:\Dataset\cleaned_dataset_flowbased\DoS\DoS SYN Flood\DoS-SYN_Flood4.pcap_Flow.csv
+================================================================================
+
+[Progreso: 6/30]
+
+================================================================================
+Limpiando: DoS-SYN_Flood5.pcap_Flow.csv
+Tipo de ataque: DoS
+Tamano: 925.48 MB
+================================================================================
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Filas originales: 1,795,088
+  Filas eliminadas: 155 (0.01%)
+  Filas finales: 1,794,933
+  Columnas originales: 84
+  Columnas finales: 75
+  Archivo guardado en: F:\Dataset\cleaned_dataset_flowbased\DoS\DoS SYN Flood\DoS-SYN_Flood5.pcap_Flow.csv
+================================================================================
+
+[Progreso: 7/30]
+
+================================================================================
+Limpiando: DoS-SYN_Flood6.pcap_Flow.csv
+Tipo de ataque: DoS
+Tamano: 789.88 MB
+================================================================================
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Filas originales: 1,503,778
+  Filas eliminadas: 246 (0.02%)
+  Filas finales: 1,503,532
+  Columnas originales: 84
+  Columnas finales: 75
+  Archivo guardado en: F:\Dataset\cleaned_dataset_flowbased\DoS\DoS SYN Flood\DoS-SYN_Flood6.pcap_Flow.csv
+================================================================================
+
+[Progreso: 8/30]
+
+================================================================================
+Limpiando: DoS-SYN_Flood7.pcap_Flow.csv
+Tipo de ataque: DoS
+Tamano: 703.60 MB
+================================================================================
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Filas originales: 1,404,314
+  Filas eliminadas: 256 (0.02%)
+  Filas finales: 1,404,058
+  Columnas originales: 84
+  Columnas finales: 75
+  Archivo guardado en: F:\Dataset\cleaned_dataset_flowbased\DoS\DoS SYN Flood\DoS-SYN_Flood7.pcap_Flow.csv
+================================================================================
+
+[Progreso: 9/30]
+
+================================================================================
+Limpiando: DoS-HTTP_Flood.pcap_Flow.csv
+Tipo de ataque: DoS
+Tamano: 387.37 MB
+================================================================================
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Filas originales: 932,513
+  Filas eliminadas: 41,539 (4.45%)
+  Filas finales: 890,974
+  Columnas originales: 84
+  Columnas finales: 75
+  Archivo guardado en: F:\Dataset\cleaned_dataset_flowbased\DoS\DoS-HTTP_Flood\DoS-HTTP_Flood.pcap_Flow.csv
+================================================================================
+
+[Progreso: 10/30]
+
+================================================================================
+Limpiando: DoS-HTTP_Flood1.pcap_Flow.csv
+Tipo de ataque: DoS
+Tamano: 299.31 MB
+================================================================================
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Filas originales: 710,231
+  Filas eliminadas: 39,265 (5.53%)
+  Filas finales: 670,966
+  Columnas originales: 84
+  Columnas finales: 75
+  Archivo guardado en: F:\Dataset\cleaned_dataset_flowbased\DoS\DoS-HTTP_Flood\DoS-HTTP_Flood1.pcap_Flow.csv
+================================================================================
+
+[Progreso: 11/30]
+
+================================================================================
+Limpiando: DoS-TCP_Flood.pcap_Flow.csv
+Tipo de ataque: DoS
+Tamano: 0.00 MB
+================================================================================
+[WARN] Archivo sin filas de datos, se guardo limpio con cabecera.
+
+[Progreso: 12/30]
+
+================================================================================
+Limpiando: DoS-TCP_Flood1.pcap_Flow.csv
+Tipo de ataque: DoS
+Tamano: 0.00 MB
+================================================================================
+[WARN] Archivo sin filas de datos, se guardo limpio con cabecera.
+
+[Progreso: 13/30]
+
+================================================================================
+Limpiando: DoS-TCP_Flood10.pcap_Flow.csv
+Tipo de ataque: DoS
+Tamano: 0.00 MB
+================================================================================
+[WARN] Archivo sin filas de datos, se guardo limpio con cabecera.
+
+[Progreso: 14/30]
+
+================================================================================
+Limpiando: DoS-TCP_Flood2.pcap_Flow.csv
+Tipo de ataque: DoS
+Tamano: 0.00 MB
+================================================================================
+[WARN] Archivo sin filas de datos, se guardo limpio con cabecera.
+
+[PROGRESO GUARDADO: 80 archivos procesados]
+
+[Progreso: 15/30]
+
+================================================================================
+Limpiando: DoS-TCP_Flood3.pcap_Flow.csv
+Tipo de ataque: DoS
+Tamano: 0.00 MB
+================================================================================
+[WARN] Archivo sin filas de datos, se guardo limpio con cabecera.
+
+[Progreso: 16/30]
+
+================================================================================
+Limpiando: DoS-UDP_Flood.pcap_Flow.csv
+Tipo de ataque: DoS
+Tamano: 499.13 MB
+================================================================================
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Filas originales: 934,001
+  Filas eliminadas: 194 (0.02%)
+  Filas finales: 933,807
+  Columnas originales: 84
+  Columnas finales: 75
+  Archivo guardado en: F:\Dataset\cleaned_dataset_flowbased\DoS\DoS-UDP_Flood\DoS-UDP_Flood.pcap_Flow.csv
+================================================================================
+
+[Progreso: 17/30]
+
+================================================================================
+Limpiando: DoS-UDP_Flood10.pcap_Flow.csv
+Tipo de ataque: DoS
+Tamano: 29.03 MB
+================================================================================
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Filas originales: 61,907
+  Filas eliminadas: 465 (0.75%)
+  Filas finales: 61,442
+  Columnas originales: 84
+  Columnas finales: 75
+  Archivo guardado en: F:\Dataset\cleaned_dataset_flowbased\DoS\DoS-UDP_Flood\DoS-UDP_Flood10.pcap_Flow.csv
+================================================================================
+
+[Progreso: 18/30]
+
+================================================================================
+Limpiando: DoS-UDP_Flood11.pcap_Flow.csv
+Tipo de ataque: DoS
+Tamano: 26.85 MB
+================================================================================
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Filas originales: 57,086
+  Filas eliminadas: 381 (0.67%)
+  Filas finales: 56,705
+  Columnas originales: 84
+  Columnas finales: 75
+  Archivo guardado en: F:\Dataset\cleaned_dataset_flowbased\DoS\DoS-UDP_Flood\DoS-UDP_Flood11.pcap_Flow.csv
+================================================================================
+
+[Progreso: 19/30]
+
+================================================================================
+Limpiando: DoS-UDP_Flood12.pcap_Flow.csv
+Tipo de ataque: DoS
+Tamano: 23.63 MB
+================================================================================
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Filas originales: 50,017
+  Filas eliminadas: 273 (0.55%)
+  Filas finales: 49,744
+  Columnas originales: 84
+  Columnas finales: 75
+  Archivo guardado en: F:\Dataset\cleaned_dataset_flowbased\DoS\DoS-UDP_Flood\DoS-UDP_Flood12.pcap_Flow.csv
+================================================================================
+
+[Progreso: 20/30]
+
+================================================================================
+Limpiando: DoS-UDP_Flood13.pcap_Flow.csv
+Tipo de ataque: DoS
+Tamano: 27.70 MB
+================================================================================
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Filas originales: 59,885
+  Filas eliminadas: 286 (0.48%)
+  Filas finales: 59,599
+  Columnas originales: 84
+  Columnas finales: 75
+  Archivo guardado en: F:\Dataset\cleaned_dataset_flowbased\DoS\DoS-UDP_Flood\DoS-UDP_Flood13.pcap_Flow.csv
+================================================================================
+
+[Progreso: 21/30]
+
+================================================================================
+Limpiando: DoS-UDP_Flood14.pcap_Flow.csv
+Tipo de ataque: DoS
+Tamano: 30.41 MB
+================================================================================
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Filas originales: 64,565
+  Filas eliminadas: 246 (0.38%)
+  Filas finales: 64,319
+  Columnas originales: 84
+  Columnas finales: 75
+  Archivo guardado en: F:\Dataset\cleaned_dataset_flowbased\DoS\DoS-UDP_Flood\DoS-UDP_Flood14.pcap_Flow.csv
+================================================================================
+
+[Progreso: 22/30]
+
+================================================================================
+Limpiando: DoS-UDP_Flood15.pcap_Flow.csv
+Tipo de ataque: DoS
+Tamano: 30.79 MB
+================================================================================
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Filas originales: 66,453
+  Filas eliminadas: 442 (0.67%)
+  Filas finales: 66,011
+  Columnas originales: 84
+  Columnas finales: 75
+  Archivo guardado en: F:\Dataset\cleaned_dataset_flowbased\DoS\DoS-UDP_Flood\DoS-UDP_Flood15.pcap_Flow.csv
+================================================================================
+
+[Progreso: 23/30]
+
+================================================================================
+Limpiando: DoS-UDP_Flood16.pcap_Flow.csv
+Tipo de ataque: DoS
+Tamano: 16.68 MB
+================================================================================
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Filas originales: 35,173
+  Filas eliminadas: 143 (0.41%)
+  Filas finales: 35,030
+  Columnas originales: 84
+  Columnas finales: 75
+  Archivo guardado en: F:\Dataset\cleaned_dataset_flowbased\DoS\DoS-UDP_Flood\DoS-UDP_Flood16.pcap_Flow.csv
+================================================================================
+
+[Progreso: 24/30]
+
+================================================================================
+Limpiando: DoS-UDP_Flood3.pcap_Flow.csv
+Tipo de ataque: DoS
+Tamano: 310.85 MB
+================================================================================
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Filas originales: 589,185
+  Filas eliminadas: 232 (0.04%)
+  Filas finales: 588,953
+  Columnas originales: 84
+  Columnas finales: 75
+  Archivo guardado en: F:\Dataset\cleaned_dataset_flowbased\DoS\DoS-UDP_Flood\DoS-UDP_Flood3.pcap_Flow.csv
+================================================================================
+
+[PROGRESO GUARDADO: 90 archivos procesados]
+
+[Progreso: 25/30]
+
+================================================================================
+Limpiando: DoS-UDP_Flood4.pcap_Flow.csv
+Tipo de ataque: DoS
+Tamano: 516.23 MB
+================================================================================
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Filas originales: 901,794
+  Filas eliminadas: 184 (0.02%)
+  Filas finales: 901,610
+  Columnas originales: 84
+  Columnas finales: 75
+  Archivo guardado en: F:\Dataset\cleaned_dataset_flowbased\DoS\DoS-UDP_Flood\DoS-UDP_Flood4.pcap_Flow.csv
+================================================================================
+
+[Progreso: 26/30]
+
+================================================================================
+Limpiando: DoS-UDP_Flood5.pcap_Flow.csv
+Tipo de ataque: DoS
+Tamano: 450.10 MB
+================================================================================
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Filas originales: 842,995
+  Filas eliminadas: 122 (0.01%)
+  Filas finales: 842,873
+  Columnas originales: 84
+  Columnas finales: 75
+  Archivo guardado en: F:\Dataset\cleaned_dataset_flowbased\DoS\DoS-UDP_Flood\DoS-UDP_Flood5.pcap_Flow.csv
+================================================================================
+
+[Progreso: 27/30]
+
+================================================================================
+Limpiando: DoS-UDP_Flood6.pcap_Flow.csv
+Tipo de ataque: DoS
+Tamano: 447.66 MB
+================================================================================
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Filas originales: 862,694
+  Filas eliminadas: 129 (0.01%)
+  Filas finales: 862,565
+  Columnas originales: 84
+  Columnas finales: 75
+  Archivo guardado en: F:\Dataset\cleaned_dataset_flowbased\DoS\DoS-UDP_Flood\DoS-UDP_Flood6.pcap_Flow.csv
+================================================================================
+
+[Progreso: 28/30]
+
+================================================================================
+Limpiando: DoS-UDP_Flood7.pcap_Flow.csv
+Tipo de ataque: DoS
+Tamano: 280.40 MB
+================================================================================
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Filas originales: 539,459
+  Filas eliminadas: 232 (0.04%)
+  Filas finales: 539,227
+  Columnas originales: 84
+  Columnas finales: 75
+  Archivo guardado en: F:\Dataset\cleaned_dataset_flowbased\DoS\DoS-UDP_Flood\DoS-UDP_Flood7.pcap_Flow.csv
+================================================================================
+
+[Progreso: 29/30]
+
+================================================================================
+Limpiando: DoS-UDP_Flood8.pcap_Flow.csv
+Tipo de ataque: DoS
+Tamano: 34.57 MB
+================================================================================
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Filas originales: 74,524
+  Filas eliminadas: 425 (0.57%)
+  Filas finales: 74,099
+  Columnas originales: 84
+  Columnas finales: 75
+  Archivo guardado en: F:\Dataset\cleaned_dataset_flowbased\DoS\DoS-UDP_Flood\DoS-UDP_Flood8.pcap_Flow.csv
+================================================================================
+
+[Progreso: 30/30]
+
+================================================================================
+Limpiando: DoS-UDP_Flood9.pcap_Flow.csv
+Tipo de ataque: DoS
+Tamano: 32.78 MB
+================================================================================
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Filas originales: 70,798
+  Filas eliminadas: 415 (0.59%)
+  Filas finales: 70,383
+  Columnas originales: 84
+  Columnas finales: 75
+  Archivo guardado en: F:\Dataset\cleaned_dataset_flowbased\DoS\DoS-UDP_Flood\DoS-UDP_Flood9.pcap_Flow.csv
+================================================================================
+
+
+################################################################################
+# CATEGORIA: Mirai (29 archivos)
+################################################################################
+
+[Progreso: 1/29]
+
+================================================================================
+Limpiando: Mirai-greeth_flood.pcap_Flow.csv
+Tipo de ataque: Mirai
+Tamano: 2.57 MB
+================================================================================
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Filas originales: 5,172
+  Filas eliminadas: 24 (0.46%)
+  Filas finales: 5,148
+  Columnas originales: 84
+  Columnas finales: 75
+  Archivo guardado en: F:\Dataset\cleaned_dataset_flowbased\Mirai\Mirai-greeth_flood.pcap_Flow.csv
+================================================================================
+
+[Progreso: 2/29]
+
+================================================================================
+Limpiando: Mirai-greeth_flood1.pcap_Flow.csv
+Tipo de ataque: Mirai
+Tamano: 5.17 MB
+================================================================================
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Filas originales: 10,856
+  Filas eliminadas: 10 (0.09%)
+  Filas finales: 10,846
+  Columnas originales: 84
+  Columnas finales: 75
+  Archivo guardado en: F:\Dataset\cleaned_dataset_flowbased\Mirai\Mirai-greeth_flood1.pcap_Flow.csv
+================================================================================
+
+[Progreso: 3/29]
+
+================================================================================
+Limpiando: Mirai-greeth_flood10.pcap_Flow.csv
+Tipo de ataque: Mirai
+Tamano: 4.09 MB
+================================================================================
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Filas originales: 8,187
+  Filas eliminadas: 10 (0.12%)
+  Filas finales: 8,177
+  Columnas originales: 84
+  Columnas finales: 75
+  Archivo guardado en: F:\Dataset\cleaned_dataset_flowbased\Mirai\Mirai-greeth_flood10.pcap_Flow.csv
+================================================================================
+
+[Progreso: 4/29]
+
+================================================================================
+Limpiando: Mirai-greeth_flood11.pcap_Flow.csv
+Tipo de ataque: Mirai
+Tamano: 4.21 MB
+================================================================================
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Filas originales: 8,377
+  Filas eliminadas: 9 (0.11%)
+  Filas finales: 8,368
+  Columnas originales: 84
+  Columnas finales: 75
+  Archivo guardado en: F:\Dataset\cleaned_dataset_flowbased\Mirai\Mirai-greeth_flood11.pcap_Flow.csv
+================================================================================
+
+[PROGRESO GUARDADO: 100 archivos procesados]
+
+[Progreso: 5/29]
+
+================================================================================
+Limpiando: Mirai-greeth_flood12.pcap_Flow.csv
+Tipo de ataque: Mirai
+Tamano: 3.29 MB
+================================================================================
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Filas originales: 6,423
+  Filas eliminadas: 30 (0.47%)
+  Filas finales: 6,393
+  Columnas originales: 84
+  Columnas finales: 75
+  Archivo guardado en: F:\Dataset\cleaned_dataset_flowbased\Mirai\Mirai-greeth_flood12.pcap_Flow.csv
+================================================================================
+
+[Progreso: 6/29]
+
+================================================================================
+Limpiando: Mirai-greeth_flood13.pcap_Flow.csv
+Tipo de ataque: Mirai
+Tamano: 5.23 MB
+================================================================================
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Filas originales: 10,306
+  Filas eliminadas: 42 (0.41%)
+  Filas finales: 10,264
+  Columnas originales: 84
+  Columnas finales: 75
+  Archivo guardado en: F:\Dataset\cleaned_dataset_flowbased\Mirai\Mirai-greeth_flood13.pcap_Flow.csv
+================================================================================
+
+[Progreso: 7/29]
+
+================================================================================
+Limpiando: Mirai-greeth_flood14.pcap_Flow.csv
+Tipo de ataque: Mirai
+Tamano: 1.51 MB
+================================================================================
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Filas originales: 2,977
+  Filas eliminadas: 0 (0.00%)
+  Filas finales: 2,977
+  Columnas originales: 84
+  Columnas finales: 75
+  Archivo guardado en: F:\Dataset\cleaned_dataset_flowbased\Mirai\Mirai-greeth_flood14.pcap_Flow.csv
+================================================================================
+
+[Progreso: 8/29]
+
+================================================================================
+Limpiando: Mirai-greeth_flood15.pcap_Flow.csv
+Tipo de ataque: Mirai
+Tamano: 1.69 MB
+================================================================================
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Filas originales: 3,247
+  Filas eliminadas: 4 (0.12%)
+  Filas finales: 3,243
+  Columnas originales: 84
+  Columnas finales: 75
+  Archivo guardado en: F:\Dataset\cleaned_dataset_flowbased\Mirai\Mirai-greeth_flood15.pcap_Flow.csv
+================================================================================
+
+[Progreso: 9/29]
+
+================================================================================
+Limpiando: Mirai-greeth_flood16.pcap_Flow.csv
+Tipo de ataque: Mirai
+Tamano: 2.24 MB
+================================================================================
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Filas originales: 4,438
+  Filas eliminadas: 0 (0.00%)
+  Filas finales: 4,438
+  Columnas originales: 84
+  Columnas finales: 75
+  Archivo guardado en: F:\Dataset\cleaned_dataset_flowbased\Mirai\Mirai-greeth_flood16.pcap_Flow.csv
+================================================================================
+
+[Progreso: 10/29]
+
+================================================================================
+Limpiando: Mirai-greeth_flood17.pcap_Flow.csv
+Tipo de ataque: Mirai
+Tamano: 1.46 MB
+================================================================================
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Filas originales: 2,790
+  Filas eliminadas: 2 (0.07%)
+  Filas finales: 2,788
+  Columnas originales: 84
+  Columnas finales: 75
+  Archivo guardado en: F:\Dataset\cleaned_dataset_flowbased\Mirai\Mirai-greeth_flood17.pcap_Flow.csv
+================================================================================
+
+[Progreso: 11/29]
+
+================================================================================
+Limpiando: Mirai-greeth_flood18.pcap_Flow.csv
+Tipo de ataque: Mirai
+Tamano: 1.67 MB
+================================================================================
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Filas originales: 3,265
+  Filas eliminadas: 2 (0.06%)
+  Filas finales: 3,263
+  Columnas originales: 84
+  Columnas finales: 75
+  Archivo guardado en: F:\Dataset\cleaned_dataset_flowbased\Mirai\Mirai-greeth_flood18.pcap_Flow.csv
+================================================================================
+
+[Progreso: 12/29]
+
+================================================================================
+Limpiando: Mirai-greeth_flood19.pcap_Flow.csv
+Tipo de ataque: Mirai
+Tamano: 1.76 MB
+================================================================================
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Filas originales: 3,481
+  Filas eliminadas: 5 (0.14%)
+  Filas finales: 3,476
+  Columnas originales: 84
+  Columnas finales: 75
+  Archivo guardado en: F:\Dataset\cleaned_dataset_flowbased\Mirai\Mirai-greeth_flood19.pcap_Flow.csv
+================================================================================
+
+[Progreso: 13/29]
+
+================================================================================
+Limpiando: Mirai-greeth_flood2.pcap_Flow.csv
+Tipo de ataque: Mirai
+Tamano: 2.00 MB
+================================================================================
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Filas originales: 4,071
+  Filas eliminadas: 2 (0.05%)
+  Filas finales: 4,069
+  Columnas originales: 84
+  Columnas finales: 75
+  Archivo guardado en: F:\Dataset\cleaned_dataset_flowbased\Mirai\Mirai-greeth_flood2.pcap_Flow.csv
+================================================================================
+
+[Progreso: 14/29]
+
+================================================================================
+Limpiando: Mirai-greeth_flood20.pcap_Flow.csv
+Tipo de ataque: Mirai
+Tamano: 2.11 MB
+================================================================================
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Filas originales: 4,100
+  Filas eliminadas: 6 (0.15%)
+  Filas finales: 4,094
+  Columnas originales: 84
+  Columnas finales: 75
+  Archivo guardado en: F:\Dataset\cleaned_dataset_flowbased\Mirai\Mirai-greeth_flood20.pcap_Flow.csv
+================================================================================
+
+[PROGRESO GUARDADO: 110 archivos procesados]
+
+[Progreso: 15/29]
+
+================================================================================
+Limpiando: Mirai-greeth_flood21.pcap_Flow.csv
+Tipo de ataque: Mirai
+Tamano: 2.33 MB
+================================================================================
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Filas originales: 4,507
+  Filas eliminadas: 3 (0.07%)
+  Filas finales: 4,504
+  Columnas originales: 84
+  Columnas finales: 75
+  Archivo guardado en: F:\Dataset\cleaned_dataset_flowbased\Mirai\Mirai-greeth_flood21.pcap_Flow.csv
+================================================================================
+
+[Progreso: 16/29]
+
+================================================================================
+Limpiando: Mirai-greeth_flood22.pcap_Flow.csv
+Tipo de ataque: Mirai
+Tamano: 3.38 MB
+================================================================================
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Filas originales: 6,609
+  Filas eliminadas: 20 (0.30%)
+  Filas finales: 6,589
+  Columnas originales: 84
+  Columnas finales: 75
+  Archivo guardado en: F:\Dataset\cleaned_dataset_flowbased\Mirai\Mirai-greeth_flood22.pcap_Flow.csv
+================================================================================
+
+[Progreso: 17/29]
+
+================================================================================
+Limpiando: Mirai-greeth_flood23.pcap_Flow.csv
+Tipo de ataque: Mirai
+Tamano: 2.36 MB
+================================================================================
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Filas originales: 4,572
+  Filas eliminadas: 6 (0.13%)
+  Filas finales: 4,566
+  Columnas originales: 84
+  Columnas finales: 75
+  Archivo guardado en: F:\Dataset\cleaned_dataset_flowbased\Mirai\Mirai-greeth_flood23.pcap_Flow.csv
+================================================================================
+
+[Progreso: 18/29]
+
+================================================================================
+Limpiando: Mirai-greeth_flood24.pcap_Flow.csv
+Tipo de ataque: Mirai
+Tamano: 1.33 MB
+================================================================================
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Filas originales: 2,546
+  Filas eliminadas: 2 (0.08%)
+  Filas finales: 2,544
+  Columnas originales: 84
+  Columnas finales: 75
+  Archivo guardado en: F:\Dataset\cleaned_dataset_flowbased\Mirai\Mirai-greeth_flood24.pcap_Flow.csv
+================================================================================
+
+[Progreso: 19/29]
+
+================================================================================
+Limpiando: Mirai-greeth_flood25.pcap_Flow.csv
+Tipo de ataque: Mirai
+Tamano: 1.28 MB
+================================================================================
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Filas originales: 2,500
+  Filas eliminadas: 1 (0.04%)
+  Filas finales: 2,499
+  Columnas originales: 84
+  Columnas finales: 75
+  Archivo guardado en: F:\Dataset\cleaned_dataset_flowbased\Mirai\Mirai-greeth_flood25.pcap_Flow.csv
+================================================================================
+
+[Progreso: 20/29]
+
+================================================================================
+Limpiando: Mirai-greeth_flood26.pcap_Flow.csv
+Tipo de ataque: Mirai
+Tamano: 2.88 MB
+================================================================================
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Filas originales: 5,482
+  Filas eliminadas: 8 (0.15%)
+  Filas finales: 5,474
+  Columnas originales: 84
+  Columnas finales: 75
+  Archivo guardado en: F:\Dataset\cleaned_dataset_flowbased\Mirai\Mirai-greeth_flood26.pcap_Flow.csv
+================================================================================
+
+[Progreso: 21/29]
+
+================================================================================
+Limpiando: Mirai-greeth_flood27.pcap_Flow.csv
+Tipo de ataque: Mirai
+Tamano: 3.78 MB
+================================================================================
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Filas originales: 7,602
+  Filas eliminadas: 13 (0.17%)
+  Filas finales: 7,589
+  Columnas originales: 84
+  Columnas finales: 75
+  Archivo guardado en: F:\Dataset\cleaned_dataset_flowbased\Mirai\Mirai-greeth_flood27.pcap_Flow.csv
+================================================================================
+
+[Progreso: 22/29]
+
+================================================================================
+Limpiando: Mirai-greeth_flood28.pcap_Flow.csv
+Tipo de ataque: Mirai
+Tamano: 4.27 MB
+================================================================================
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Filas originales: 8,451
+  Filas eliminadas: 8 (0.09%)
+  Filas finales: 8,443
+  Columnas originales: 84
+  Columnas finales: 75
+  Archivo guardado en: F:\Dataset\cleaned_dataset_flowbased\Mirai\Mirai-greeth_flood28.pcap_Flow.csv
+================================================================================
+
+[Progreso: 23/29]
+
+================================================================================
+Limpiando: Mirai-greeth_flood3.pcap_Flow.csv
+Tipo de ataque: Mirai
+Tamano: 2.23 MB
+================================================================================
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Filas originales: 4,647
+  Filas eliminadas: 1 (0.02%)
+  Filas finales: 4,646
+  Columnas originales: 84
+  Columnas finales: 75
+  Archivo guardado en: F:\Dataset\cleaned_dataset_flowbased\Mirai\Mirai-greeth_flood3.pcap_Flow.csv
+================================================================================
+
+[Progreso: 24/29]
+
+================================================================================
+Limpiando: Mirai-greeth_flood4.pcap_Flow.csv
+Tipo de ataque: Mirai
+Tamano: 4.26 MB
+================================================================================
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Filas originales: 9,012
+  Filas eliminadas: 8 (0.09%)
+  Filas finales: 9,004
+  Columnas originales: 84
+  Columnas finales: 75
+  Archivo guardado en: F:\Dataset\cleaned_dataset_flowbased\Mirai\Mirai-greeth_flood4.pcap_Flow.csv
+================================================================================
+
+[PROGRESO GUARDADO: 120 archivos procesados]
+
+[Progreso: 25/29]
+
+================================================================================
+Limpiando: Mirai-greeth_flood5.pcap_Flow.csv
+Tipo de ataque: Mirai
+Tamano: 1.90 MB
+================================================================================
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Filas originales: 3,873
+  Filas eliminadas: 0 (0.00%)
+  Filas finales: 3,873
+  Columnas originales: 84
+  Columnas finales: 75
+  Archivo guardado en: F:\Dataset\cleaned_dataset_flowbased\Mirai\Mirai-greeth_flood5.pcap_Flow.csv
+================================================================================
+
+[Progreso: 26/29]
+
+================================================================================
+Limpiando: Mirai-greeth_flood6.pcap_Flow.csv
+Tipo de ataque: Mirai
+Tamano: 5.51 MB
+================================================================================
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Filas originales: 11,786
+  Filas eliminadas: 28 (0.24%)
+  Filas finales: 11,758
+  Columnas originales: 84
+  Columnas finales: 75
+  Archivo guardado en: F:\Dataset\cleaned_dataset_flowbased\Mirai\Mirai-greeth_flood6.pcap_Flow.csv
+================================================================================
+
+[Progreso: 27/29]
+
+================================================================================
+Limpiando: Mirai-greeth_flood7.pcap_Flow.csv
+Tipo de ataque: Mirai
+Tamano: 3.70 MB
+================================================================================
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Filas originales: 7,789
+  Filas eliminadas: 5 (0.06%)
+  Filas finales: 7,784
+  Columnas originales: 84
+  Columnas finales: 75
+  Archivo guardado en: F:\Dataset\cleaned_dataset_flowbased\Mirai\Mirai-greeth_flood7.pcap_Flow.csv
+================================================================================
+
+[Progreso: 28/29]
+
+================================================================================
+Limpiando: Mirai-greeth_flood8.pcap_Flow.csv
+Tipo de ataque: Mirai
+Tamano: 2.63 MB
+================================================================================
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Filas originales: 5,443
+  Filas eliminadas: 2 (0.04%)
+  Filas finales: 5,441
+  Columnas originales: 84
+  Columnas finales: 75
+  Archivo guardado en: F:\Dataset\cleaned_dataset_flowbased\Mirai\Mirai-greeth_flood8.pcap_Flow.csv
+================================================================================
+
+[Progreso: 29/29]
+
+================================================================================
+Limpiando: Mirai-greeth_flood9.pcap_Flow.csv
+Tipo de ataque: Mirai
+Tamano: 5.88 MB
+================================================================================
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Filas originales: 12,079
+  Filas eliminadas: 20 (0.17%)
+  Filas finales: 12,059
+  Columnas originales: 84
+  Columnas finales: 75
+  Archivo guardado en: F:\Dataset\cleaned_dataset_flowbased\Mirai\Mirai-greeth_flood9.pcap_Flow.csv
+================================================================================
+
+
+################################################################################
+# CATEGORIA: Recon (1 archivos)
+################################################################################
+
+[Progreso: 1/1]
+
+================================================================================
+Limpiando: VulnerabilityScan.pcap_Flow.csv
+Tipo de ataque: Recon
+Tamano: 216.83 MB
+================================================================================
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Filas originales: 442,158
+  Filas eliminadas: 1,135 (0.26%)
+  Filas finales: 441,023
+  Columnas originales: 84
+  Columnas finales: 75
+  Archivo guardado en: F:\Dataset\cleaned_dataset_flowbased\Recon\VulnerabilityScan\VulnerabilityScan.pcap_Flow.csv
+================================================================================
+
+
+################################################################################
+# CATEGORIA: Spoofing (3 archivos)
+################################################################################
+
+[Progreso: 1/3]
+
+================================================================================
+Limpiando: MITM-ArpSpoofing.pcap_Flow.csv
+Tipo de ataque: Spoofing
+Tamano: 36.63 MB
+================================================================================
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Filas originales: 73,033
+  Filas eliminadas: 65 (0.09%)
+  Filas finales: 72,968
+  Columnas originales: 84
+  Columnas finales: 75
+  Archivo guardado en: F:\Dataset\cleaned_dataset_flowbased\Spoofing\ARP Spoofing\MITM-ArpSpoofing.pcap_Flow.csv
+================================================================================
+
+[Progreso: 2/3]
+
+================================================================================
+Limpiando: MITM-ArpSpoofing1.pcap_Flow.csv
+Tipo de ataque: Spoofing
+Tamano: 4.68 MB
+================================================================================
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Filas originales: 9,349
+  Filas eliminadas: 16 (0.17%)
+  Filas finales: 9,333
+  Columnas originales: 84
+  Columnas finales: 75
+  Archivo guardado en: F:\Dataset\cleaned_dataset_flowbased\Spoofing\ARP Spoofing\MITM-ArpSpoofing1.pcap_Flow.csv
+================================================================================
+
+[Progreso: 3/3]
+
+================================================================================
+Limpiando: DNS_Spoofing.pcap_Flow.csv
+Tipo de ataque: Spoofing
+Tamano: 38.72 MB
+================================================================================
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Filas originales: 74,856
+  Filas eliminadas: 92 (0.12%)
+  Filas finales: 74,764
+  Columnas originales: 84
+  Columnas finales: 75
+  Archivo guardado en: F:\Dataset\cleaned_dataset_flowbased\Spoofing\DNS Spoofing\DNS_Spoofing.pcap_Flow.csv
+================================================================================
+
+
+################################################################################
+# CATEGORIA: Web-Based (3 archivos)
+################################################################################
+
+[Progreso: 1/3]
+
+================================================================================
+Limpiando: SqlInjection.pcap_Flow.csv
+Tipo de ataque: Web-Based
+Tamano: 3.34 MB
+================================================================================
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Filas originales: 6,603
+  Filas eliminadas: 3 (0.05%)
+  Filas finales: 6,600
+  Columnas originales: 84
+  Columnas finales: 75
+  Archivo guardado en: F:\Dataset\cleaned_dataset_flowbased\Web-Based\sqlinjection\SqlInjection.pcap_Flow.csv
+================================================================================
+
+[PROGRESO GUARDADO: 130 archivos procesados]
+
+[Progreso: 2/3]
+
+================================================================================
+Limpiando: Uploading_Attack.pcap_Flow.csv
+Tipo de ataque: Web-Based
+Tamano: 0.68 MB
+================================================================================
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Filas originales: 1,348
+  Filas eliminadas: 0 (0.00%)
+  Filas finales: 1,348
+  Columnas originales: 84
+  Columnas finales: 75
+  Archivo guardado en: F:\Dataset\cleaned_dataset_flowbased\Web-Based\Uploading_Attack\Uploading_Attack.pcap_Flow.csv
+================================================================================
+
+[Progreso: 3/3]
+
+================================================================================
+Limpiando: XSS.pcap_Flow.csv
+Tipo de ataque: Web-Based
+Tamano: 1.76 MB
+================================================================================
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Filas originales: 3,377
+  Filas eliminadas: 0 (0.00%)
+  Filas finales: 3,377
+  Columnas originales: 84
+  Columnas finales: 75
+  Archivo guardado en: F:\Dataset\cleaned_dataset_flowbased\Web-Based\XSS\XSS.pcap_Flow.csv
+================================================================================
+
+
+====================================================================================================
+REPORTE FINAL DE LIMPIEZA DEL DATASET
+====================================================================================================
+Total de archivos procesados: 132
+Total de filas originales: 27,809,999
+Total de filas eliminadas: 96,469 (0.35%)
+Total de filas finales: 27,713,530
+
+Detalle por problema:
+  Missing values: 86,355
+  Duplicados: 6,734
+  Infinitos: 3,378
+  Negativos: 2
+  All zeros: 0
+
+Reporte detallado: F:\Dataset\cleaned_dataset_flowbased\cleaning_report_flowbased.csv
+Resumen por categoria: F:\Dataset\cleaned_dataset_flowbased\cleaning_summary_by_category.csv
+====================================================================================================
