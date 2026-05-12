@@ -1,3 +1,9 @@
+# =============================================================================
+# DATASET PREPARATION FOR MULTIVIEW TEST
+# -----------------------------------------------------------------------------
+# Este script genera un dataset balanceado para experimentos multivista,
+# asegurando que no haya fuga de datos y eliminando identificadores.
+
 import pandas as pd
 from pathlib import Path
 

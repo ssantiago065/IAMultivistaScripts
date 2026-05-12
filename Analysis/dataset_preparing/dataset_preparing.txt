@@ -1,0 +1,49 @@
+================================================================================
+GENERANDO DATASET ESTRUCTURADO PARA MULTIVISTA (SIN FUGA DE DATOS)
+================================================================================
+Entrada: F:\Dataset\cleaned_dataset_flowbased
+Salida:  F:\Dataset\dataset_poc_multivista.csv
+Límite máximo por clase: 100000
+
+Clases detectadas: Benign, BruteForce, DDoS, DoS, Mirai, Recon, Spoofing, Web-Based
+
+Procesando clase: Benign
+  OK: 183588 filas leidas, submuestreadas a 100000
+
+Procesando clase: BruteForce
+  OK: 3619 filas leidas, se mantienen intactas (sin duplicar)
+
+Procesando clase: DDoS
+  OK: 200000 filas leidas, submuestreadas a 100000
+
+Procesando clase: DoS
+  OK: 200000 filas leidas, submuestreadas a 100000
+
+Procesando clase: Mirai
+  OK: 156817 filas leidas, submuestreadas a 100000
+
+Procesando clase: Recon
+  OK: 200000 filas leidas, submuestreadas a 100000
+
+Procesando clase: Spoofing
+  OK: 157065 filas leidas, submuestreadas a 100000
+
+Procesando clase: Web-Based
+  OK: 11325 filas leidas, se mantienen intactas (sin duplicar)
+
+================================================================================
+PROCESO COMPLETADO
+================================================================================
+Archivo guardado en: F:\Dataset\dataset_poc_multivista.csv
+Dimensiones finales: (614944, 71)
+Distribucion real de clases (Lista para Train/Test split):
+Label
+DoS           100000
+Spoofing      100000
+Recon         100000
+DDoS          100000
+Benign        100000
+Mirai         100000
+Web-Based      11325
+BruteForce      3619
+Name: count, dtype: int64
