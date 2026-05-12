@@ -1,0 +1,6029 @@
+====================================================================================================
+ANÁLISIS DE DATA PROFILING - DATASET IOT
+====================================================================================================
+Dataset: F:\Dataset\Anomaly Detection - Flow Based features
+Salida: F:\Dataset\profiling_results.json
+Modo duplicados: global
+
+
+################################################################################
+# CATEGORÍA: Benign (4 archivos a analizar)
+################################################################################
+
+================================================================================
+Analizando: BenignTraffic.pcap_Flow.csv
+Tipo de ataque: Benign
+================================================================================
+
+Dimensiones originales: (183630, 84)
+
+1. ANÁLISIS DE VALORES FALTANTES:
+   - Flow Bytes/s: 10 (0.01%)
+
+2. ANÁLISIS DE FILAS DUPLICADAS:
+   - Filas duplicadas: 7
+
+3. ANÁLISIS DE COLUMNAS CONSTANTES:
+   - Bwd PSH Flags
+   - Bwd URG Flags
+   - Fwd Bulk Rate Avg
+   - Fwd Bytes/Bulk Avg
+   - Fwd Packet/Bulk Avg
+   - Fwd URG Flags
+   - URG Flag Count
+
+4. ANÁLISIS DE COLUMNAS CASI CONSTANTES (>99%):
+   - CWR Flag Count: 99.62%
+   - ECE Flag Count: 99.62%
+
+5. ANÁLISIS DE FILAS CON TODOS LOS VALORES EN CERO:
+   - Filas con todos los valores en 0: 0
+
+6. ANÁLISIS DE VALORES INFINITOS:
+   - Flow Bytes/s: 25 valores infinitos
+   - Flow Packets/s: 35 valores infinitos
+
+7. ANÁLISIS DE VALORES NEGATIVOS ANÓMALOS:
+   [OK] No se encontraron valores negativos anomalos
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Total de filas a eliminar: 42 (0.02%)
+  Filas que permanecerán: 183588
+  Muestra de índices marcados: 42
+================================================================================
+
+================================================================================
+Analizando: BenignTraffic1.pcap_Flow.csv
+Tipo de ataque: Benign
+================================================================================
+
+Dimensiones originales: (84526, 84)
+
+1. ANÁLISIS DE VALORES FALTANTES:
+   - Flow Bytes/s: 7 (0.01%)
+
+2. ANÁLISIS DE FILAS DUPLICADAS:
+   - Filas duplicadas: 4
+
+3. ANÁLISIS DE COLUMNAS CONSTANTES:
+   - Bwd PSH Flags
+   - Bwd URG Flags
+   - Fwd Bulk Rate Avg
+   - Fwd Bytes/Bulk Avg
+   - Fwd Packet/Bulk Avg
+   - Fwd URG Flags
+   - URG Flag Count
+
+4. ANÁLISIS DE COLUMNAS CASI CONSTANTES (>99%):
+   - CWR Flag Count: 99.16%
+   - ECE Flag Count: 99.16%
+
+5. ANÁLISIS DE FILAS CON TODOS LOS VALORES EN CERO:
+   - Filas con todos los valores en 0: 0
+
+6. ANÁLISIS DE VALORES INFINITOS:
+   - Flow Bytes/s: 28 valores infinitos
+   - Flow Packets/s: 35 valores infinitos
+
+7. ANÁLISIS DE VALORES NEGATIVOS ANÓMALOS:
+   [OK] No se encontraron valores negativos anomalos
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Total de filas a eliminar: 39 (0.05%)
+  Filas que permanecerán: 84487
+  Muestra de índices marcados: 39
+================================================================================
+
+================================================================================
+Analizando: BenignTraffic2.pcap_Flow.csv
+Tipo de ataque: Benign
+================================================================================
+
+Dimensiones originales: (91279, 84)
+
+1. ANÁLISIS DE VALORES FALTANTES:
+   - Flow Bytes/s: 14 (0.02%)
+
+2. ANÁLISIS DE FILAS DUPLICADAS:
+   - Filas duplicadas: 4
+
+3. ANÁLISIS DE COLUMNAS CONSTANTES:
+   - Bwd PSH Flags
+   - Bwd URG Flags
+   - Fwd Bulk Rate Avg
+   - Fwd Bytes/Bulk Avg
+   - Fwd Packet/Bulk Avg
+   - Fwd URG Flags
+   - URG Flag Count
+
+4. ANÁLISIS DE COLUMNAS CASI CONSTANTES (>99%):
+   - CWR Flag Count: 99.15%
+   - ECE Flag Count: 99.14%
+
+5. ANÁLISIS DE FILAS CON TODOS LOS VALORES EN CERO:
+   - Filas con todos los valores en 0: 0
+
+6. ANÁLISIS DE VALORES INFINITOS:
+   - Flow Bytes/s: 31 valores infinitos
+   - Flow Packets/s: 45 valores infinitos
+
+7. ANÁLISIS DE VALORES NEGATIVOS ANÓMALOS:
+   [OK] No se encontraron valores negativos anomalos
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Total de filas a eliminar: 49 (0.05%)
+  Filas que permanecerán: 91230
+  Muestra de índices marcados: 49
+================================================================================
+
+================================================================================
+Analizando: BenignTraffic3.pcap_Flow.csv
+Tipo de ataque: Benign
+================================================================================
+
+Dimensiones originales: (38895, 84)
+
+1. ANÁLISIS DE VALORES FALTANTES:
+   - Flow Bytes/s: 1 (0.00%)
+
+2. ANÁLISIS DE FILAS DUPLICADAS:
+   - Filas duplicadas: 1
+
+3. ANÁLISIS DE COLUMNAS CONSTANTES:
+   - Bwd PSH Flags
+   - Bwd URG Flags
+   - Fwd Bulk Rate Avg
+   - Fwd Bytes/Bulk Avg
+   - Fwd Packet/Bulk Avg
+   - Fwd URG Flags
+   - URG Flag Count
+
+4. ANÁLISIS DE COLUMNAS CASI CONSTANTES (>99%):
+   - CWR Flag Count: 99.15%
+   - ECE Flag Count: 99.15%
+
+5. ANÁLISIS DE FILAS CON TODOS LOS VALORES EN CERO:
+   - Filas con todos los valores en 0: 0
+
+6. ANÁLISIS DE VALORES INFINITOS:
+   - Flow Bytes/s: 16 valores infinitos
+   - Flow Packets/s: 17 valores infinitos
+
+7. ANÁLISIS DE VALORES NEGATIVOS ANÓMALOS:
+   [OK] No se encontraron valores negativos anomalos
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Total de filas a eliminar: 18 (0.05%)
+  Filas que permanecerán: 38877
+  Muestra de índices marcados: 18
+================================================================================
+
+
+################################################################################
+# CATEGORÍA: BruteForce (1 archivos a analizar)
+################################################################################
+
+================================================================================
+Analizando: DictionaryBruteForce.pcap_Flow.csv
+Tipo de ataque: BruteForce
+================================================================================
+
+Dimensiones originales: (3619, 84)
+
+1. ANÁLISIS DE VALORES FALTANTES:
+   [OK] No se encontraron valores faltantes
+
+2. ANÁLISIS DE FILAS DUPLICADAS:
+   - Filas duplicadas: 0
+
+3. ANÁLISIS DE COLUMNAS CONSTANTES:
+   - Bwd PSH Flags
+   - Bwd URG Flags
+   - CWR Flag Count
+   - ECE Flag Count
+   - Fwd Bulk Rate Avg
+   - Fwd Bytes/Bulk Avg
+   - Fwd Packet/Bulk Avg
+   - Fwd URG Flags
+   - URG Flag Count
+
+4. ANÁLISIS DE COLUMNAS CASI CONSTANTES (>99%):
+   - RST Flag Count: 99.81%
+
+5. ANÁLISIS DE FILAS CON TODOS LOS VALORES EN CERO:
+   - Filas con todos los valores en 0: 0
+
+6. ANÁLISIS DE VALORES INFINITOS:
+   [OK] No se encontraron valores infinitos
+
+7. ANÁLISIS DE VALORES NEGATIVOS ANÓMALOS:
+   [OK] No se encontraron valores negativos anomalos
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Total de filas a eliminar: 0 (0.00%)
+  Filas que permanecerán: 3619
+  Muestra de índices marcados: 0
+================================================================================
+
+
+################################################################################
+# CATEGORÍA: DDoS (61 archivos a analizar)
+################################################################################
+
+================================================================================
+Analizando: DDoS-ACK_Fragmentation.pcap_Flow.csv
+Tipo de ataque: DDoS
+================================================================================
+
+Dimensiones originales: (323886, 84)
+
+1. ANÁLISIS DE VALORES FALTANTES:
+   - Flow Bytes/s: 5 (0.00%)
+
+2. ANÁLISIS DE FILAS DUPLICADAS:
+   - Filas duplicadas: 10
+
+3. ANÁLISIS DE COLUMNAS CONSTANTES:
+   - Bwd PSH Flags
+   - Bwd URG Flags
+   - Fwd Bulk Rate Avg
+   - Fwd Bytes/Bulk Avg
+   - Fwd Packet/Bulk Avg
+   - Fwd URG Flags
+   - URG Flag Count
+
+4. ANÁLISIS DE COLUMNAS CASI CONSTANTES (>99%):
+   - Bwd Packet Length Std: 99.56%
+   - Bwd IAT Std: 99.21%
+   - Fwd PSH Flags: 99.81%
+   - FIN Flag Count: 99.69%
+   - SYN Flag Count: 99.60%
+   - PSH Flag Count: 99.56%
+   - CWR Flag Count: 99.98%
+   - ECE Flag Count: 99.99%
+   - Bwd Bytes/Bulk Avg: 99.47%
+   - Bwd Packet/Bulk Avg: 99.47%
+   - Bwd Bulk Rate Avg: 99.47%
+   - Active Std: 99.69%
+
+5. ANÁLISIS DE FILAS CON TODOS LOS VALORES EN CERO:
+   - Filas con todos los valores en 0: 0
+
+6. ANÁLISIS DE VALORES INFINITOS:
+   - Flow Bytes/s: 5 valores infinitos
+   - Flow Packets/s: 10 valores infinitos
+
+7. ANÁLISIS DE VALORES NEGATIVOS ANÓMALOS:
+   [OK] No se encontraron valores negativos anomalos
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Total de filas a eliminar: 20 (0.01%)
+  Filas que permanecerán: 323866
+  Muestra de índices marcados: 20
+================================================================================
+
+================================================================================
+Analizando: DDoS-ACK_Fragmentation1.pcap_Flow.csv
+Tipo de ataque: DDoS
+================================================================================
+
+Dimensiones originales: (137172, 84)
+
+1. ANÁLISIS DE VALORES FALTANTES:
+   - Flow Bytes/s: 2 (0.00%)
+
+2. ANÁLISIS DE FILAS DUPLICADAS:
+   - Filas duplicadas: 5
+
+3. ANÁLISIS DE COLUMNAS CONSTANTES:
+   - Bwd PSH Flags
+   - Bwd URG Flags
+   - Fwd Bulk Rate Avg
+   - Fwd Bytes/Bulk Avg
+   - Fwd Packet/Bulk Avg
+   - Fwd URG Flags
+   - URG Flag Count
+
+4. ANÁLISIS DE COLUMNAS CASI CONSTANTES (>99%):
+   - Fwd PSH Flags: 99.61%
+   - FIN Flag Count: 99.18%
+   - RST Flag Count: 99.12%
+   - CWR Flag Count: 99.96%
+   - ECE Flag Count: 99.97%
+   - Active Std: 99.25%
+
+5. ANÁLISIS DE FILAS CON TODOS LOS VALORES EN CERO:
+   - Filas con todos los valores en 0: 0
+
+6. ANÁLISIS DE VALORES INFINITOS:
+   - Flow Bytes/s: 4 valores infinitos
+   - Flow Packets/s: 6 valores infinitos
+
+7. ANÁLISIS DE VALORES NEGATIVOS ANÓMALOS:
+   [OK] No se encontraron valores negativos anomalos
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Total de filas a eliminar: 11 (0.01%)
+  Filas que permanecerán: 137161
+  Muestra de índices marcados: 11
+================================================================================
+
+================================================================================
+Analizando: DDoS-ACK_Fragmentation10.pcap_Flow.csv
+Tipo de ataque: DDoS
+================================================================================
+
+Dimensiones originales: (166796, 84)
+
+1. ANÁLISIS DE VALORES FALTANTES:
+   - Flow Bytes/s: 7 (0.00%)
+
+2. ANÁLISIS DE FILAS DUPLICADAS:
+   - Filas duplicadas: 4
+
+3. ANÁLISIS DE COLUMNAS CONSTANTES:
+   - Bwd PSH Flags
+   - Bwd URG Flags
+   - Fwd Bulk Rate Avg
+   - Fwd Bytes/Bulk Avg
+   - Fwd Packet/Bulk Avg
+   - Fwd URG Flags
+   - URG Flag Count
+
+4. ANÁLISIS DE COLUMNAS CASI CONSTANTES (>99%):
+   - Bwd Packet Length Std: 99.06%
+   - Fwd PSH Flags: 99.60%
+   - FIN Flag Count: 99.22%
+   - SYN Flag Count: 99.10%
+   - CWR Flag Count: 99.96%
+   - ECE Flag Count: 99.96%
+   - Bwd Bytes/Bulk Avg: 99.14%
+   - Bwd Packet/Bulk Avg: 99.14%
+   - Bwd Bulk Rate Avg: 99.14%
+   - Active Std: 99.38%
+
+5. ANÁLISIS DE FILAS CON TODOS LOS VALORES EN CERO:
+   - Filas con todos los valores en 0: 0
+
+6. ANÁLISIS DE VALORES INFINITOS:
+   - Flow Bytes/s: 2 valores infinitos
+   - Flow Packets/s: 9 valores infinitos
+
+7. ANÁLISIS DE VALORES NEGATIVOS ANÓMALOS:
+   [OK] No se encontraron valores negativos anomalos
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Total de filas a eliminar: 13 (0.01%)
+  Filas que permanecerán: 166783
+  Muestra de índices marcados: 13
+================================================================================
+
+================================================================================
+Analizando: DDoS-ACK_Fragmentation11.pcap_Flow.csv
+Tipo de ataque: DDoS
+================================================================================
+
+Dimensiones originales: (198622, 84)
+
+1. ANÁLISIS DE VALORES FALTANTES:
+   - Flow Bytes/s: 1 (0.00%)
+
+2. ANÁLISIS DE FILAS DUPLICADAS:
+   - Filas duplicadas: 1
+
+3. ANÁLISIS DE COLUMNAS CONSTANTES:
+   - Bwd PSH Flags
+   - Bwd URG Flags
+   - Fwd Bulk Rate Avg
+   - Fwd Bytes/Bulk Avg
+   - Fwd Packet/Bulk Avg
+   - Fwd URG Flags
+   - URG Flag Count
+
+4. ANÁLISIS DE COLUMNAS CASI CONSTANTES (>99%):
+   - Fwd Packet Length Std: 99.26%
+   - Bwd Packet Length Std: 99.35%
+   - Fwd PSH Flags: 99.78%
+   - FIN Flag Count: 99.41%
+   - SYN Flag Count: 99.34%
+   - PSH Flag Count: 99.31%
+   - CWR Flag Count: 99.97%
+   - ECE Flag Count: 99.97%
+   - Bwd Bytes/Bulk Avg: 99.47%
+   - Bwd Packet/Bulk Avg: 99.47%
+   - Bwd Bulk Rate Avg: 99.47%
+   - Active Std: 99.60%
+
+5. ANÁLISIS DE FILAS CON TODOS LOS VALORES EN CERO:
+   - Filas con todos los valores en 0: 0
+
+6. ANÁLISIS DE VALORES INFINITOS:
+   - Flow Bytes/s: 2 valores infinitos
+   - Flow Packets/s: 3 valores infinitos
+
+7. ANÁLISIS DE VALORES NEGATIVOS ANÓMALOS:
+   [OK] No se encontraron valores negativos anomalos
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Total de filas a eliminar: 4 (0.00%)
+  Filas que permanecerán: 198618
+  Muestra de índices marcados: 4
+================================================================================
+
+================================================================================
+Analizando: DDoS-ACK_Fragmentation12.pcap_Flow.csv
+Tipo de ataque: DDoS
+================================================================================
+
+Dimensiones originales: (37292, 84)
+
+1. ANÁLISIS DE VALORES FALTANTES:
+   - Flow Bytes/s: 2 (0.01%)
+
+2. ANÁLISIS DE FILAS DUPLICADAS:
+   - Filas duplicadas: 3
+
+3. ANÁLISIS DE COLUMNAS CONSTANTES:
+   - Bwd PSH Flags
+   - Bwd URG Flags
+   - Fwd Bulk Rate Avg
+   - Fwd Bytes/Bulk Avg
+   - Fwd Packet/Bulk Avg
+   - Fwd URG Flags
+   - URG Flag Count
+
+4. ANÁLISIS DE COLUMNAS CASI CONSTANTES (>99%):
+   - CWR Flag Count: 99.95%
+   - ECE Flag Count: 99.95%
+
+5. ANÁLISIS DE FILAS CON TODOS LOS VALORES EN CERO:
+   - Filas con todos los valores en 0: 0
+
+6. ANÁLISIS DE VALORES INFINITOS:
+   - Flow Bytes/s: 4 valores infinitos
+   - Flow Packets/s: 6 valores infinitos
+
+7. ANÁLISIS DE VALORES NEGATIVOS ANÓMALOS:
+   [OK] No se encontraron valores negativos anomalos
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Total de filas a eliminar: 9 (0.02%)
+  Filas que permanecerán: 37283
+  Muestra de índices marcados: 9
+================================================================================
+
+================================================================================
+Analizando: DDoS-ACK_Fragmentation2.pcap_Flow.csv
+Tipo de ataque: DDoS
+================================================================================
+
+Dimensiones originales: (121409, 84)
+
+1. ANÁLISIS DE VALORES FALTANTES:
+   - Flow Bytes/s: 12 (0.01%)
+
+2. ANÁLISIS DE FILAS DUPLICADAS:
+   - Filas duplicadas: 6
+
+3. ANÁLISIS DE COLUMNAS CONSTANTES:
+   - Bwd PSH Flags
+   - Bwd URG Flags
+   - Fwd Bulk Rate Avg
+   - Fwd Bytes/Bulk Avg
+   - Fwd Packet/Bulk Avg
+   - Fwd URG Flags
+   - URG Flag Count
+
+4. ANÁLISIS DE COLUMNAS CASI CONSTANTES (>99%):
+   - Fwd PSH Flags: 99.54%
+   - RST Flag Count: 99.01%
+   - CWR Flag Count: 99.97%
+   - ECE Flag Count: 99.97%
+   - Active Std: 99.02%
+
+5. ANÁLISIS DE FILAS CON TODOS LOS VALORES EN CERO:
+   - Filas con todos los valores en 0: 0
+
+6. ANÁLISIS DE VALORES INFINITOS:
+   - Flow Bytes/s: 2 valores infinitos
+   - Flow Packets/s: 14 valores infinitos
+
+7. ANÁLISIS DE VALORES NEGATIVOS ANÓMALOS:
+   [OK] No se encontraron valores negativos anomalos
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Total de filas a eliminar: 18 (0.01%)
+  Filas que permanecerán: 121391
+  Muestra de índices marcados: 18
+================================================================================
+
+================================================================================
+Analizando: DDoS-ACK_Fragmentation3.pcap_Flow.csv
+Tipo de ataque: DDoS
+================================================================================
+
+Dimensiones originales: (174443, 84)
+
+1. ANÁLISIS DE VALORES FALTANTES:
+   - Flow Bytes/s: 5 (0.00%)
+
+2. ANÁLISIS DE FILAS DUPLICADAS:
+   - Filas duplicadas: 7
+
+3. ANÁLISIS DE COLUMNAS CONSTANTES:
+   - Bwd PSH Flags
+   - Bwd URG Flags
+   - Fwd Bulk Rate Avg
+   - Fwd Bytes/Bulk Avg
+   - Fwd Packet/Bulk Avg
+   - Fwd URG Flags
+   - URG Flag Count
+
+4. ANÁLISIS DE COLUMNAS CASI CONSTANTES (>99%):
+   - Bwd Packet Length Std: 99.10%
+   - Fwd PSH Flags: 99.70%
+   - FIN Flag Count: 99.22%
+   - PSH Flag Count: 99.04%
+   - CWR Flag Count: 99.99%
+   - ECE Flag Count: 99.99%
+   - Bwd Bytes/Bulk Avg: 99.02%
+   - Bwd Packet/Bulk Avg: 99.02%
+   - Bwd Bulk Rate Avg: 99.02%
+   - Active Std: 99.40%
+
+5. ANÁLISIS DE FILAS CON TODOS LOS VALORES EN CERO:
+   - Filas con todos los valores en 0: 0
+
+6. ANÁLISIS DE VALORES INFINITOS:
+   - Flow Packets/s: 5 valores infinitos
+
+7. ANÁLISIS DE VALORES NEGATIVOS ANÓMALOS:
+   [OK] No se encontraron valores negativos anomalos
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Total de filas a eliminar: 12 (0.01%)
+  Filas que permanecerán: 174431
+  Muestra de índices marcados: 12
+================================================================================
+
+================================================================================
+Analizando: DDoS-ACK_Fragmentation4.pcap_Flow.csv
+Tipo de ataque: DDoS
+================================================================================
+
+Dimensiones originales: (152216, 84)
+
+1. ANÁLISIS DE VALORES FALTANTES:
+   - Flow Bytes/s: 11 (0.01%)
+
+2. ANÁLISIS DE FILAS DUPLICADAS:
+   - Filas duplicadas: 3
+
+3. ANÁLISIS DE COLUMNAS CONSTANTES:
+   - Bwd PSH Flags
+   - Bwd URG Flags
+   - Fwd Bulk Rate Avg
+   - Fwd Bytes/Bulk Avg
+   - Fwd Packet/Bulk Avg
+   - Fwd URG Flags
+   - URG Flag Count
+
+4. ANÁLISIS DE COLUMNAS CASI CONSTANTES (>99%):
+   - Bwd Packet Length Std: 99.22%
+   - Fwd PSH Flags: 99.68%
+   - FIN Flag Count: 99.25%
+   - SYN Flag Count: 99.17%
+   - PSH Flag Count: 99.10%
+   - CWR Flag Count: 99.99%
+   - ECE Flag Count: 99.99%
+   - Bwd Bytes/Bulk Avg: 99.19%
+   - Bwd Packet/Bulk Avg: 99.19%
+   - Bwd Bulk Rate Avg: 99.19%
+   - Active Std: 99.45%
+
+5. ANÁLISIS DE FILAS CON TODOS LOS VALORES EN CERO:
+   - Filas con todos los valores en 0: 0
+
+6. ANÁLISIS DE VALORES INFINITOS:
+   - Flow Bytes/s: 12 valores infinitos
+   - Flow Packets/s: 23 valores infinitos
+
+7. ANÁLISIS DE VALORES NEGATIVOS ANÓMALOS:
+   [OK] No se encontraron valores negativos anomalos
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Total de filas a eliminar: 23 (0.02%)
+  Filas que permanecerán: 152193
+  Muestra de índices marcados: 23
+================================================================================
+
+================================================================================
+Analizando: DDoS-ACK_Fragmentation5.pcap_Flow.csv
+Tipo de ataque: DDoS
+================================================================================
+
+Dimensiones originales: (209344, 84)
+
+1. ANÁLISIS DE VALORES FALTANTES:
+   [OK] No se encontraron valores faltantes
+
+2. ANÁLISIS DE FILAS DUPLICADAS:
+   - Filas duplicadas: 0
+
+3. ANÁLISIS DE COLUMNAS CONSTANTES:
+   - Bwd PSH Flags
+   - Bwd URG Flags
+   - Fwd Bulk Rate Avg
+   - Fwd Bytes/Bulk Avg
+   - Fwd Packet/Bulk Avg
+   - Fwd URG Flags
+   - URG Flag Count
+
+4. ANÁLISIS DE COLUMNAS CASI CONSTANTES (>99%):
+   - Fwd Packet Length Std: 99.37%
+   - Bwd Packet Length Std: 99.57%
+   - Bwd IAT Total: 99.06%
+   - Bwd IAT Mean: 99.06%
+   - Bwd IAT Std: 99.36%
+   - Bwd IAT Max: 99.06%
+   - Bwd IAT Min: 99.10%
+   - Fwd PSH Flags: 99.84%
+   - FIN Flag Count: 99.65%
+   - SYN Flag Count: 99.50%
+   - PSH Flag Count: 99.52%
+   - CWR Flag Count: 99.99%
+   - ECE Flag Count: 99.99%
+   - Bwd Bytes/Bulk Avg: 99.55%
+   - Bwd Packet/Bulk Avg: 99.55%
+   - Bwd Bulk Rate Avg: 99.55%
+   - Subflow Bwd Bytes: 99.44%
+   - Bwd Init Win Bytes: 99.34%
+   - Active Mean: 99.21%
+   - Active Std: 99.75%
+   - Active Max: 99.21%
+   - Active Min: 99.21%
+
+5. ANÁLISIS DE FILAS CON TODOS LOS VALORES EN CERO:
+   - Filas con todos los valores en 0: 0
+
+6. ANÁLISIS DE VALORES INFINITOS:
+   [OK] No se encontraron valores infinitos
+
+7. ANÁLISIS DE VALORES NEGATIVOS ANÓMALOS:
+   [OK] No se encontraron valores negativos anomalos
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Total de filas a eliminar: 0 (0.00%)
+  Filas que permanecerán: 209344
+  Muestra de índices marcados: 0
+================================================================================
+
+================================================================================
+Analizando: DDoS-ACK_Fragmentation6.pcap_Flow.csv
+Tipo de ataque: DDoS
+================================================================================
+
+Dimensiones originales: (209790, 84)
+
+1. ANÁLISIS DE VALORES FALTANTES:
+   [OK] No se encontraron valores faltantes
+
+2. ANÁLISIS DE FILAS DUPLICADAS:
+   - Filas duplicadas: 3
+
+3. ANÁLISIS DE COLUMNAS CONSTANTES:
+   - Bwd PSH Flags
+   - Bwd URG Flags
+   - Fwd Bulk Rate Avg
+   - Fwd Bytes/Bulk Avg
+   - Fwd Packet/Bulk Avg
+   - Fwd URG Flags
+   - URG Flag Count
+
+4. ANÁLISIS DE COLUMNAS CASI CONSTANTES (>99%):
+   - Fwd Packet Length Std: 99.56%
+   - Bwd Packet Length Std: 99.64%
+   - Bwd IAT Std: 99.28%
+   - Bwd IAT Min: 99.00%
+   - Fwd PSH Flags: 99.83%
+   - FIN Flag Count: 99.70%
+   - SYN Flag Count: 99.56%
+   - PSH Flag Count: 99.60%
+   - CWR Flag Count: 99.98%
+   - ECE Flag Count: 99.98%
+   - Bwd Bytes/Bulk Avg: 99.58%
+   - Bwd Packet/Bulk Avg: 99.58%
+   - Bwd Bulk Rate Avg: 99.58%
+   - Subflow Bwd Bytes: 99.27%
+   - Active Std: 99.73%
+
+5. ANÁLISIS DE FILAS CON TODOS LOS VALORES EN CERO:
+   - Filas con todos los valores en 0: 0
+
+6. ANÁLISIS DE VALORES INFINITOS:
+   - Flow Bytes/s: 2 valores infinitos
+   - Flow Packets/s: 2 valores infinitos
+
+7. ANÁLISIS DE VALORES NEGATIVOS ANÓMALOS:
+   [OK] No se encontraron valores negativos anomalos
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Total de filas a eliminar: 5 (0.00%)
+  Filas que permanecerán: 209785
+  Muestra de índices marcados: 5
+================================================================================
+
+================================================================================
+Analizando: DDoS-ACK_Fragmentation7.pcap_Flow.csv
+Tipo de ataque: DDoS
+================================================================================
+
+Dimensiones originales: (127543, 84)
+
+1. ANÁLISIS DE VALORES FALTANTES:
+   - Flow Bytes/s: 7 (0.01%)
+
+2. ANÁLISIS DE FILAS DUPLICADAS:
+   - Filas duplicadas: 15
+
+3. ANÁLISIS DE COLUMNAS CONSTANTES:
+   - Bwd PSH Flags
+   - Bwd URG Flags
+   - Fwd Bulk Rate Avg
+   - Fwd Bytes/Bulk Avg
+   - Fwd Packet/Bulk Avg
+   - Fwd URG Flags
+   - URG Flag Count
+
+4. ANÁLISIS DE COLUMNAS CASI CONSTANTES (>99%):
+   - Fwd PSH Flags: 99.53%
+   - FIN Flag Count: 99.06%
+   - CWR Flag Count: 99.92%
+   - ECE Flag Count: 99.92%
+   - Active Std: 99.24%
+
+5. ANÁLISIS DE FILAS CON TODOS LOS VALORES EN CERO:
+   - Filas con todos los valores en 0: 0
+
+6. ANÁLISIS DE VALORES INFINITOS:
+   - Flow Bytes/s: 2 valores infinitos
+   - Flow Packets/s: 9 valores infinitos
+
+7. ANÁLISIS DE VALORES NEGATIVOS ANÓMALOS:
+   [OK] No se encontraron valores negativos anomalos
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Total de filas a eliminar: 24 (0.02%)
+  Filas que permanecerán: 127519
+  Muestra de índices marcados: 24
+================================================================================
+
+================================================================================
+Analizando: DDoS-ACK_Fragmentation8.pcap_Flow.csv
+Tipo de ataque: DDoS
+================================================================================
+
+Dimensiones originales: (179379, 84)
+
+1. ANÁLISIS DE VALORES FALTANTES:
+   - Flow Bytes/s: 8 (0.00%)
+
+2. ANÁLISIS DE FILAS DUPLICADAS:
+   - Filas duplicadas: 13
+
+3. ANÁLISIS DE COLUMNAS CONSTANTES:
+   - Bwd PSH Flags
+   - Bwd URG Flags
+   - Fwd Bulk Rate Avg
+   - Fwd Bytes/Bulk Avg
+   - Fwd Packet/Bulk Avg
+   - Fwd URG Flags
+   - URG Flag Count
+
+4. ANÁLISIS DE COLUMNAS CASI CONSTANTES (>99%):
+   - Fwd Packet Length Std: 99.17%
+   - Bwd Packet Length Std: 99.35%
+   - Fwd PSH Flags: 99.74%
+   - FIN Flag Count: 99.36%
+   - SYN Flag Count: 99.35%
+   - PSH Flag Count: 99.22%
+   - CWR Flag Count: 99.95%
+   - ECE Flag Count: 99.95%
+   - Bwd Bytes/Bulk Avg: 99.39%
+   - Bwd Packet/Bulk Avg: 99.39%
+   - Bwd Bulk Rate Avg: 99.39%
+   - Subflow Bwd Bytes: 99.05%
+   - Active Std: 99.57%
+
+5. ANÁLISIS DE FILAS CON TODOS LOS VALORES EN CERO:
+   - Filas con todos los valores en 0: 0
+
+6. ANÁLISIS DE VALORES INFINITOS:
+   - Flow Bytes/s: 2 valores infinitos
+   - Flow Packets/s: 10 valores infinitos
+
+7. ANÁLISIS DE VALORES NEGATIVOS ANÓMALOS:
+   [OK] No se encontraron valores negativos anomalos
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Total de filas a eliminar: 22 (0.01%)
+  Filas que permanecerán: 179357
+  Muestra de índices marcados: 22
+================================================================================
+
+================================================================================
+Analizando: DDoS-ACK_Fragmentation9.pcap_Flow.csv
+Tipo de ataque: DDoS
+================================================================================
+
+Dimensiones originales: (412194, 84)
+
+1. ANÁLISIS DE VALORES FALTANTES:
+   - Flow Bytes/s: 12 (0.00%)
+
+2. ANÁLISIS DE FILAS DUPLICADAS:
+   - Filas duplicadas: 14
+
+3. ANÁLISIS DE COLUMNAS CONSTANTES:
+   - Bwd PSH Flags
+   - Bwd URG Flags
+   - Fwd Bulk Rate Avg
+   - Fwd Bytes/Bulk Avg
+   - Fwd Packet/Bulk Avg
+   - Fwd URG Flags
+   - URG Flag Count
+
+4. ANÁLISIS DE COLUMNAS CASI CONSTANTES (>99%):
+   - Bwd Packet Length Std: 99.52%
+   - Bwd IAT Std: 99.22%
+   - Fwd PSH Flags: 99.82%
+   - FIN Flag Count: 99.57%
+   - SYN Flag Count: 99.52%
+   - PSH Flag Count: 99.47%
+   - CWR Flag Count: 99.97%
+   - ECE Flag Count: 99.97%
+   - Bwd Bytes/Bulk Avg: 99.57%
+   - Bwd Packet/Bulk Avg: 99.57%
+   - Bwd Bulk Rate Avg: 99.57%
+   - Active Std: 99.71%
+
+5. ANÁLISIS DE FILAS CON TODOS LOS VALORES EN CERO:
+   - Filas con todos los valores en 0: 0
+
+6. ANÁLISIS DE VALORES INFINITOS:
+   - Flow Bytes/s: 5 valores infinitos
+   - Flow Packets/s: 17 valores infinitos
+
+7. ANÁLISIS DE VALORES NEGATIVOS ANÓMALOS:
+   [OK] No se encontraron valores negativos anomalos
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Total de filas a eliminar: 30 (0.01%)
+  Filas que permanecerán: 412164
+  Muestra de índices marcados: 30
+================================================================================
+
+================================================================================
+Analizando: DDoS-ICMP_Flood.pcap_Flow.csv
+Tipo de ataque: DDoS
+================================================================================
+
+Dimensiones originales: (10415, 84)
+
+1. ANÁLISIS DE VALORES FALTANTES:
+   - Flow Bytes/s: 30 (0.29%)
+
+2. ANÁLISIS DE FILAS DUPLICADAS:
+   - Filas duplicadas: 1
+
+3. ANÁLISIS DE COLUMNAS CONSTANTES:
+   - Bwd PSH Flags
+   - Bwd URG Flags
+   - Fwd Bulk Rate Avg
+   - Fwd Bytes/Bulk Avg
+   - Fwd Packet/Bulk Avg
+   - Fwd URG Flags
+   - URG Flag Count
+
+4. ANÁLISIS DE COLUMNAS CASI CONSTANTES (>99%):
+   - CWR Flag Count: 99.93%
+   - ECE Flag Count: 99.93%
+
+5. ANÁLISIS DE FILAS CON TODOS LOS VALORES EN CERO:
+   - Filas con todos los valores en 0: 0
+
+6. ANÁLISIS DE VALORES INFINITOS:
+   - Flow Bytes/s: 20 valores infinitos
+   - Flow Packets/s: 50 valores infinitos
+
+7. ANÁLISIS DE VALORES NEGATIVOS ANÓMALOS:
+   [OK] No se encontraron valores negativos anomalos
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Total de filas a eliminar: 50 (0.48%)
+  Filas que permanecerán: 10365
+  Muestra de índices marcados: 50
+================================================================================
+
+================================================================================
+Analizando: DDoS-ICMP_Flood1.pcap_Flow.csv
+Tipo de ataque: DDoS
+================================================================================
+
+Dimensiones originales: (8263, 84)
+
+1. ANÁLISIS DE VALORES FALTANTES:
+   - Flow Bytes/s: 2 (0.02%)
+
+2. ANÁLISIS DE FILAS DUPLICADAS:
+   - Filas duplicadas: 1
+
+3. ANÁLISIS DE COLUMNAS CONSTANTES:
+   - Bwd PSH Flags
+   - Bwd URG Flags
+   - Fwd Bulk Rate Avg
+   - Fwd Bytes/Bulk Avg
+   - Fwd Packet/Bulk Avg
+   - Fwd URG Flags
+   - URG Flag Count
+
+4. ANÁLISIS DE COLUMNAS CASI CONSTANTES (>99%):
+   - CWR Flag Count: 99.92%
+   - ECE Flag Count: 99.92%
+
+5. ANÁLISIS DE FILAS CON TODOS LOS VALORES EN CERO:
+   - Filas con todos los valores en 0: 0
+
+6. ANÁLISIS DE VALORES INFINITOS:
+   - Flow Bytes/s: 1 valores infinitos
+   - Flow Packets/s: 3 valores infinitos
+
+7. ANÁLISIS DE VALORES NEGATIVOS ANÓMALOS:
+   [OK] No se encontraron valores negativos anomalos
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Total de filas a eliminar: 4 (0.05%)
+  Filas que permanecerán: 8259
+  Muestra de índices marcados: 4
+================================================================================
+
+================================================================================
+Analizando: DDoS-ICMP_Flood10.pcap_Flow.csv
+Tipo de ataque: DDoS
+================================================================================
+
+Dimensiones originales: (7558, 84)
+
+1. ANÁLISIS DE VALORES FALTANTES:
+   - Flow Bytes/s: 14 (0.19%)
+
+2. ANÁLISIS DE FILAS DUPLICADAS:
+   - Filas duplicadas: 8
+
+3. ANÁLISIS DE COLUMNAS CONSTANTES:
+   - Bwd PSH Flags
+   - Bwd URG Flags
+   - Fwd Bulk Rate Avg
+   - Fwd Bytes/Bulk Avg
+   - Fwd Packet/Bulk Avg
+   - Fwd URG Flags
+   - URG Flag Count
+
+4. ANÁLISIS DE COLUMNAS CASI CONSTANTES (>99%):
+   - CWR Flag Count: 99.59%
+   - ECE Flag Count: 99.60%
+
+5. ANÁLISIS DE FILAS CON TODOS LOS VALORES EN CERO:
+   - Filas con todos los valores en 0: 0
+
+6. ANÁLISIS DE VALORES INFINITOS:
+   - Flow Bytes/s: 3 valores infinitos
+   - Flow Packets/s: 17 valores infinitos
+
+7. ANÁLISIS DE VALORES NEGATIVOS ANÓMALOS:
+   [OK] No se encontraron valores negativos anomalos
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Total de filas a eliminar: 23 (0.30%)
+  Filas que permanecerán: 7535
+  Muestra de índices marcados: 23
+================================================================================
+
+================================================================================
+Analizando: DDoS-ICMP_Flood11.pcap_Flow.csv
+Tipo de ataque: DDoS
+================================================================================
+
+Dimensiones originales: (8312, 84)
+
+1. ANÁLISIS DE VALORES FALTANTES:
+   - Flow Bytes/s: 20 (0.24%)
+
+2. ANÁLISIS DE FILAS DUPLICADAS:
+   - Filas duplicadas: 8
+
+3. ANÁLISIS DE COLUMNAS CONSTANTES:
+   - Bwd PSH Flags
+   - Bwd URG Flags
+   - Fwd Bulk Rate Avg
+   - Fwd Bytes/Bulk Avg
+   - Fwd Packet/Bulk Avg
+   - Fwd URG Flags
+   - URG Flag Count
+
+4. ANÁLISIS DE COLUMNAS CASI CONSTANTES (>99%):
+   - CWR Flag Count: 99.93%
+   - ECE Flag Count: 99.93%
+
+5. ANÁLISIS DE FILAS CON TODOS LOS VALORES EN CERO:
+   - Filas con todos los valores en 0: 0
+
+6. ANÁLISIS DE VALORES INFINITOS:
+   - Flow Bytes/s: 4 valores infinitos
+   - Flow Packets/s: 24 valores infinitos
+
+7. ANÁLISIS DE VALORES NEGATIVOS ANÓMALOS:
+   [OK] No se encontraron valores negativos anomalos
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Total de filas a eliminar: 30 (0.36%)
+  Filas que permanecerán: 8282
+  Muestra de índices marcados: 30
+================================================================================
+
+================================================================================
+Analizando: DDoS-ICMP_Flood12.pcap_Flow.csv
+Tipo de ataque: DDoS
+================================================================================
+
+Dimensiones originales: (7204, 84)
+
+1. ANÁLISIS DE VALORES FALTANTES:
+   - Flow Bytes/s: 16 (0.22%)
+
+2. ANÁLISIS DE FILAS DUPLICADAS:
+   - Filas duplicadas: 4
+
+3. ANÁLISIS DE COLUMNAS CONSTANTES:
+   - Bwd PSH Flags
+   - Bwd URG Flags
+   - Fwd Bulk Rate Avg
+   - Fwd Bytes/Bulk Avg
+   - Fwd Packet/Bulk Avg
+   - Fwd URG Flags
+   - URG Flag Count
+
+4. ANÁLISIS DE COLUMNAS CASI CONSTANTES (>99%):
+   - CWR Flag Count: 99.92%
+   - ECE Flag Count: 99.92%
+
+5. ANÁLISIS DE FILAS CON TODOS LOS VALORES EN CERO:
+   - Filas con todos los valores en 0: 0
+
+6. ANÁLISIS DE VALORES INFINITOS:
+   - Flow Bytes/s: 3 valores infinitos
+   - Flow Packets/s: 19 valores infinitos
+
+7. ANÁLISIS DE VALORES NEGATIVOS ANÓMALOS:
+   [OK] No se encontraron valores negativos anomalos
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Total de filas a eliminar: 22 (0.31%)
+  Filas que permanecerán: 7182
+  Muestra de índices marcados: 22
+================================================================================
+
+================================================================================
+Analizando: DDoS-ICMP_Flood13.pcap_Flow.csv
+Tipo de ataque: DDoS
+================================================================================
+
+Dimensiones originales: (5552, 84)
+
+1. ANÁLISIS DE VALORES FALTANTES:
+   - Flow Bytes/s: 24 (0.43%)
+
+2. ANÁLISIS DE FILAS DUPLICADAS:
+   - Filas duplicadas: 15
+
+3. ANÁLISIS DE COLUMNAS CONSTANTES:
+   - Bwd PSH Flags
+   - Bwd URG Flags
+   - Fwd Bulk Rate Avg
+   - Fwd Bytes/Bulk Avg
+   - Fwd Packet/Bulk Avg
+   - Fwd URG Flags
+   - URG Flag Count
+
+4. ANÁLISIS DE COLUMNAS CASI CONSTANTES (>99%):
+   - CWR Flag Count: 99.87%
+   - ECE Flag Count: 99.87%
+
+5. ANÁLISIS DE FILAS CON TODOS LOS VALORES EN CERO:
+   - Filas con todos los valores en 0: 0
+
+6. ANÁLISIS DE VALORES INFINITOS:
+   - Flow Bytes/s: 1 valores infinitos
+   - Flow Packets/s: 25 valores infinitos
+
+7. ANÁLISIS DE VALORES NEGATIVOS ANÓMALOS:
+   [OK] No se encontraron valores negativos anomalos
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Total de filas a eliminar: 35 (0.63%)
+  Filas que permanecerán: 5517
+  Muestra de índices marcados: 35
+================================================================================
+
+================================================================================
+Analizando: DDoS-ICMP_Flood14.pcap_Flow.csv
+Tipo de ataque: DDoS
+================================================================================
+
+Dimensiones originales: (6572, 84)
+
+1. ANÁLISIS DE VALORES FALTANTES:
+   - Flow Bytes/s: 26 (0.40%)
+
+2. ANÁLISIS DE FILAS DUPLICADAS:
+   - Filas duplicadas: 20
+
+3. ANÁLISIS DE COLUMNAS CONSTANTES:
+   - Bwd PSH Flags
+   - Bwd URG Flags
+   - Fwd Bulk Rate Avg
+   - Fwd Bytes/Bulk Avg
+   - Fwd Packet/Bulk Avg
+   - Fwd URG Flags
+   - URG Flag Count
+
+4. ANÁLISIS DE COLUMNAS CASI CONSTANTES (>99%):
+   - CWR Flag Count: 99.88%
+   - ECE Flag Count: 99.88%
+
+5. ANÁLISIS DE FILAS CON TODOS LOS VALORES EN CERO:
+   - Filas con todos los valores en 0: 0
+
+6. ANÁLISIS DE VALORES INFINITOS:
+   - Flow Bytes/s: 6 valores infinitos
+   - Flow Packets/s: 32 valores infinitos
+
+7. ANÁLISIS DE VALORES NEGATIVOS ANÓMALOS:
+   [OK] No se encontraron valores negativos anomalos
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Total de filas a eliminar: 49 (0.75%)
+  Filas que permanecerán: 6523
+  Muestra de índices marcados: 49
+================================================================================
+
+================================================================================
+Analizando: DDoS-ICMP_Flood15.pcap_Flow.csv
+Tipo de ataque: DDoS
+================================================================================
+
+Dimensiones originales: (10323, 84)
+
+1. ANÁLISIS DE VALORES FALTANTES:
+   - Flow Bytes/s: 36 (0.35%)
+
+2. ANÁLISIS DE FILAS DUPLICADAS:
+   - Filas duplicadas: 18
+
+3. ANÁLISIS DE COLUMNAS CONSTANTES:
+   - Bwd PSH Flags
+   - Bwd URG Flags
+   - Fwd Bulk Rate Avg
+   - Fwd Bytes/Bulk Avg
+   - Fwd Packet/Bulk Avg
+   - Fwd URG Flags
+   - URG Flag Count
+
+4. ANÁLISIS DE COLUMNAS CASI CONSTANTES (>99%):
+   - CWR Flag Count: 99.87%
+   - ECE Flag Count: 99.87%
+
+5. ANÁLISIS DE FILAS CON TODOS LOS VALORES EN CERO:
+   - Filas con todos los valores en 0: 0
+
+6. ANÁLISIS DE VALORES INFINITOS:
+   - Flow Bytes/s: 8 valores infinitos
+   - Flow Packets/s: 44 valores infinitos
+
+7. ANÁLISIS DE VALORES NEGATIVOS ANÓMALOS:
+   [OK] No se encontraron valores negativos anomalos
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Total de filas a eliminar: 57 (0.55%)
+  Filas que permanecerán: 10266
+  Muestra de índices marcados: 57
+================================================================================
+
+================================================================================
+Analizando: DDoS-ICMP_Flood16.pcap_Flow.csv
+Tipo de ataque: DDoS
+================================================================================
+
+Dimensiones originales: (10270, 84)
+
+1. ANÁLISIS DE VALORES FALTANTES:
+   - Flow Bytes/s: 64 (0.62%)
+
+2. ANÁLISIS DE FILAS DUPLICADAS:
+   - Filas duplicadas: 93
+
+3. ANÁLISIS DE COLUMNAS CONSTANTES:
+   - Bwd PSH Flags
+   - Bwd URG Flags
+   - Fwd Bulk Rate Avg
+   - Fwd Bytes/Bulk Avg
+   - Fwd Packet/Bulk Avg
+   - Fwd URG Flags
+   - URG Flag Count
+
+4. ANÁLISIS DE COLUMNAS CASI CONSTANTES (>99%):
+   [OK] No se encontraron columnas casi constantes
+
+5. ANÁLISIS DE FILAS CON TODOS LOS VALORES EN CERO:
+   - Filas con todos los valores en 0: 0
+
+6. ANÁLISIS DE VALORES INFINITOS:
+   - Flow Bytes/s: 4 valores infinitos
+   - Flow Packets/s: 68 valores infinitos
+
+7. ANÁLISIS DE VALORES NEGATIVOS ANÓMALOS:
+   [OK] No se encontraron valores negativos anomalos
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Total de filas a eliminar: 136 (1.32%)
+  Filas que permanecerán: 10134
+  Muestra de índices marcados: 136
+================================================================================
+
+================================================================================
+Analizando: DDoS-ICMP_Flood17.pcap_Flow.csv
+Tipo de ataque: DDoS
+================================================================================
+
+Dimensiones originales: (4643, 84)
+
+1. ANÁLISIS DE VALORES FALTANTES:
+   - Flow Bytes/s: 9 (0.19%)
+
+2. ANÁLISIS DE FILAS DUPLICADAS:
+   - Filas duplicadas: 3
+
+3. ANÁLISIS DE COLUMNAS CONSTANTES:
+   - Bwd PSH Flags
+   - Bwd URG Flags
+   - CWR Flag Count
+   - ECE Flag Count
+   - Fwd Bulk Rate Avg
+   - Fwd Bytes/Bulk Avg
+   - Fwd Packet/Bulk Avg
+   - Fwd URG Flags
+   - URG Flag Count
+
+4. ANÁLISIS DE COLUMNAS CASI CONSTANTES (>99%):
+   [OK] No se encontraron columnas casi constantes
+
+5. ANÁLISIS DE FILAS CON TODOS LOS VALORES EN CERO:
+   - Filas con todos los valores en 0: 0
+
+6. ANÁLISIS DE VALORES INFINITOS:
+   - Flow Bytes/s: 2 valores infinitos
+   - Flow Packets/s: 11 valores infinitos
+
+7. ANÁLISIS DE VALORES NEGATIVOS ANÓMALOS:
+   [OK] No se encontraron valores negativos anomalos
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Total de filas a eliminar: 14 (0.30%)
+  Filas que permanecerán: 4629
+  Muestra de índices marcados: 14
+================================================================================
+
+================================================================================
+Analizando: DDoS-ICMP_Flood18.pcap_Flow.csv
+Tipo de ataque: DDoS
+================================================================================
+
+Dimensiones originales: (4062, 84)
+
+1. ANÁLISIS DE VALORES FALTANTES:
+   [OK] No se encontraron valores faltantes
+
+2. ANÁLISIS DE FILAS DUPLICADAS:
+   - Filas duplicadas: 1
+
+3. ANÁLISIS DE COLUMNAS CONSTANTES:
+   - Bwd PSH Flags
+   - Bwd URG Flags
+   - CWR Flag Count
+   - ECE Flag Count
+   - Fwd Bulk Rate Avg
+   - Fwd Bytes/Bulk Avg
+   - Fwd Packet/Bulk Avg
+   - Fwd URG Flags
+   - URG Flag Count
+
+4. ANÁLISIS DE COLUMNAS CASI CONSTANTES (>99%):
+   [OK] No se encontraron columnas casi constantes
+
+5. ANÁLISIS DE FILAS CON TODOS LOS VALORES EN CERO:
+   - Filas con todos los valores en 0: 0
+
+6. ANÁLISIS DE VALORES INFINITOS:
+   - Flow Bytes/s: 4 valores infinitos
+   - Flow Packets/s: 4 valores infinitos
+
+7. ANÁLISIS DE VALORES NEGATIVOS ANÓMALOS:
+   [OK] No se encontraron valores negativos anomalos
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Total de filas a eliminar: 5 (0.12%)
+  Filas que permanecerán: 4057
+  Muestra de índices marcados: 5
+================================================================================
+
+================================================================================
+Analizando: DDoS-ICMP_Flood19.pcap_Flow.csv
+Tipo de ataque: DDoS
+================================================================================
+
+Dimensiones originales: (8121, 84)
+
+1. ANÁLISIS DE VALORES FALTANTES:
+   - Flow Bytes/s: 7 (0.09%)
+
+2. ANÁLISIS DE FILAS DUPLICADAS:
+   - Filas duplicadas: 1
+
+3. ANÁLISIS DE COLUMNAS CONSTANTES:
+   - Bwd PSH Flags
+   - Bwd URG Flags
+   - Fwd Bulk Rate Avg
+   - Fwd Bytes/Bulk Avg
+   - Fwd Packet/Bulk Avg
+   - Fwd URG Flags
+   - URG Flag Count
+
+4. ANÁLISIS DE COLUMNAS CASI CONSTANTES (>99%):
+   - CWR Flag Count: 99.56%
+   - ECE Flag Count: 99.59%
+
+5. ANÁLISIS DE FILAS CON TODOS LOS VALORES EN CERO:
+   - Filas con todos los valores en 0: 0
+
+6. ANÁLISIS DE VALORES INFINITOS:
+   - Flow Bytes/s: 4 valores infinitos
+   - Flow Packets/s: 11 valores infinitos
+
+7. ANÁLISIS DE VALORES NEGATIVOS ANÓMALOS:
+   [OK] No se encontraron valores negativos anomalos
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Total de filas a eliminar: 12 (0.15%)
+  Filas que permanecerán: 8109
+  Muestra de índices marcados: 12
+================================================================================
+
+================================================================================
+Analizando: DDoS-ICMP_Flood2.pcap_Flow.csv
+Tipo de ataque: DDoS
+================================================================================
+
+Dimensiones originales: (10958, 84)
+
+1. ANÁLISIS DE VALORES FALTANTES:
+   - Flow Bytes/s: 10 (0.09%)
+
+2. ANÁLISIS DE FILAS DUPLICADAS:
+   - Filas duplicadas: 8
+
+3. ANÁLISIS DE COLUMNAS CONSTANTES:
+   - Bwd PSH Flags
+   - Bwd URG Flags
+   - Fwd Bulk Rate Avg
+   - Fwd Bytes/Bulk Avg
+   - Fwd Packet/Bulk Avg
+   - Fwd URG Flags
+   - URG Flag Count
+
+4. ANÁLISIS DE COLUMNAS CASI CONSTANTES (>99%):
+   - CWR Flag Count: 99.92%
+   - ECE Flag Count: 99.92%
+
+5. ANÁLISIS DE FILAS CON TODOS LOS VALORES EN CERO:
+   - Filas con todos los valores en 0: 0
+
+6. ANÁLISIS DE VALORES INFINITOS:
+   - Flow Bytes/s: 1 valores infinitos
+   - Flow Packets/s: 11 valores infinitos
+
+7. ANÁLISIS DE VALORES NEGATIVOS ANÓMALOS:
+   [OK] No se encontraron valores negativos anomalos
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Total de filas a eliminar: 19 (0.17%)
+  Filas que permanecerán: 10939
+  Muestra de índices marcados: 19
+================================================================================
+
+================================================================================
+Analizando: DDoS-ICMP_Flood20.pcap_Flow.csv
+Tipo de ataque: DDoS
+================================================================================
+
+Dimensiones originales: (7322, 84)
+
+1. ANÁLISIS DE VALORES FALTANTES:
+   - Flow Bytes/s: 12 (0.16%)
+
+2. ANÁLISIS DE FILAS DUPLICADAS:
+   - Filas duplicadas: 2
+
+3. ANÁLISIS DE COLUMNAS CONSTANTES:
+   - Bwd PSH Flags
+   - Bwd URG Flags
+   - Fwd Bulk Rate Avg
+   - Fwd Bytes/Bulk Avg
+   - Fwd Packet/Bulk Avg
+   - Fwd URG Flags
+   - URG Flag Count
+
+4. ANÁLISIS DE COLUMNAS CASI CONSTANTES (>99%):
+   - CWR Flag Count: 99.45%
+   - ECE Flag Count: 99.47%
+
+5. ANÁLISIS DE FILAS CON TODOS LOS VALORES EN CERO:
+   - Filas con todos los valores en 0: 0
+
+6. ANÁLISIS DE VALORES INFINITOS:
+   - Flow Bytes/s: 6 valores infinitos
+   - Flow Packets/s: 18 valores infinitos
+
+7. ANÁLISIS DE VALORES NEGATIVOS ANÓMALOS:
+   [OK] No se encontraron valores negativos anomalos
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Total de filas a eliminar: 20 (0.27%)
+  Filas que permanecerán: 7302
+  Muestra de índices marcados: 20
+================================================================================
+
+================================================================================
+Analizando: DDoS-ICMP_Flood21.pcap_Flow.csv
+Tipo de ataque: DDoS
+================================================================================
+
+Dimensiones originales: (7293, 84)
+
+1. ANÁLISIS DE VALORES FALTANTES:
+   - Flow Bytes/s: 10 (0.14%)
+
+2. ANÁLISIS DE FILAS DUPLICADAS:
+   - Filas duplicadas: 9
+
+3. ANÁLISIS DE COLUMNAS CONSTANTES:
+   - Bwd PSH Flags
+   - Bwd URG Flags
+   - Fwd Bulk Rate Avg
+   - Fwd Bytes/Bulk Avg
+   - Fwd Packet/Bulk Avg
+   - Fwd URG Flags
+   - URG Flag Count
+
+4. ANÁLISIS DE COLUMNAS CASI CONSTANTES (>99%):
+   - CWR Flag Count: 99.53%
+   - ECE Flag Count: 99.55%
+
+5. ANÁLISIS DE FILAS CON TODOS LOS VALORES EN CERO:
+   - Filas con todos los valores en 0: 0
+
+6. ANÁLISIS DE VALORES INFINITOS:
+   - Flow Bytes/s: 1 valores infinitos
+   - Flow Packets/s: 11 valores infinitos
+
+7. ANÁLISIS DE VALORES NEGATIVOS ANÓMALOS:
+   [OK] No se encontraron valores negativos anomalos
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Total de filas a eliminar: 19 (0.26%)
+  Filas que permanecerán: 7274
+  Muestra de índices marcados: 19
+================================================================================
+
+================================================================================
+Analizando: DDoS-ICMP_Flood22.pcap_Flow.csv
+Tipo de ataque: DDoS
+================================================================================
+
+Dimensiones originales: (5993, 84)
+
+1. ANÁLISIS DE VALORES FALTANTES:
+   - Flow Bytes/s: 5 (0.08%)
+
+2. ANÁLISIS DE FILAS DUPLICADAS:
+   - Filas duplicadas: 2
+
+3. ANÁLISIS DE COLUMNAS CONSTANTES:
+   - Bwd PSH Flags
+   - Bwd URG Flags
+   - Fwd Bulk Rate Avg
+   - Fwd Bytes/Bulk Avg
+   - Fwd Packet/Bulk Avg
+   - Fwd URG Flags
+   - URG Flag Count
+
+4. ANÁLISIS DE COLUMNAS CASI CONSTANTES (>99%):
+   - CWR Flag Count: 99.35%
+   - ECE Flag Count: 99.35%
+
+5. ANÁLISIS DE FILAS CON TODOS LOS VALORES EN CERO:
+   - Filas con todos los valores en 0: 0
+
+6. ANÁLISIS DE VALORES INFINITOS:
+   - Flow Bytes/s: 1 valores infinitos
+   - Flow Packets/s: 6 valores infinitos
+
+7. ANÁLISIS DE VALORES NEGATIVOS ANÓMALOS:
+   [OK] No se encontraron valores negativos anomalos
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Total de filas a eliminar: 8 (0.13%)
+  Filas que permanecerán: 5985
+  Muestra de índices marcados: 8
+================================================================================
+
+================================================================================
+Analizando: DDoS-ICMP_Flood23.pcap_Flow.csv
+Tipo de ataque: DDoS
+================================================================================
+
+Dimensiones originales: (5193, 84)
+
+1. ANÁLISIS DE VALORES FALTANTES:
+   - Flow Bytes/s: 8 (0.15%)
+
+2. ANÁLISIS DE FILAS DUPLICADAS:
+   - Filas duplicadas: 1
+
+3. ANÁLISIS DE COLUMNAS CONSTANTES:
+   - Bwd PSH Flags
+   - Bwd URG Flags
+   - Fwd Bulk Rate Avg
+   - Fwd Bytes/Bulk Avg
+   - Fwd Packet/Bulk Avg
+   - Fwd URG Flags
+   - URG Flag Count
+
+4. ANÁLISIS DE COLUMNAS CASI CONSTANTES (>99%):
+   - CWR Flag Count: 99.54%
+   - ECE Flag Count: 99.60%
+
+5. ANÁLISIS DE FILAS CON TODOS LOS VALORES EN CERO:
+   - Filas con todos los valores en 0: 0
+
+6. ANÁLISIS DE VALORES INFINITOS:
+   - Flow Bytes/s: 1 valores infinitos
+   - Flow Packets/s: 9 valores infinitos
+
+7. ANÁLISIS DE VALORES NEGATIVOS ANÓMALOS:
+   [OK] No se encontraron valores negativos anomalos
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Total de filas a eliminar: 10 (0.19%)
+  Filas que permanecerán: 5183
+  Muestra de índices marcados: 10
+================================================================================
+
+================================================================================
+Analizando: DDoS-ICMP_Flood24.pcap_Flow.csv
+Tipo de ataque: DDoS
+================================================================================
+
+Dimensiones originales: (6055, 84)
+
+1. ANÁLISIS DE VALORES FALTANTES:
+   - Flow Bytes/s: 19 (0.31%)
+
+2. ANÁLISIS DE FILAS DUPLICADAS:
+   - Filas duplicadas: 1
+
+3. ANÁLISIS DE COLUMNAS CONSTANTES:
+   - Bwd PSH Flags
+   - Bwd URG Flags
+   - Fwd Bulk Rate Avg
+   - Fwd Bytes/Bulk Avg
+   - Fwd Packet/Bulk Avg
+   - Fwd URG Flags
+   - URG Flag Count
+
+4. ANÁLISIS DE COLUMNAS CASI CONSTANTES (>99%):
+   - CWR Flag Count: 99.67%
+   - ECE Flag Count: 99.50%
+
+5. ANÁLISIS DE FILAS CON TODOS LOS VALORES EN CERO:
+   - Filas con todos los valores en 0: 0
+
+6. ANÁLISIS DE VALORES INFINITOS:
+   - Flow Bytes/s: 9 valores infinitos
+   - Flow Packets/s: 28 valores infinitos
+
+7. ANÁLISIS DE VALORES NEGATIVOS ANÓMALOS:
+   [OK] No se encontraron valores negativos anomalos
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Total de filas a eliminar: 28 (0.46%)
+  Filas que permanecerán: 6027
+  Muestra de índices marcados: 28
+================================================================================
+
+================================================================================
+Analizando: DDoS-ICMP_Flood25.pcap_Flow.csv
+Tipo de ataque: DDoS
+================================================================================
+
+Dimensiones originales: (9442, 84)
+
+1. ANÁLISIS DE VALORES FALTANTES:
+   - Flow Bytes/s: 6 (0.06%)
+
+2. ANÁLISIS DE FILAS DUPLICADAS:
+   - Filas duplicadas: 2
+
+3. ANÁLISIS DE COLUMNAS CONSTANTES:
+   - Bwd PSH Flags
+   - Bwd URG Flags
+   - Fwd Bulk Rate Avg
+   - Fwd Bytes/Bulk Avg
+   - Fwd Packet/Bulk Avg
+   - Fwd URG Flags
+   - URG Flag Count
+
+4. ANÁLISIS DE COLUMNAS CASI CONSTANTES (>99%):
+   [OK] No se encontraron columnas casi constantes
+
+5. ANÁLISIS DE FILAS CON TODOS LOS VALORES EN CERO:
+   - Filas con todos los valores en 0: 0
+
+6. ANÁLISIS DE VALORES INFINITOS:
+   - Flow Bytes/s: 11 valores infinitos
+   - Flow Packets/s: 17 valores infinitos
+
+7. ANÁLISIS DE VALORES NEGATIVOS ANÓMALOS:
+   [OK] No se encontraron valores negativos anomalos
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Total de filas a eliminar: 19 (0.20%)
+  Filas que permanecerán: 9423
+  Muestra de índices marcados: 19
+================================================================================
+
+================================================================================
+Analizando: DDoS-ICMP_Flood26.pcap_Flow.csv
+Tipo de ataque: DDoS
+================================================================================
+
+Dimensiones originales: (5432, 84)
+
+1. ANÁLISIS DE VALORES FALTANTES:
+   [OK] No se encontraron valores faltantes
+
+2. ANÁLISIS DE FILAS DUPLICADAS:
+   - Filas duplicadas: 0
+
+3. ANÁLISIS DE COLUMNAS CONSTANTES:
+   - Bwd PSH Flags
+   - Bwd URG Flags
+   - Fwd Bulk Rate Avg
+   - Fwd Bytes/Bulk Avg
+   - Fwd Packet/Bulk Avg
+   - Fwd URG Flags
+   - URG Flag Count
+
+4. ANÁLISIS DE COLUMNAS CASI CONSTANTES (>99%):
+   - CWR Flag Count: 99.61%
+   - ECE Flag Count: 99.63%
+
+5. ANÁLISIS DE FILAS CON TODOS LOS VALORES EN CERO:
+   - Filas con todos los valores en 0: 0
+
+6. ANÁLISIS DE VALORES INFINITOS:
+   [OK] No se encontraron valores infinitos
+
+7. ANÁLISIS DE VALORES NEGATIVOS ANÓMALOS:
+   [OK] No se encontraron valores negativos anomalos
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Total de filas a eliminar: 0 (0.00%)
+  Filas que permanecerán: 5432
+  Muestra de índices marcados: 0
+================================================================================
+
+================================================================================
+Analizando: DDoS-ICMP_Flood3.pcap_Flow.csv
+Tipo de ataque: DDoS
+================================================================================
+
+Dimensiones originales: (7845, 84)
+
+1. ANÁLISIS DE VALORES FALTANTES:
+   - Flow Bytes/s: 29 (0.37%)
+
+2. ANÁLISIS DE FILAS DUPLICADAS:
+   - Filas duplicadas: 44
+
+3. ANÁLISIS DE COLUMNAS CONSTANTES:
+   - Bwd PSH Flags
+   - Bwd URG Flags
+   - Fwd Bulk Rate Avg
+   - Fwd Bytes/Bulk Avg
+   - Fwd Packet/Bulk Avg
+   - Fwd URG Flags
+   - URG Flag Count
+
+4. ANÁLISIS DE COLUMNAS CASI CONSTANTES (>99%):
+   - CWR Flag Count: 99.94%
+   - ECE Flag Count: 99.94%
+
+5. ANÁLISIS DE FILAS CON TODOS LOS VALORES EN CERO:
+   - Filas con todos los valores en 0: 0
+
+6. ANÁLISIS DE VALORES INFINITOS:
+   - Flow Packets/s: 29 valores infinitos
+
+7. ANÁLISIS DE VALORES NEGATIVOS ANÓMALOS:
+   [OK] No se encontraron valores negativos anomalos
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Total de filas a eliminar: 53 (0.68%)
+  Filas que permanecerán: 7792
+  Muestra de índices marcados: 53
+================================================================================
+
+================================================================================
+Analizando: DDoS-ICMP_Flood4.pcap_Flow.csv
+Tipo de ataque: DDoS
+================================================================================
+
+Dimensiones originales: (16190, 84)
+
+1. ANÁLISIS DE VALORES FALTANTES:
+   - Flow Bytes/s: 28 (0.17%)
+
+2. ANÁLISIS DE FILAS DUPLICADAS:
+   - Filas duplicadas: 16
+
+3. ANÁLISIS DE COLUMNAS CONSTANTES:
+   - Bwd PSH Flags
+   - Bwd URG Flags
+   - Fwd Bulk Rate Avg
+   - Fwd Bytes/Bulk Avg
+   - Fwd Packet/Bulk Avg
+   - Fwd URG Flags
+   - URG Flag Count
+
+4. ANÁLISIS DE COLUMNAS CASI CONSTANTES (>99%):
+   - CWR Flag Count: 99.98%
+   - ECE Flag Count: 99.98%
+
+5. ANÁLISIS DE FILAS CON TODOS LOS VALORES EN CERO:
+   - Filas con todos los valores en 0: 0
+
+6. ANÁLISIS DE VALORES INFINITOS:
+   - Flow Bytes/s: 6 valores infinitos
+   - Flow Packets/s: 34 valores infinitos
+
+7. ANÁLISIS DE VALORES NEGATIVOS ANÓMALOS:
+   [OK] No se encontraron valores negativos anomalos
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Total de filas a eliminar: 43 (0.27%)
+  Filas que permanecerán: 16147
+  Muestra de índices marcados: 43
+================================================================================
+
+================================================================================
+Analizando: DDoS-ICMP_Flood5.pcap_Flow.csv
+Tipo de ataque: DDoS
+================================================================================
+
+Dimensiones originales: (7840, 84)
+
+1. ANÁLISIS DE VALORES FALTANTES:
+   - Flow Bytes/s: 8 (0.10%)
+
+2. ANÁLISIS DE FILAS DUPLICADAS:
+   - Filas duplicadas: 0
+
+3. ANÁLISIS DE COLUMNAS CONSTANTES:
+   - Bwd PSH Flags
+   - Bwd URG Flags
+   - Fwd Bulk Rate Avg
+   - Fwd Bytes/Bulk Avg
+   - Fwd Packet/Bulk Avg
+   - Fwd URG Flags
+   - URG Flag Count
+
+4. ANÁLISIS DE COLUMNAS CASI CONSTANTES (>99%):
+   - CWR Flag Count: 99.92%
+   - ECE Flag Count: 99.92%
+
+5. ANÁLISIS DE FILAS CON TODOS LOS VALORES EN CERO:
+   - Filas con todos los valores en 0: 0
+
+6. ANÁLISIS DE VALORES INFINITOS:
+   - Flow Bytes/s: 6 valores infinitos
+   - Flow Packets/s: 14 valores infinitos
+
+7. ANÁLISIS DE VALORES NEGATIVOS ANÓMALOS:
+   [OK] No se encontraron valores negativos anomalos
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Total de filas a eliminar: 14 (0.18%)
+  Filas que permanecerán: 7826
+  Muestra de índices marcados: 14
+================================================================================
+
+================================================================================
+Analizando: DDoS-ICMP_Flood6.pcap_Flow.csv
+Tipo de ataque: DDoS
+================================================================================
+
+Dimensiones originales: (4783, 84)
+
+1. ANÁLISIS DE VALORES FALTANTES:
+   - Flow Bytes/s: 3 (0.06%)
+
+2. ANÁLISIS DE FILAS DUPLICADAS:
+   - Filas duplicadas: 0
+
+3. ANÁLISIS DE COLUMNAS CONSTANTES:
+   - Bwd PSH Flags
+   - Bwd URG Flags
+   - Fwd Bulk Rate Avg
+   - Fwd Bytes/Bulk Avg
+   - Fwd Packet/Bulk Avg
+   - Fwd URG Flags
+   - URG Flag Count
+
+4. ANÁLISIS DE COLUMNAS CASI CONSTANTES (>99%):
+   - CWR Flag Count: 99.85%
+   - ECE Flag Count: 99.85%
+
+5. ANÁLISIS DE FILAS CON TODOS LOS VALORES EN CERO:
+   - Filas con todos los valores en 0: 0
+
+6. ANÁLISIS DE VALORES INFINITOS:
+   - Flow Bytes/s: 3 valores infinitos
+   - Flow Packets/s: 6 valores infinitos
+
+7. ANÁLISIS DE VALORES NEGATIVOS ANÓMALOS:
+   [OK] No se encontraron valores negativos anomalos
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Total de filas a eliminar: 6 (0.13%)
+  Filas que permanecerán: 4777
+  Muestra de índices marcados: 6
+================================================================================
+
+================================================================================
+Analizando: DDoS-ICMP_Flood7.pcap_Flow.csv
+Tipo de ataque: DDoS
+================================================================================
+
+Dimensiones originales: (3244, 84)
+
+1. ANÁLISIS DE VALORES FALTANTES:
+   - Flow Bytes/s: 3 (0.09%)
+
+2. ANÁLISIS DE FILAS DUPLICADAS:
+   - Filas duplicadas: 0
+
+3. ANÁLISIS DE COLUMNAS CONSTANTES:
+   - Bwd PSH Flags
+   - Bwd URG Flags
+   - Fwd Bulk Rate Avg
+   - Fwd Bytes/Bulk Avg
+   - Fwd Packet/Bulk Avg
+   - Fwd URG Flags
+   - URG Flag Count
+
+4. ANÁLISIS DE COLUMNAS CASI CONSTANTES (>99%):
+   - CWR Flag Count: 99.85%
+   - ECE Flag Count: 99.85%
+
+5. ANÁLISIS DE FILAS CON TODOS LOS VALORES EN CERO:
+   - Filas con todos los valores en 0: 0
+
+6. ANÁLISIS DE VALORES INFINITOS:
+   - Flow Bytes/s: 5 valores infinitos
+   - Flow Packets/s: 8 valores infinitos
+
+7. ANÁLISIS DE VALORES NEGATIVOS ANÓMALOS:
+   [OK] No se encontraron valores negativos anomalos
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Total de filas a eliminar: 8 (0.25%)
+  Filas que permanecerán: 3236
+  Muestra de índices marcados: 8
+================================================================================
+
+================================================================================
+Analizando: DDoS-ICMP_Flood8.pcap_Flow.csv
+Tipo de ataque: DDoS
+================================================================================
+
+Dimensiones originales: (6411, 84)
+
+1. ANÁLISIS DE VALORES FALTANTES:
+   - Flow Bytes/s: 9 (0.14%)
+
+2. ANÁLISIS DE FILAS DUPLICADAS:
+   - Filas duplicadas: 3
+
+3. ANÁLISIS DE COLUMNAS CONSTANTES:
+   - Bwd PSH Flags
+   - Bwd URG Flags
+   - Fwd Bulk Rate Avg
+   - Fwd Bytes/Bulk Avg
+   - Fwd Packet/Bulk Avg
+   - Fwd URG Flags
+   - URG Flag Count
+
+4. ANÁLISIS DE COLUMNAS CASI CONSTANTES (>99%):
+   - CWR Flag Count: 99.86%
+   - ECE Flag Count: 99.86%
+
+5. ANÁLISIS DE FILAS CON TODOS LOS VALORES EN CERO:
+   - Filas con todos los valores en 0: 0
+
+6. ANÁLISIS DE VALORES INFINITOS:
+   - Flow Bytes/s: 2 valores infinitos
+   - Flow Packets/s: 11 valores infinitos
+
+7. ANÁLISIS DE VALORES NEGATIVOS ANÓMALOS:
+   [OK] No se encontraron valores negativos anomalos
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Total de filas a eliminar: 12 (0.19%)
+  Filas que permanecerán: 6399
+  Muestra de índices marcados: 12
+================================================================================
+
+================================================================================
+Analizando: DDoS-ICMP_Flood9.pcap_Flow.csv
+Tipo de ataque: DDoS
+================================================================================
+
+Dimensiones originales: (6955, 84)
+
+1. ANÁLISIS DE VALORES FALTANTES:
+   - Flow Bytes/s: 11 (0.16%)
+
+2. ANÁLISIS DE FILAS DUPLICADAS:
+   - Filas duplicadas: 3
+
+3. ANÁLISIS DE COLUMNAS CONSTANTES:
+   - Bwd PSH Flags
+   - Bwd URG Flags
+   - Fwd Bulk Rate Avg
+   - Fwd Bytes/Bulk Avg
+   - Fwd Packet/Bulk Avg
+   - Fwd URG Flags
+   - URG Flag Count
+
+4. ANÁLISIS DE COLUMNAS CASI CONSTANTES (>99%):
+   - CWR Flag Count: 99.84%
+   - ECE Flag Count: 99.84%
+
+5. ANÁLISIS DE FILAS CON TODOS LOS VALORES EN CERO:
+   - Filas con todos los valores en 0: 0
+
+6. ANÁLISIS DE VALORES INFINITOS:
+   - Flow Bytes/s: 2 valores infinitos
+   - Flow Packets/s: 13 valores infinitos
+
+7. ANÁLISIS DE VALORES NEGATIVOS ANÓMALOS:
+   [OK] No se encontraron valores negativos anomalos
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Total de filas a eliminar: 14 (0.20%)
+  Filas que permanecerán: 6941
+  Muestra de índices marcados: 14
+================================================================================
+
+================================================================================
+Analizando: DDoS-HTTP_Flood-.pcap_Flow.csv
+Tipo de ataque: DDoS
+================================================================================
+
+Dimensiones originales: (505720, 84)
+
+1. ANÁLISIS DE VALORES FALTANTES:
+   - Flow Bytes/s: 1113 (0.22%)
+
+2. ANÁLISIS DE FILAS DUPLICADAS:
+   - Filas duplicadas: 4745
+
+3. ANÁLISIS DE COLUMNAS CONSTANTES:
+   - Bwd PSH Flags
+   - Bwd URG Flags
+   - Fwd Bulk Rate Avg
+   - Fwd Bytes/Bulk Avg
+   - Fwd Packet/Bulk Avg
+   - Fwd URG Flags
+   - URG Flag Count
+
+4. ANÁLISIS DE COLUMNAS CASI CONSTANTES (>99%):
+   - CWR Flag Count: 99.97%
+   - ECE Flag Count: 99.98%
+   - Subflow Bwd Bytes: 99.22%
+
+5. ANÁLISIS DE FILAS CON TODOS LOS VALORES EN CERO:
+   - Filas con todos los valores en 0: 0
+
+6. ANÁLISIS DE VALORES INFINITOS:
+   - Flow Bytes/s: 10 valores infinitos
+   - Flow Packets/s: 1123 valores infinitos
+
+7. ANÁLISIS DE VALORES NEGATIVOS ANÓMALOS:
+   [OK] No se encontraron valores negativos anomalos
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Total de filas a eliminar: 5659 (1.12%)
+  Filas que permanecerán: 500061
+  Muestra de índices marcados: 1000
+================================================================================
+
+================================================================================
+Analizando: DDoS-ICMP_Fragmentation.pcap_Flow.csv
+Tipo de ataque: DDoS
+================================================================================
+
+Dimensiones originales: (14479, 84)
+
+1. ANÁLISIS DE VALORES FALTANTES:
+   - Flow Bytes/s: 7 (0.05%)
+
+2. ANÁLISIS DE FILAS DUPLICADAS:
+   - Filas duplicadas: 11
+
+3. ANÁLISIS DE COLUMNAS CONSTANTES:
+   - Bwd PSH Flags
+   - Bwd URG Flags
+   - Fwd Bulk Rate Avg
+   - Fwd Bytes/Bulk Avg
+   - Fwd Packet/Bulk Avg
+   - Fwd URG Flags
+   - URG Flag Count
+
+4. ANÁLISIS DE COLUMNAS CASI CONSTANTES (>99%):
+   - CWR Flag Count: 99.90%
+   - ECE Flag Count: 99.90%
+
+5. ANÁLISIS DE FILAS CON TODOS LOS VALORES EN CERO:
+   - Filas con todos los valores en 0: 0
+
+6. ANÁLISIS DE VALORES INFINITOS:
+   - Flow Bytes/s: 4 valores infinitos
+   - Flow Packets/s: 11 valores infinitos
+
+7. ANÁLISIS DE VALORES NEGATIVOS ANÓMALOS:
+   [OK] No se encontraron valores negativos anomalos
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Total de filas a eliminar: 22 (0.15%)
+  Filas que permanecerán: 14457
+  Muestra de índices marcados: 22
+================================================================================
+
+================================================================================
+Analizando: DDoS-ICMP_Fragmentation1.pcap_Flow.csv
+Tipo de ataque: DDoS
+================================================================================
+
+Dimensiones originales: (17480, 84)
+
+1. ANÁLISIS DE VALORES FALTANTES:
+   - Flow Bytes/s: 8 (0.05%)
+
+2. ANÁLISIS DE FILAS DUPLICADAS:
+   - Filas duplicadas: 34
+
+3. ANÁLISIS DE COLUMNAS CONSTANTES:
+   - Bwd PSH Flags
+   - Bwd URG Flags
+   - Fwd Bulk Rate Avg
+   - Fwd Bytes/Bulk Avg
+   - Fwd Packet/Bulk Avg
+   - Fwd URG Flags
+   - URG Flag Count
+
+4. ANÁLISIS DE COLUMNAS CASI CONSTANTES (>99%):
+   - CWR Flag Count: 99.93%
+   - ECE Flag Count: 99.93%
+
+5. ANÁLISIS DE FILAS CON TODOS LOS VALORES EN CERO:
+   - Filas con todos los valores en 0: 0
+
+6. ANÁLISIS DE VALORES INFINITOS:
+   - Flow Bytes/s: 4 valores infinitos
+   - Flow Packets/s: 12 valores infinitos
+
+7. ANÁLISIS DE VALORES NEGATIVOS ANÓMALOS:
+   [OK] No se encontraron valores negativos anomalos
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Total de filas a eliminar: 46 (0.26%)
+  Filas que permanecerán: 17434
+  Muestra de índices marcados: 46
+================================================================================
+
+================================================================================
+Analizando: DDoS-ICMP_Fragmentation10.pcap_Flow.csv
+Tipo de ataque: DDoS
+================================================================================
+
+Dimensiones originales: (14420, 84)
+
+1. ANÁLISIS DE VALORES FALTANTES:
+   [OK] No se encontraron valores faltantes
+
+2. ANÁLISIS DE FILAS DUPLICADAS:
+   - Filas duplicadas: 3
+
+3. ANÁLISIS DE COLUMNAS CONSTANTES:
+   - Bwd PSH Flags
+   - Bwd URG Flags
+   - Fwd Bulk Rate Avg
+   - Fwd Bytes/Bulk Avg
+   - Fwd Packet/Bulk Avg
+   - Fwd URG Flags
+   - URG Flag Count
+
+4. ANÁLISIS DE COLUMNAS CASI CONSTANTES (>99%):
+   - CWR Flag Count: 99.94%
+   - ECE Flag Count: 99.94%
+
+5. ANÁLISIS DE FILAS CON TODOS LOS VALORES EN CERO:
+   - Filas con todos los valores en 0: 0
+
+6. ANÁLISIS DE VALORES INFINITOS:
+   - Flow Bytes/s: 3 valores infinitos
+   - Flow Packets/s: 3 valores infinitos
+
+7. ANÁLISIS DE VALORES NEGATIVOS ANÓMALOS:
+   [OK] No se encontraron valores negativos anomalos
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Total de filas a eliminar: 6 (0.04%)
+  Filas que permanecerán: 14414
+  Muestra de índices marcados: 6
+================================================================================
+
+================================================================================
+Analizando: DDoS-ICMP_Fragmentation11.pcap_Flow.csv
+Tipo de ataque: DDoS
+================================================================================
+
+Dimensiones originales: (11479, 84)
+
+1. ANÁLISIS DE VALORES FALTANTES:
+   - Flow Bytes/s: 2 (0.02%)
+
+2. ANÁLISIS DE FILAS DUPLICADAS:
+   - Filas duplicadas: 4
+
+3. ANÁLISIS DE COLUMNAS CONSTANTES:
+   - Bwd PSH Flags
+   - Bwd URG Flags
+   - Fwd Bulk Rate Avg
+   - Fwd Bytes/Bulk Avg
+   - Fwd Packet/Bulk Avg
+   - Fwd URG Flags
+   - URG Flag Count
+
+4. ANÁLISIS DE COLUMNAS CASI CONSTANTES (>99%):
+   - CWR Flag Count: 99.93%
+   - ECE Flag Count: 99.93%
+
+5. ANÁLISIS DE FILAS CON TODOS LOS VALORES EN CERO:
+   - Filas con todos los valores en 0: 0
+
+6. ANÁLISIS DE VALORES INFINITOS:
+   - Flow Bytes/s: 1 valores infinitos
+   - Flow Packets/s: 3 valores infinitos
+
+7. ANÁLISIS DE VALORES NEGATIVOS ANÓMALOS:
+   [OK] No se encontraron valores negativos anomalos
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Total de filas a eliminar: 7 (0.06%)
+  Filas que permanecerán: 11472
+  Muestra de índices marcados: 7
+================================================================================
+
+================================================================================
+Analizando: DDoS-ICMP_Fragmentation12.pcap_Flow.csv
+Tipo de ataque: DDoS
+================================================================================
+
+Dimensiones originales: (18026, 84)
+
+1. ANÁLISIS DE VALORES FALTANTES:
+   - Flow Bytes/s: 3 (0.02%)
+
+2. ANÁLISIS DE FILAS DUPLICADAS:
+   - Filas duplicadas: 30
+
+3. ANÁLISIS DE COLUMNAS CONSTANTES:
+   - Bwd PSH Flags
+   - Bwd URG Flags
+   - Fwd Bulk Rate Avg
+   - Fwd Bytes/Bulk Avg
+   - Fwd Packet/Bulk Avg
+   - Fwd URG Flags
+   - URG Flag Count
+
+4. ANÁLISIS DE COLUMNAS CASI CONSTANTES (>99%):
+   - CWR Flag Count: 99.85%
+   - ECE Flag Count: 99.85%
+
+5. ANÁLISIS DE FILAS CON TODOS LOS VALORES EN CERO:
+   - Filas con todos los valores en 0: 0
+
+6. ANÁLISIS DE VALORES INFINITOS:
+   - Flow Bytes/s: 2 valores infinitos
+   - Flow Packets/s: 5 valores infinitos
+
+7. ANÁLISIS DE VALORES NEGATIVOS ANÓMALOS:
+   [OK] No se encontraron valores negativos anomalos
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Total de filas a eliminar: 35 (0.19%)
+  Filas que permanecerán: 17991
+  Muestra de índices marcados: 35
+================================================================================
+
+================================================================================
+Analizando: DDoS-ICMP_Fragmentation13.pcap_Flow.csv
+Tipo de ataque: DDoS
+================================================================================
+
+Dimensiones originales: (12980, 84)
+
+1. ANÁLISIS DE VALORES FALTANTES:
+   - Flow Bytes/s: 2 (0.02%)
+
+2. ANÁLISIS DE FILAS DUPLICADAS:
+   - Filas duplicadas: 0
+
+3. ANÁLISIS DE COLUMNAS CONSTANTES:
+   - Bwd PSH Flags
+   - Bwd URG Flags
+   - Fwd Bulk Rate Avg
+   - Fwd Bytes/Bulk Avg
+   - Fwd Packet/Bulk Avg
+   - Fwd URG Flags
+   - URG Flag Count
+
+4. ANÁLISIS DE COLUMNAS CASI CONSTANTES (>99%):
+   - CWR Flag Count: 99.95%
+   - ECE Flag Count: 99.95%
+
+5. ANÁLISIS DE FILAS CON TODOS LOS VALORES EN CERO:
+   - Filas con todos los valores en 0: 0
+
+6. ANÁLISIS DE VALORES INFINITOS:
+   - Flow Bytes/s: 1 valores infinitos
+   - Flow Packets/s: 3 valores infinitos
+
+7. ANÁLISIS DE VALORES NEGATIVOS ANÓMALOS:
+   [OK] No se encontraron valores negativos anomalos
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Total de filas a eliminar: 3 (0.02%)
+  Filas que permanecerán: 12977
+  Muestra de índices marcados: 3
+================================================================================
+
+================================================================================
+Analizando: DDoS-ICMP_Fragmentation14.pcap_Flow.csv
+Tipo de ataque: DDoS
+================================================================================
+
+Dimensiones originales: (13411, 84)
+
+1. ANÁLISIS DE VALORES FALTANTES:
+   - Flow Bytes/s: 2 (0.01%)
+
+2. ANÁLISIS DE FILAS DUPLICADAS:
+   - Filas duplicadas: 54
+
+3. ANÁLISIS DE COLUMNAS CONSTANTES:
+   - Bwd PSH Flags
+   - Bwd URG Flags
+   - Fwd Bulk Rate Avg
+   - Fwd Bytes/Bulk Avg
+   - Fwd Packet/Bulk Avg
+   - Fwd URG Flags
+   - URG Flag Count
+
+4. ANÁLISIS DE COLUMNAS CASI CONSTANTES (>99%):
+   - CWR Flag Count: 99.93%
+   - ECE Flag Count: 99.93%
+
+5. ANÁLISIS DE FILAS CON TODOS LOS VALORES EN CERO:
+   - Filas con todos los valores en 0: 0
+
+6. ANÁLISIS DE VALORES INFINITOS:
+   - Flow Bytes/s: 1 valores infinitos
+   - Flow Packets/s: 3 valores infinitos
+
+7. ANÁLISIS DE VALORES NEGATIVOS ANÓMALOS:
+   [OK] No se encontraron valores negativos anomalos
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Total de filas a eliminar: 57 (0.43%)
+  Filas que permanecerán: 13354
+  Muestra de índices marcados: 57
+================================================================================
+
+================================================================================
+Analizando: DDoS-ICMP_Fragmentation15.pcap_Flow.csv
+Tipo de ataque: DDoS
+================================================================================
+
+Dimensiones originales: (9890, 84)
+
+1. ANÁLISIS DE VALORES FALTANTES:
+   - Flow Bytes/s: 7 (0.07%)
+
+2. ANÁLISIS DE FILAS DUPLICADAS:
+   - Filas duplicadas: 4
+
+3. ANÁLISIS DE COLUMNAS CONSTANTES:
+   - Bwd PSH Flags
+   - Bwd URG Flags
+   - Fwd Bulk Rate Avg
+   - Fwd Bytes/Bulk Avg
+   - Fwd Packet/Bulk Avg
+   - Fwd URG Flags
+   - URG Flag Count
+
+4. ANÁLISIS DE COLUMNAS CASI CONSTANTES (>99%):
+   - CWR Flag Count: 99.98%
+   - ECE Flag Count: 99.98%
+
+5. ANÁLISIS DE FILAS CON TODOS LOS VALORES EN CERO:
+   - Filas con todos los valores en 0: 0
+
+6. ANÁLISIS DE VALORES INFINITOS:
+   - Flow Bytes/s: 2 valores infinitos
+   - Flow Packets/s: 9 valores infinitos
+
+7. ANÁLISIS DE VALORES NEGATIVOS ANÓMALOS:
+   [OK] No se encontraron valores negativos anomalos
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Total de filas a eliminar: 13 (0.13%)
+  Filas que permanecerán: 9877
+  Muestra de índices marcados: 13
+================================================================================
+
+================================================================================
+Analizando: DDoS-ICMP_Fragmentation16.pcap_Flow.csv
+Tipo de ataque: DDoS
+================================================================================
+
+Dimensiones originales: (16489, 84)
+
+1. ANÁLISIS DE VALORES FALTANTES:
+   - Flow Bytes/s: 11 (0.07%)
+
+2. ANÁLISIS DE FILAS DUPLICADAS:
+   - Filas duplicadas: 24
+
+3. ANÁLISIS DE COLUMNAS CONSTANTES:
+   - Bwd PSH Flags
+   - Bwd URG Flags
+   - Fwd Bulk Rate Avg
+   - Fwd Bytes/Bulk Avg
+   - Fwd Packet/Bulk Avg
+   - Fwd URG Flags
+   - URG Flag Count
+
+4. ANÁLISIS DE COLUMNAS CASI CONSTANTES (>99%):
+   - CWR Flag Count: 99.61%
+   - ECE Flag Count: 99.64%
+
+5. ANÁLISIS DE FILAS CON TODOS LOS VALORES EN CERO:
+   - Filas con todos los valores en 0: 0
+
+6. ANÁLISIS DE VALORES INFINITOS:
+   - Flow Packets/s: 11 valores infinitos
+
+7. ANÁLISIS DE VALORES NEGATIVOS ANÓMALOS:
+   [OK] No se encontraron valores negativos anomalos
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Total de filas a eliminar: 34 (0.21%)
+  Filas que permanecerán: 16455
+  Muestra de índices marcados: 34
+================================================================================
+
+================================================================================
+Analizando: DDoS-ICMP_Fragmentation17.pcap_Flow.csv
+Tipo de ataque: DDoS
+================================================================================
+
+Dimensiones originales: (41632, 84)
+
+1. ANÁLISIS DE VALORES FALTANTES:
+   - Flow Bytes/s: 18 (0.04%)
+
+2. ANÁLISIS DE FILAS DUPLICADAS:
+   - Filas duplicadas: 53
+
+3. ANÁLISIS DE COLUMNAS CONSTANTES:
+   - Bwd PSH Flags
+   - Bwd URG Flags
+   - Fwd Bulk Rate Avg
+   - Fwd Bytes/Bulk Avg
+   - Fwd Packet/Bulk Avg
+   - Fwd URG Flags
+   - URG Flag Count
+
+4. ANÁLISIS DE COLUMNAS CASI CONSTANTES (>99%):
+   - CWR Flag Count: 99.15%
+   - ECE Flag Count: 99.18%
+
+5. ANÁLISIS DE FILAS CON TODOS LOS VALORES EN CERO:
+   - Filas con todos los valores en 0: 0
+
+6. ANÁLISIS DE VALORES INFINITOS:
+   - Flow Packets/s: 18 valores infinitos
+
+7. ANÁLISIS DE VALORES NEGATIVOS ANÓMALOS:
+   [OK] No se encontraron valores negativos anomalos
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Total de filas a eliminar: 71 (0.17%)
+  Filas que permanecerán: 41561
+  Muestra de índices marcados: 71
+================================================================================
+
+================================================================================
+Analizando: DDoS-ICMP_Fragmentation18.pcap_Flow.csv
+Tipo de ataque: DDoS
+================================================================================
+
+Dimensiones originales: (9106, 84)
+
+1. ANÁLISIS DE VALORES FALTANTES:
+   - Flow Bytes/s: 3 (0.03%)
+
+2. ANÁLISIS DE FILAS DUPLICADAS:
+   - Filas duplicadas: 3
+
+3. ANÁLISIS DE COLUMNAS CONSTANTES:
+   - Bwd PSH Flags
+   - Bwd URG Flags
+   - Fwd Bulk Rate Avg
+   - Fwd Bytes/Bulk Avg
+   - Fwd Packet/Bulk Avg
+   - Fwd URG Flags
+   - URG Flag Count
+
+4. ANÁLISIS DE COLUMNAS CASI CONSTANTES (>99%):
+   - CWR Flag Count: 99.58%
+   - ECE Flag Count: 99.58%
+
+5. ANÁLISIS DE FILAS CON TODOS LOS VALORES EN CERO:
+   - Filas con todos los valores en 0: 0
+
+6. ANÁLISIS DE VALORES INFINITOS:
+   - Flow Bytes/s: 1 valores infinitos
+   - Flow Packets/s: 4 valores infinitos
+
+7. ANÁLISIS DE VALORES NEGATIVOS ANÓMALOS:
+   [OK] No se encontraron valores negativos anomalos
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Total de filas a eliminar: 7 (0.08%)
+  Filas que permanecerán: 9099
+  Muestra de índices marcados: 7
+================================================================================
+
+================================================================================
+Analizando: DDoS-ICMP_Fragmentation19.pcap_Flow.csv
+Tipo de ataque: DDoS
+================================================================================
+
+Dimensiones originales: (10963, 84)
+
+1. ANÁLISIS DE VALORES FALTANTES:
+   - Flow Bytes/s: 3 (0.03%)
+
+2. ANÁLISIS DE FILAS DUPLICADAS:
+   - Filas duplicadas: 5
+
+3. ANÁLISIS DE COLUMNAS CONSTANTES:
+   - Bwd PSH Flags
+   - Bwd URG Flags
+   - Fwd Bulk Rate Avg
+   - Fwd Bytes/Bulk Avg
+   - Fwd Packet/Bulk Avg
+   - Fwd URG Flags
+   - URG Flag Count
+
+4. ANÁLISIS DE COLUMNAS CASI CONSTANTES (>99%):
+   - CWR Flag Count: 99.27%
+   - ECE Flag Count: 99.28%
+
+5. ANÁLISIS DE FILAS CON TODOS LOS VALORES EN CERO:
+   - Filas con todos los valores en 0: 0
+
+6. ANÁLISIS DE VALORES INFINITOS:
+   - Flow Bytes/s: 1 valores infinitos
+   - Flow Packets/s: 4 valores infinitos
+
+7. ANÁLISIS DE VALORES NEGATIVOS ANÓMALOS:
+   [OK] No se encontraron valores negativos anomalos
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Total de filas a eliminar: 9 (0.08%)
+  Filas que permanecerán: 10954
+  Muestra de índices marcados: 9
+================================================================================
+
+================================================================================
+Analizando: DDoS-ICMP_Fragmentation2.pcap_Flow.csv
+Tipo de ataque: DDoS
+================================================================================
+
+Dimensiones originales: (13462, 84)
+
+1. ANÁLISIS DE VALORES FALTANTES:
+   - Flow Bytes/s: 4 (0.03%)
+
+2. ANÁLISIS DE FILAS DUPLICADAS:
+   - Filas duplicadas: 3
+
+3. ANÁLISIS DE COLUMNAS CONSTANTES:
+   - Bwd PSH Flags
+   - Bwd URG Flags
+   - Fwd Bulk Rate Avg
+   - Fwd Bytes/Bulk Avg
+   - Fwd Packet/Bulk Avg
+   - Fwd URG Flags
+   - URG Flag Count
+
+4. ANÁLISIS DE COLUMNAS CASI CONSTANTES (>99%):
+   - CWR Flag Count: 99.98%
+   - ECE Flag Count: 99.98%
+
+5. ANÁLISIS DE FILAS CON TODOS LOS VALORES EN CERO:
+   - Filas con todos los valores en 0: 0
+
+6. ANÁLISIS DE VALORES INFINITOS:
+   - Flow Bytes/s: 2 valores infinitos
+   - Flow Packets/s: 6 valores infinitos
+
+7. ANÁLISIS DE VALORES NEGATIVOS ANÓMALOS:
+   [OK] No se encontraron valores negativos anomalos
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Total de filas a eliminar: 8 (0.06%)
+  Filas que permanecerán: 13454
+  Muestra de índices marcados: 8
+================================================================================
+
+================================================================================
+Analizando: DDoS-ICMP_Fragmentation3.pcap_Flow.csv
+Tipo de ataque: DDoS
+================================================================================
+
+Dimensiones originales: (23405, 84)
+
+1. ANÁLISIS DE VALORES FALTANTES:
+   - Flow Bytes/s: 9 (0.04%)
+
+2. ANÁLISIS DE FILAS DUPLICADAS:
+   - Filas duplicadas: 19
+
+3. ANÁLISIS DE COLUMNAS CONSTANTES:
+   - Bwd PSH Flags
+   - Bwd URG Flags
+   - ECE Flag Count
+   - Fwd Bulk Rate Avg
+   - Fwd Bytes/Bulk Avg
+   - Fwd Packet/Bulk Avg
+   - Fwd URG Flags
+   - URG Flag Count
+
+4. ANÁLISIS DE COLUMNAS CASI CONSTANTES (>99%):
+   - CWR Flag Count: 100.00%
+
+5. ANÁLISIS DE FILAS CON TODOS LOS VALORES EN CERO:
+   - Filas con todos los valores en 0: 0
+
+6. ANÁLISIS DE VALORES INFINITOS:
+   - Flow Bytes/s: 4 valores infinitos
+   - Flow Packets/s: 13 valores infinitos
+
+7. ANÁLISIS DE VALORES NEGATIVOS ANÓMALOS:
+   [OK] No se encontraron valores negativos anomalos
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Total de filas a eliminar: 32 (0.14%)
+  Filas que permanecerán: 23373
+  Muestra de índices marcados: 32
+================================================================================
+
+================================================================================
+Analizando: DDoS-ICMP_Fragmentation4.pcap_Flow.csv
+Tipo de ataque: DDoS
+================================================================================
+
+Dimensiones originales: (25593, 84)
+
+1. ANÁLISIS DE VALORES FALTANTES:
+   - Flow Bytes/s: 17 (0.07%)
+
+2. ANÁLISIS DE FILAS DUPLICADAS:
+   - Filas duplicadas: 33
+
+3. ANÁLISIS DE COLUMNAS CONSTANTES:
+   - Bwd PSH Flags
+   - Bwd URG Flags
+   - Fwd Bulk Rate Avg
+   - Fwd Bytes/Bulk Avg
+   - Fwd Packet/Bulk Avg
+   - Fwd URG Flags
+   - URG Flag Count
+
+4. ANÁLISIS DE COLUMNAS CASI CONSTANTES (>99%):
+   - CWR Flag Count: 99.99%
+   - ECE Flag Count: 99.99%
+
+5. ANÁLISIS DE FILAS CON TODOS LOS VALORES EN CERO:
+   - Filas con todos los valores en 0: 0
+
+6. ANÁLISIS DE VALORES INFINITOS:
+   - Flow Bytes/s: 8 valores infinitos
+   - Flow Packets/s: 25 valores infinitos
+
+7. ANÁLISIS DE VALORES NEGATIVOS ANÓMALOS:
+   [OK] No se encontraron valores negativos anomalos
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Total de filas a eliminar: 55 (0.21%)
+  Filas que permanecerán: 25538
+  Muestra de índices marcados: 55
+================================================================================
+
+================================================================================
+Analizando: DDoS-ICMP_Fragmentation5.pcap_Flow.csv
+Tipo de ataque: DDoS
+================================================================================
+
+Dimensiones originales: (10617, 84)
+
+1. ANÁLISIS DE VALORES FALTANTES:
+   - Flow Bytes/s: 4 (0.04%)
+
+2. ANÁLISIS DE FILAS DUPLICADAS:
+   - Filas duplicadas: 13
+
+3. ANÁLISIS DE COLUMNAS CONSTANTES:
+   - Bwd PSH Flags
+   - Bwd URG Flags
+   - Fwd Bulk Rate Avg
+   - Fwd Bytes/Bulk Avg
+   - Fwd Packet/Bulk Avg
+   - Fwd URG Flags
+   - URG Flag Count
+
+4. ANÁLISIS DE COLUMNAS CASI CONSTANTES (>99%):
+   - CWR Flag Count: 99.87%
+   - ECE Flag Count: 99.92%
+
+5. ANÁLISIS DE FILAS CON TODOS LOS VALORES EN CERO:
+   - Filas con todos los valores en 0: 0
+
+6. ANÁLISIS DE VALORES INFINITOS:
+   - Flow Bytes/s: 1 valores infinitos
+   - Flow Packets/s: 5 valores infinitos
+
+7. ANÁLISIS DE VALORES NEGATIVOS ANÓMALOS:
+   [OK] No se encontraron valores negativos anomalos
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Total de filas a eliminar: 18 (0.17%)
+  Filas que permanecerán: 10599
+  Muestra de índices marcados: 18
+================================================================================
+
+================================================================================
+Analizando: DDoS-ICMP_Fragmentation6.pcap_Flow.csv
+Tipo de ataque: DDoS
+================================================================================
+
+Dimensiones originales: (10138, 84)
+
+1. ANÁLISIS DE VALORES FALTANTES:
+   [OK] No se encontraron valores faltantes
+
+2. ANÁLISIS DE FILAS DUPLICADAS:
+   - Filas duplicadas: 0
+
+3. ANÁLISIS DE COLUMNAS CONSTANTES:
+   - Bwd PSH Flags
+   - Bwd URG Flags
+   - Fwd Bulk Rate Avg
+   - Fwd Bytes/Bulk Avg
+   - Fwd Packet/Bulk Avg
+   - Fwd URG Flags
+   - URG Flag Count
+
+4. ANÁLISIS DE COLUMNAS CASI CONSTANTES (>99%):
+   - CWR Flag Count: 99.91%
+   - ECE Flag Count: 99.91%
+
+5. ANÁLISIS DE FILAS CON TODOS LOS VALORES EN CERO:
+   - Filas con todos los valores en 0: 0
+
+6. ANÁLISIS DE VALORES INFINITOS:
+   [OK] No se encontraron valores infinitos
+
+7. ANÁLISIS DE VALORES NEGATIVOS ANÓMALOS:
+   [OK] No se encontraron valores negativos anomalos
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Total de filas a eliminar: 0 (0.00%)
+  Filas que permanecerán: 10138
+  Muestra de índices marcados: 0
+================================================================================
+
+================================================================================
+Analizando: DDoS-ICMP_Fragmentation7.pcap_Flow.csv
+Tipo de ataque: DDoS
+================================================================================
+
+Dimensiones originales: (14235, 84)
+
+1. ANÁLISIS DE VALORES FALTANTES:
+   - Flow Bytes/s: 2 (0.01%)
+
+2. ANÁLISIS DE FILAS DUPLICADAS:
+   - Filas duplicadas: 3
+
+3. ANÁLISIS DE COLUMNAS CONSTANTES:
+   - Bwd PSH Flags
+   - Bwd URG Flags
+   - Fwd Bulk Rate Avg
+   - Fwd Bytes/Bulk Avg
+   - Fwd Packet/Bulk Avg
+   - Fwd URG Flags
+   - URG Flag Count
+
+4. ANÁLISIS DE COLUMNAS CASI CONSTANTES (>99%):
+   - CWR Flag Count: 99.92%
+   - ECE Flag Count: 99.93%
+
+5. ANÁLISIS DE FILAS CON TODOS LOS VALORES EN CERO:
+   - Filas con todos los valores en 0: 0
+
+6. ANÁLISIS DE VALORES INFINITOS:
+   - Flow Bytes/s: 5 valores infinitos
+   - Flow Packets/s: 7 valores infinitos
+
+7. ANÁLISIS DE VALORES NEGATIVOS ANÓMALOS:
+   [OK] No se encontraron valores negativos anomalos
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Total de filas a eliminar: 10 (0.07%)
+  Filas que permanecerán: 14225
+  Muestra de índices marcados: 10
+================================================================================
+
+================================================================================
+Analizando: DDoS-ICMP_Fragmentation8.pcap_Flow.csv
+Tipo de ataque: DDoS
+================================================================================
+
+Dimensiones originales: (12572, 84)
+
+1. ANÁLISIS DE VALORES FALTANTES:
+   - Flow Bytes/s: 4 (0.03%)
+
+2. ANÁLISIS DE FILAS DUPLICADAS:
+   - Filas duplicadas: 4
+
+3. ANÁLISIS DE COLUMNAS CONSTANTES:
+   - Bwd PSH Flags
+   - Bwd URG Flags
+   - Fwd Bulk Rate Avg
+   - Fwd Bytes/Bulk Avg
+   - Fwd Packet/Bulk Avg
+   - Fwd URG Flags
+   - URG Flag Count
+
+4. ANÁLISIS DE COLUMNAS CASI CONSTANTES (>99%):
+   - CWR Flag Count: 99.91%
+   - ECE Flag Count: 99.92%
+
+5. ANÁLISIS DE FILAS CON TODOS LOS VALORES EN CERO:
+   - Filas con todos los valores en 0: 0
+
+6. ANÁLISIS DE VALORES INFINITOS:
+   - Flow Bytes/s: 2 valores infinitos
+   - Flow Packets/s: 6 valores infinitos
+
+7. ANÁLISIS DE VALORES NEGATIVOS ANÓMALOS:
+   [OK] No se encontraron valores negativos anomalos
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Total de filas a eliminar: 8 (0.06%)
+  Filas que permanecerán: 12564
+  Muestra de índices marcados: 8
+================================================================================
+
+================================================================================
+Analizando: DDoS-ICMP_Fragmentation9.pcap_Flow.csv
+Tipo de ataque: DDoS
+================================================================================
+
+Dimensiones originales: (20380, 84)
+
+1. ANÁLISIS DE VALORES FALTANTES:
+   - Flow Bytes/s: 11 (0.05%)
+
+2. ANÁLISIS DE FILAS DUPLICADAS:
+   - Filas duplicadas: 14
+
+3. ANÁLISIS DE COLUMNAS CONSTANTES:
+   - Bwd PSH Flags
+   - Bwd URG Flags
+   - Fwd Bulk Rate Avg
+   - Fwd Bytes/Bulk Avg
+   - Fwd Packet/Bulk Avg
+   - Fwd URG Flags
+   - URG Flag Count
+
+4. ANÁLISIS DE COLUMNAS CASI CONSTANTES (>99%):
+   - CWR Flag Count: 99.92%
+   - ECE Flag Count: 99.92%
+
+5. ANÁLISIS DE FILAS CON TODOS LOS VALORES EN CERO:
+   - Filas con todos los valores en 0: 0
+
+6. ANÁLISIS DE VALORES INFINITOS:
+   - Flow Bytes/s: 2 valores infinitos
+   - Flow Packets/s: 13 valores infinitos
+
+7. ANÁLISIS DE VALORES NEGATIVOS ANÓMALOS:
+   [OK] No se encontraron valores negativos anomalos
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Total de filas a eliminar: 24 (0.12%)
+  Filas que permanecerán: 20356
+  Muestra de índices marcados: 24
+================================================================================
+
+
+################################################################################
+# CATEGORÍA: DoS (30 archivos a analizar)
+################################################################################
+
+================================================================================
+Analizando: DoS-SYN_Flood.pcap_Flow.csv
+Tipo de ataque: DoS
+================================================================================
+   Progreso: chunk 10 | filas procesadas: 2,000,000
+   Progreso: chunk 20 | filas procesadas: 3,990,181
+
+Dimensiones originales: (3990181, 84)
+
+1. ANÁLISIS DE VALORES FALTANTES:
+   - Flow Bytes/s: 204 (0.01%)
+
+2. ANÁLISIS DE FILAS DUPLICADAS:
+   - Filas duplicadas: 54
+
+3. ANÁLISIS DE COLUMNAS CONSTANTES:
+   - Bwd PSH Flags
+   - Bwd URG Flags
+   - Fwd Bulk Rate Avg
+   - Fwd Bytes/Bulk Avg
+   - Fwd Packet/Bulk Avg
+   - Fwd URG Flags
+   - URG Flag Count
+
+4. ANÁLISIS DE COLUMNAS CASI CONSTANTES (>99%):
+   - Protocol: 99.79%
+   - Total Length of Fwd Packet: 99.66%
+   - Total Length of Bwd Packet: 99.69%
+   - Fwd Packet Length Max: 99.66%
+   - Fwd Packet Length Min: 99.79%
+   - Fwd Packet Length Mean: 99.66%
+   - Fwd Packet Length Std: 99.85%
+   - Bwd Packet Length Max: 99.69%
+   - Bwd Packet Length Min: 99.81%
+   - Bwd Packet Length Mean: 99.69%
+   - Bwd Packet Length Std: 99.87%
+   - Flow Bytes/s: 99.65%
+   - Fwd PSH Flags: 99.98%
+   - Packet Length Min: 99.79%
+   - Packet Length Max: 99.65%
+   - Packet Length Mean: 99.65%
+   - Packet Length Std: 99.68%
+   - Packet Length Variance: 99.68%
+   - FIN Flag Count: 99.83%
+   - PSH Flag Count: 99.86%
+   - CWR Flag Count: 100.00%
+   - ECE Flag Count: 100.00%
+   - Average Packet Size: 99.65%
+   - Fwd Segment Size Avg: 99.66%
+   - Bwd Segment Size Avg: 99.69%
+   - Bwd Bytes/Bulk Avg: 99.94%
+   - Bwd Packet/Bulk Avg: 99.94%
+   - Bwd Bulk Rate Avg: 99.94%
+   - Subflow Fwd Bytes: 99.90%
+   - Subflow Bwd Bytes: 99.92%
+   - Fwd Act Data Pkts: 99.81%
+
+5. ANÁLISIS DE FILAS CON TODOS LOS VALORES EN CERO:
+   - Filas con todos los valores en 0: 0
+
+6. ANÁLISIS DE VALORES INFINITOS:
+   - Flow Bytes/s: 62 valores infinitos
+   - Flow Packets/s: 266 valores infinitos
+
+7. ANÁLISIS DE VALORES NEGATIVOS ANÓMALOS:
+   [OK] No se encontraron valores negativos anomalos
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Total de filas a eliminar: 268 (0.01%)
+  Filas que permanecerán: 3989913
+  Muestra de índices marcados: 268
+================================================================================
+
+================================================================================
+Analizando: DoS-SYN_Flood1.pcap_Flow.csv
+Tipo de ataque: DoS
+================================================================================
+
+Dimensiones originales: (1373103, 84)
+
+1. ANÁLISIS DE VALORES FALTANTES:
+   - Flow Bytes/s: 252 (0.02%)
+
+2. ANÁLISIS DE FILAS DUPLICADAS:
+   - Filas duplicadas: 83
+
+3. ANÁLISIS DE COLUMNAS CONSTANTES:
+   - Bwd PSH Flags
+   - Bwd URG Flags
+   - Fwd Bulk Rate Avg
+   - Fwd Bytes/Bulk Avg
+   - Fwd Packet/Bulk Avg
+   - Fwd URG Flags
+   - URG Flag Count
+
+4. ANÁLISIS DE COLUMNAS CASI CONSTANTES (>99%):
+   - Protocol: 99.35%
+   - Total Length of Fwd Packet: 99.00%
+   - Total Length of Bwd Packet: 99.17%
+   - Fwd Packet Length Max: 99.00%
+   - Fwd Packet Length Min: 99.35%
+   - Fwd Packet Length Mean: 99.00%
+   - Fwd Packet Length Std: 99.59%
+   - Bwd Packet Length Max: 99.17%
+   - Bwd Packet Length Min: 99.49%
+   - Bwd Packet Length Mean: 99.17%
+   - Bwd Packet Length Std: 99.66%
+   - Fwd PSH Flags: 99.93%
+   - Packet Length Min: 99.37%
+   - Packet Length Std: 99.14%
+   - Packet Length Variance: 99.14%
+   - FIN Flag Count: 99.52%
+   - PSH Flag Count: 99.61%
+   - CWR Flag Count: 99.99%
+   - ECE Flag Count: 99.99%
+   - Fwd Segment Size Avg: 99.00%
+   - Bwd Segment Size Avg: 99.17%
+   - Bwd Bytes/Bulk Avg: 99.78%
+   - Bwd Packet/Bulk Avg: 99.78%
+   - Bwd Bulk Rate Avg: 99.78%
+   - Subflow Fwd Bytes: 99.71%
+   - Subflow Bwd Bytes: 99.78%
+   - Fwd Act Data Pkts: 99.39%
+
+5. ANÁLISIS DE FILAS CON TODOS LOS VALORES EN CERO:
+   - Filas con todos los valores en 0: 0
+
+6. ANÁLISIS DE VALORES INFINITOS:
+   - Flow Bytes/s: 83 valores infinitos
+   - Flow Packets/s: 335 valores infinitos
+
+7. ANÁLISIS DE VALORES NEGATIVOS ANÓMALOS:
+   [OK] No se encontraron valores negativos anomalos
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Total de filas a eliminar: 340 (0.02%)
+  Filas que permanecerán: 1372763
+  Muestra de índices marcados: 340
+================================================================================
+
+================================================================================
+Analizando: DoS-SYN_Flood2.pcap_Flow.csv
+Tipo de ataque: DoS
+================================================================================
+   Progreso: chunk 10 | filas procesadas: 2,000,000
+
+Dimensiones originales: (2130835, 84)
+
+1. ANÁLISIS DE VALORES FALTANTES:
+   - Flow Bytes/s: 282 (0.01%)
+
+2. ANÁLISIS DE FILAS DUPLICADAS:
+   - Filas duplicadas: 47
+
+3. ANÁLISIS DE COLUMNAS CONSTANTES:
+   - Bwd PSH Flags
+   - Bwd URG Flags
+   - Fwd Bulk Rate Avg
+   - Fwd Bytes/Bulk Avg
+   - Fwd Packet/Bulk Avg
+   - Fwd URG Flags
+   - URG Flag Count
+
+4. ANÁLISIS DE COLUMNAS CASI CONSTANTES (>99%):
+   - Protocol: 99.30%
+   - Total Length of Bwd Packet: 99.04%
+   - Fwd Packet Length Min: 99.30%
+   - Fwd Packet Length Std: 99.55%
+   - Bwd Packet Length Max: 99.04%
+   - Bwd Packet Length Min: 99.41%
+   - Bwd Packet Length Mean: 99.04%
+   - Bwd Packet Length Std: 99.60%
+   - Bwd IAT Std: 99.03%
+   - Fwd PSH Flags: 99.92%
+   - Packet Length Min: 99.32%
+   - Packet Length Std: 99.00%
+   - Packet Length Variance: 99.00%
+   - FIN Flag Count: 99.50%
+   - PSH Flag Count: 99.57%
+   - CWR Flag Count: 100.00%
+   - ECE Flag Count: 100.00%
+   - Bwd Segment Size Avg: 99.04%
+   - Bwd Bytes/Bulk Avg: 99.80%
+   - Bwd Packet/Bulk Avg: 99.80%
+   - Bwd Bulk Rate Avg: 99.80%
+   - Subflow Fwd Bytes: 99.70%
+   - Subflow Bwd Bytes: 99.77%
+   - Fwd Act Data Pkts: 99.39%
+
+5. ANÁLISIS DE FILAS CON TODOS LOS VALORES EN CERO:
+   - Filas con todos los valores en 0: 0
+
+6. ANÁLISIS DE VALORES INFINITOS:
+   - Flow Bytes/s: 126 valores infinitos
+   - Flow Packets/s: 408 valores infinitos
+
+7. ANÁLISIS DE VALORES NEGATIVOS ANÓMALOS:
+   [OK] No se encontraron valores negativos anomalos
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Total de filas a eliminar: 414 (0.02%)
+  Filas que permanecerán: 2130421
+  Muestra de índices marcados: 414
+================================================================================
+
+================================================================================
+Analizando: DoS-SYN_Flood3.pcap_Flow.csv
+Tipo de ataque: DoS
+================================================================================
+   Progreso: chunk 10 | filas procesadas: 1,923,524
+
+Dimensiones originales: (1923524, 84)
+
+1. ANÁLISIS DE VALORES FALTANTES:
+   - Flow Bytes/s: 414 (0.02%)
+
+2. ANÁLISIS DE FILAS DUPLICADAS:
+   - Filas duplicadas: 47
+
+3. ANÁLISIS DE COLUMNAS CONSTANTES:
+   - Bwd PSH Flags
+   - Bwd URG Flags
+   - Fwd Bulk Rate Avg
+   - Fwd Bytes/Bulk Avg
+   - Fwd Packet/Bulk Avg
+   - Fwd URG Flags
+   - URG Flag Count
+
+4. ANÁLISIS DE COLUMNAS CASI CONSTANTES (>99%):
+   - Fwd Packet Length Std: 99.22%
+   - Bwd Packet Length Min: 99.11%
+   - Bwd Packet Length Std: 99.38%
+   - Fwd PSH Flags: 99.89%
+   - FIN Flag Count: 99.14%
+   - PSH Flag Count: 99.22%
+   - CWR Flag Count: 99.99%
+   - ECE Flag Count: 99.99%
+   - Bwd Bytes/Bulk Avg: 99.76%
+   - Bwd Packet/Bulk Avg: 99.76%
+   - Bwd Bulk Rate Avg: 99.76%
+   - Subflow Fwd Bytes: 99.54%
+   - Subflow Bwd Bytes: 99.69%
+   - Fwd Act Data Pkts: 99.03%
+
+5. ANÁLISIS DE FILAS CON TODOS LOS VALORES EN CERO:
+   - Filas con todos los valores en 0: 0
+
+6. ANÁLISIS DE VALORES INFINITOS:
+   - Flow Bytes/s: 134 valores infinitos
+   - Flow Packets/s: 548 valores infinitos
+
+7. ANÁLISIS DE VALORES NEGATIVOS ANÓMALOS:
+   [OK] No se encontraron valores negativos anomalos
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Total de filas a eliminar: 549 (0.03%)
+  Filas que permanecerán: 1922975
+  Muestra de índices marcados: 549
+================================================================================
+
+================================================================================
+Analizando: DoS-SYN_Flood4.pcap_Flow.csv
+Tipo de ataque: DoS
+================================================================================
+   Progreso: chunk 10 | filas procesadas: 2,000,000
+
+Dimensiones originales: (2169821, 84)
+
+1. ANÁLISIS DE VALORES FALTANTES:
+   - Flow Bytes/s: 361 (0.02%)
+
+2. ANÁLISIS DE FILAS DUPLICADAS:
+   - Filas duplicadas: 60
+
+3. ANÁLISIS DE COLUMNAS CONSTANTES:
+   - Bwd PSH Flags
+   - Bwd URG Flags
+   - Fwd Bulk Rate Avg
+   - Fwd Bytes/Bulk Avg
+   - Fwd Packet/Bulk Avg
+   - Fwd URG Flags
+   - URG Flag Count
+
+4. ANÁLISIS DE COLUMNAS CASI CONSTANTES (>99%):
+   - Protocol: 99.18%
+   - Fwd Packet Length Min: 99.18%
+   - Fwd Packet Length Std: 99.42%
+   - Bwd Packet Length Min: 99.31%
+   - Bwd Packet Length Std: 99.51%
+   - Fwd PSH Flags: 99.91%
+   - Packet Length Min: 99.21%
+   - FIN Flag Count: 99.39%
+   - PSH Flag Count: 99.46%
+   - CWR Flag Count: 99.99%
+   - ECE Flag Count: 99.99%
+   - Bwd Bytes/Bulk Avg: 99.77%
+   - Bwd Packet/Bulk Avg: 99.77%
+   - Bwd Bulk Rate Avg: 99.77%
+   - Subflow Fwd Bytes: 99.67%
+   - Subflow Bwd Bytes: 99.76%
+   - Fwd Act Data Pkts: 99.28%
+
+5. ANÁLISIS DE FILAS CON TODOS LOS VALORES EN CERO:
+   - Filas con todos los valores en 0: 0
+
+6. ANÁLISIS DE VALORES INFINITOS:
+   - Flow Bytes/s: 147 valores infinitos
+   - Flow Packets/s: 508 valores infinitos
+
+7. ANÁLISIS DE VALORES NEGATIVOS ANÓMALOS:
+   [OK] No se encontraron valores negativos anomalos
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Total de filas a eliminar: 513 (0.02%)
+  Filas que permanecerán: 2169308
+  Muestra de índices marcados: 513
+================================================================================
+
+================================================================================
+Analizando: DoS-SYN_Flood5.pcap_Flow.csv
+Tipo de ataque: DoS
+================================================================================
+
+Dimensiones originales: (1795088, 84)
+
+1. ANÁLISIS DE VALORES FALTANTES:
+   - Flow Bytes/s: 114 (0.01%)
+
+2. ANÁLISIS DE FILAS DUPLICADAS:
+   - Filas duplicadas: 13
+
+3. ANÁLISIS DE COLUMNAS CONSTANTES:
+   - Bwd PSH Flags
+   - Bwd URG Flags
+   - Fwd Bulk Rate Avg
+   - Fwd Bytes/Bulk Avg
+   - Fwd Packet/Bulk Avg
+   - Fwd URG Flags
+   - URG Flag Count
+
+4. ANÁLISIS DE COLUMNAS CASI CONSTANTES (>99%):
+   - Protocol: 99.47%
+   - Total Length of Fwd Packet: 99.15%
+   - Total Length of Bwd Packet: 99.22%
+   - Fwd Packet Length Max: 99.15%
+   - Fwd Packet Length Min: 99.47%
+   - Fwd Packet Length Mean: 99.15%
+   - Fwd Packet Length Std: 99.64%
+   - Bwd Packet Length Max: 99.22%
+   - Bwd Packet Length Min: 99.53%
+   - Bwd Packet Length Mean: 99.22%
+   - Bwd Packet Length Std: 99.68%
+   - Flow Bytes/s: 99.13%
+   - Fwd PSH Flags: 99.95%
+   - Packet Length Min: 99.49%
+   - Packet Length Max: 99.14%
+   - Packet Length Mean: 99.14%
+   - Packet Length Std: 99.20%
+   - Packet Length Variance: 99.20%
+   - FIN Flag Count: 99.66%
+   - PSH Flag Count: 99.65%
+   - CWR Flag Count: 100.00%
+   - ECE Flag Count: 100.00%
+   - Average Packet Size: 99.14%
+   - Fwd Segment Size Avg: 99.15%
+   - Bwd Segment Size Avg: 99.22%
+   - Bwd Bytes/Bulk Avg: 99.88%
+   - Bwd Packet/Bulk Avg: 99.88%
+   - Bwd Bulk Rate Avg: 99.88%
+   - Subflow Fwd Bytes: 99.78%
+   - Subflow Bwd Bytes: 99.83%
+   - Fwd Act Data Pkts: 99.56%
+
+5. ANÁLISIS DE FILAS CON TODOS LOS VALORES EN CERO:
+   - Filas con todos los valores en 0: 0
+
+6. ANÁLISIS DE VALORES INFINITOS:
+   - Flow Bytes/s: 41 valores infinitos
+   - Flow Packets/s: 155 valores infinitos
+
+7. ANÁLISIS DE VALORES NEGATIVOS ANÓMALOS:
+   [OK] No se encontraron valores negativos anomalos
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Total de filas a eliminar: 155 (0.01%)
+  Filas que permanecerán: 1794933
+  Muestra de índices marcados: 155
+================================================================================
+
+================================================================================
+Analizando: DoS-SYN_Flood6.pcap_Flow.csv
+Tipo de ataque: DoS
+================================================================================
+
+Dimensiones originales: (1503778, 84)
+
+1. ANÁLISIS DE VALORES FALTANTES:
+   - Flow Bytes/s: 180 (0.01%)
+
+2. ANÁLISIS DE FILAS DUPLICADAS:
+   - Filas duplicadas: 13
+
+3. ANÁLISIS DE COLUMNAS CONSTANTES:
+   - Bwd PSH Flags
+   - Bwd URG Flags
+   - Fwd Bulk Rate Avg
+   - Fwd Bytes/Bulk Avg
+   - Fwd Packet/Bulk Avg
+   - Fwd URG Flags
+   - URG Flag Count
+
+4. ANÁLISIS DE COLUMNAS CASI CONSTANTES (>99%):
+   - Protocol: 99.24%
+   - Fwd Packet Length Min: 99.24%
+   - Fwd Packet Length Std: 99.55%
+   - Bwd Packet Length Min: 99.32%
+   - Bwd Packet Length Std: 99.59%
+   - Fwd PSH Flags: 99.93%
+   - Packet Length Min: 99.26%
+   - FIN Flag Count: 99.56%
+   - PSH Flag Count: 99.55%
+   - CWR Flag Count: 100.00%
+   - ECE Flag Count: 100.00%
+   - Bwd Bytes/Bulk Avg: 99.82%
+   - Bwd Packet/Bulk Avg: 99.82%
+   - Bwd Bulk Rate Avg: 99.82%
+   - Subflow Fwd Bytes: 99.67%
+   - Subflow Bwd Bytes: 99.74%
+   - Fwd Act Data Pkts: 99.38%
+
+5. ANÁLISIS DE FILAS CON TODOS LOS VALORES EN CERO:
+   - Filas con todos los valores en 0: 0
+
+6. ANÁLISIS DE VALORES INFINITOS:
+   - Flow Bytes/s: 66 valores infinitos
+   - Flow Packets/s: 246 valores infinitos
+
+7. ANÁLISIS DE VALORES NEGATIVOS ANÓMALOS:
+   [OK] No se encontraron valores negativos anomalos
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Total de filas a eliminar: 246 (0.02%)
+  Filas que permanecerán: 1503532
+  Muestra de índices marcados: 246
+================================================================================
+
+================================================================================
+Analizando: DoS-SYN_Flood7.pcap_Flow.csv
+Tipo de ataque: DoS
+================================================================================
+
+Dimensiones originales: (1404314, 84)
+
+1. ANÁLISIS DE VALORES FALTANTES:
+   - Flow Bytes/s: 186 (0.01%)
+
+2. ANÁLISIS DE FILAS DUPLICADAS:
+   - Filas duplicadas: 36
+
+3. ANÁLISIS DE COLUMNAS CONSTANTES:
+   - Bwd PSH Flags
+   - Bwd URG Flags
+   - Fwd Bulk Rate Avg
+   - Fwd Bytes/Bulk Avg
+   - Fwd Packet/Bulk Avg
+   - Fwd URG Flags
+   - URG Flag Count
+
+4. ANÁLISIS DE COLUMNAS CASI CONSTANTES (>99%):
+   - Protocol: 99.33%
+   - Total Length of Bwd Packet: 99.08%
+   - Fwd Packet Length Min: 99.33%
+   - Fwd Packet Length Std: 99.47%
+   - Bwd Packet Length Max: 99.08%
+   - Bwd Packet Length Min: 99.44%
+   - Bwd Packet Length Mean: 99.08%
+   - Bwd Packet Length Std: 99.60%
+   - Bwd IAT Std: 99.50%
+   - Fwd PSH Flags: 99.90%
+   - Packet Length Min: 99.36%
+   - PSH Flag Count: 99.47%
+   - CWR Flag Count: 100.00%
+   - ECE Flag Count: 100.00%
+   - Bwd Segment Size Avg: 99.08%
+   - Bwd Bytes/Bulk Avg: 99.82%
+   - Bwd Packet/Bulk Avg: 99.82%
+   - Bwd Bulk Rate Avg: 99.82%
+   - Subflow Fwd Bytes: 99.67%
+   - Subflow Bwd Bytes: 99.79%
+   - Fwd Act Data Pkts: 99.32%
+
+5. ANÁLISIS DE FILAS CON TODOS LOS VALORES EN CERO:
+   - Filas con todos los valores en 0: 0
+
+6. ANÁLISIS DE VALORES INFINITOS:
+   - Flow Bytes/s: 69 valores infinitos
+   - Flow Packets/s: 255 valores infinitos
+
+7. ANÁLISIS DE VALORES NEGATIVOS ANÓMALOS:
+   [OK] No se encontraron valores negativos anomalos
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Total de filas a eliminar: 256 (0.02%)
+  Filas que permanecerán: 1404058
+  Muestra de índices marcados: 256
+================================================================================
+
+================================================================================
+Analizando: DoS-HTTP_Flood.pcap_Flow.csv
+Tipo de ataque: DoS
+================================================================================
+
+Dimensiones originales: (932513, 84)
+
+1. ANÁLISIS DE VALORES FALTANTES:
+   - Flow Bytes/s: 40268 (4.32%)
+
+2. ANÁLISIS DE FILAS DUPLICADAS:
+   - Filas duplicadas: 14064
+
+3. ANÁLISIS DE COLUMNAS CONSTANTES:
+   - Bwd PSH Flags
+   - Bwd URG Flags
+   - Fwd Bulk Rate Avg
+   - Fwd Bytes/Bulk Avg
+   - Fwd Packet/Bulk Avg
+   - Fwd URG Flags
+   - URG Flag Count
+
+4. ANÁLISIS DE COLUMNAS CASI CONSTANTES (>99%):
+   - CWR Flag Count: 99.99%
+   - ECE Flag Count: 99.99%
+
+5. ANÁLISIS DE FILAS CON TODOS LOS VALORES EN CERO:
+   - Filas con todos los valores en 0: 0
+
+6. ANÁLISIS DE VALORES INFINITOS:
+   - Flow Bytes/s: 518 valores infinitos
+   - Flow Packets/s: 40786 valores infinitos
+
+7. ANÁLISIS DE VALORES NEGATIVOS ANÓMALOS:
+   [OK] No se encontraron valores negativos anomalos
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Total de filas a eliminar: 41539 (4.45%)
+  Filas que permanecerán: 890974
+  Muestra de índices marcados: 1000
+================================================================================
+
+================================================================================
+Analizando: DoS-HTTP_Flood1.pcap_Flow.csv
+Tipo de ataque: DoS
+================================================================================
+
+Dimensiones originales: (710231, 84)
+
+1. ANÁLISIS DE VALORES FALTANTES:
+   - Flow Bytes/s: 38450 (5.41%)
+
+2. ANÁLISIS DE FILAS DUPLICADAS:
+   - Filas duplicadas: 12613
+
+3. ANÁLISIS DE COLUMNAS CONSTANTES:
+   - Bwd PSH Flags
+   - Bwd URG Flags
+   - Fwd Bulk Rate Avg
+   - Fwd Bytes/Bulk Avg
+   - Fwd Packet/Bulk Avg
+   - Fwd URG Flags
+   - URG Flag Count
+
+4. ANÁLISIS DE COLUMNAS CASI CONSTANTES (>99%):
+   - Fwd PSH Flags: 99.03%
+   - CWR Flag Count: 100.00%
+   - ECE Flag Count: 100.00%
+
+5. ANÁLISIS DE FILAS CON TODOS LOS VALORES EN CERO:
+   - Filas con todos los valores en 0: 0
+
+6. ANÁLISIS DE VALORES INFINITOS:
+   - Flow Bytes/s: 285 valores infinitos
+   - Flow Packets/s: 38735 valores infinitos
+
+7. ANÁLISIS DE VALORES NEGATIVOS ANÓMALOS:
+   [OK] No se encontraron valores negativos anomalos
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Total de filas a eliminar: 39265 (5.53%)
+  Filas que permanecerán: 670966
+  Muestra de índices marcados: 1000
+================================================================================
+
+================================================================================
+Analizando: DoS-TCP_Flood.pcap_Flow.csv
+Tipo de ataque: DoS
+================================================================================
+   [WARN] Archivo sin filas (solo cabecera)
+
+================================================================================
+Analizando: DoS-TCP_Flood1.pcap_Flow.csv
+Tipo de ataque: DoS
+================================================================================
+   [WARN] Archivo sin filas (solo cabecera)
+
+================================================================================
+Analizando: DoS-TCP_Flood10.pcap_Flow.csv
+Tipo de ataque: DoS
+================================================================================
+   [WARN] Archivo sin filas (solo cabecera)
+
+================================================================================
+Analizando: DoS-TCP_Flood2.pcap_Flow.csv
+Tipo de ataque: DoS
+================================================================================
+   [WARN] Archivo sin filas (solo cabecera)
+
+================================================================================
+Analizando: DoS-TCP_Flood3.pcap_Flow.csv
+Tipo de ataque: DoS
+================================================================================
+   [WARN] Archivo sin filas (solo cabecera)
+
+================================================================================
+Analizando: DoS-UDP_Flood.pcap_Flow.csv
+Tipo de ataque: DoS
+================================================================================
+
+Dimensiones originales: (934001, 84)
+
+1. ANÁLISIS DE VALORES FALTANTES:
+   - Flow Bytes/s: 148 (0.02%)
+
+2. ANÁLISIS DE FILAS DUPLICADAS:
+   - Filas duplicadas: 12
+
+3. ANÁLISIS DE COLUMNAS CONSTANTES:
+   - Bwd PSH Flags
+   - Bwd URG Flags
+   - Fwd Bulk Rate Avg
+   - Fwd Bytes/Bulk Avg
+   - Fwd Packet/Bulk Avg
+   - Fwd URG Flags
+   - URG Flag Count
+
+4. ANÁLISIS DE COLUMNAS CASI CONSTANTES (>99%):
+   - Protocol: 99.10%
+   - Fwd Packet Length Std: 99.44%
+   - Bwd Packet Length Min: 99.19%
+   - Bwd Packet Length Std: 99.52%
+   - Bwd IAT Total: 99.31%
+   - Bwd IAT Mean: 99.31%
+   - Bwd IAT Std: 99.41%
+   - Bwd IAT Max: 99.31%
+   - Bwd IAT Min: 99.54%
+   - Fwd PSH Flags: 99.91%
+   - FIN Flag Count: 99.38%
+   - SYN Flag Count: 99.52%
+   - RST Flag Count: 99.79%
+   - PSH Flag Count: 99.45%
+   - ACK Flag Count: 99.19%
+   - CWR Flag Count: 100.00%
+   - ECE Flag Count: 100.00%
+   - Bwd Bytes/Bulk Avg: 99.77%
+   - Bwd Packet/Bulk Avg: 99.77%
+   - Bwd Bulk Rate Avg: 99.77%
+   - Subflow Bwd Packets: 99.61%
+   - Subflow Bwd Bytes: 99.67%
+   - FWD Init Win Bytes: 99.19%
+   - Bwd Init Win Bytes: 99.31%
+   - Fwd Seg Size Min: 99.10%
+
+5. ANÁLISIS DE FILAS CON TODOS LOS VALORES EN CERO:
+   - Filas con todos los valores en 0: 0
+
+6. ANÁLISIS DE VALORES INFINITOS:
+   - Flow Bytes/s: 44 valores infinitos
+   - Flow Packets/s: 192 valores infinitos
+
+7. ANÁLISIS DE VALORES NEGATIVOS ANÓMALOS:
+   - Flow Duration: 2 valores negativos
+   - Flow Bytes/s: 2 valores negativos
+   - Flow Packets/s: 2 valores negativos
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Total de filas a eliminar: 194 (0.02%)
+  Filas que permanecerán: 933807
+  Muestra de índices marcados: 194
+================================================================================
+
+================================================================================
+Analizando: DoS-UDP_Flood10.pcap_Flow.csv
+Tipo de ataque: DoS
+================================================================================
+
+Dimensiones originales: (61907, 84)
+
+1. ANÁLISIS DE VALORES FALTANTES:
+   - Flow Bytes/s: 374 (0.60%)
+
+2. ANÁLISIS DE FILAS DUPLICADAS:
+   - Filas duplicadas: 19
+
+3. ANÁLISIS DE COLUMNAS CONSTANTES:
+   - Bwd PSH Flags
+   - Bwd URG Flags
+   - Fwd Bulk Rate Avg
+   - Fwd Bytes/Bulk Avg
+   - Fwd Packet/Bulk Avg
+   - Fwd URG Flags
+   - URG Flag Count
+
+4. ANÁLISIS DE COLUMNAS CASI CONSTANTES (>99%):
+   - CWR Flag Count: 99.78%
+   - ECE Flag Count: 99.80%
+
+5. ANÁLISIS DE FILAS CON TODOS LOS VALORES EN CERO:
+   - Filas con todos los valores en 0: 0
+
+6. ANÁLISIS DE VALORES INFINITOS:
+   - Flow Bytes/s: 90 valores infinitos
+   - Flow Packets/s: 464 valores infinitos
+
+7. ANÁLISIS DE VALORES NEGATIVOS ANÓMALOS:
+   [OK] No se encontraron valores negativos anomalos
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Total de filas a eliminar: 465 (0.75%)
+  Filas que permanecerán: 61442
+  Muestra de índices marcados: 465
+================================================================================
+
+================================================================================
+Analizando: DoS-UDP_Flood11.pcap_Flow.csv
+Tipo de ataque: DoS
+================================================================================
+
+Dimensiones originales: (57086, 84)
+
+1. ANÁLISIS DE VALORES FALTANTES:
+   - Flow Bytes/s: 325 (0.57%)
+
+2. ANÁLISIS DE FILAS DUPLICADAS:
+   - Filas duplicadas: 13
+
+3. ANÁLISIS DE COLUMNAS CONSTANTES:
+   - Bwd PSH Flags
+   - Bwd URG Flags
+   - Fwd Bulk Rate Avg
+   - Fwd Bytes/Bulk Avg
+   - Fwd Packet/Bulk Avg
+   - Fwd URG Flags
+   - URG Flag Count
+
+4. ANÁLISIS DE COLUMNAS CASI CONSTANTES (>99%):
+   - CWR Flag Count: 99.92%
+   - ECE Flag Count: 99.92%
+
+5. ANÁLISIS DE FILAS CON TODOS LOS VALORES EN CERO:
+   - Filas con todos los valores en 0: 0
+
+6. ANÁLISIS DE VALORES INFINITOS:
+   - Flow Bytes/s: 56 valores infinitos
+   - Flow Packets/s: 381 valores infinitos
+
+7. ANÁLISIS DE VALORES NEGATIVOS ANÓMALOS:
+   [OK] No se encontraron valores negativos anomalos
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Total de filas a eliminar: 381 (0.67%)
+  Filas que permanecerán: 56705
+  Muestra de índices marcados: 381
+================================================================================
+
+================================================================================
+Analizando: DoS-UDP_Flood12.pcap_Flow.csv
+Tipo de ataque: DoS
+================================================================================
+
+Dimensiones originales: (50017, 84)
+
+1. ANÁLISIS DE VALORES FALTANTES:
+   - Flow Bytes/s: 197 (0.39%)
+
+2. ANÁLISIS DE FILAS DUPLICADAS:
+   - Filas duplicadas: 49
+
+3. ANÁLISIS DE COLUMNAS CONSTANTES:
+   - Bwd PSH Flags
+   - Bwd URG Flags
+   - Fwd Bulk Rate Avg
+   - Fwd Bytes/Bulk Avg
+   - Fwd Packet/Bulk Avg
+   - Fwd URG Flags
+   - URG Flag Count
+
+4. ANÁLISIS DE COLUMNAS CASI CONSTANTES (>99%):
+   - CWR Flag Count: 99.91%
+   - ECE Flag Count: 99.91%
+
+5. ANÁLISIS DE FILAS CON TODOS LOS VALORES EN CERO:
+   - Filas con todos los valores en 0: 0
+
+6. ANÁLISIS DE VALORES INFINITOS:
+   - Flow Bytes/s: 63 valores infinitos
+   - Flow Packets/s: 260 valores infinitos
+
+7. ANÁLISIS DE VALORES NEGATIVOS ANÓMALOS:
+   [OK] No se encontraron valores negativos anomalos
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Total de filas a eliminar: 273 (0.55%)
+  Filas que permanecerán: 49744
+  Muestra de índices marcados: 273
+================================================================================
+
+================================================================================
+Analizando: DoS-UDP_Flood13.pcap_Flow.csv
+Tipo de ataque: DoS
+================================================================================
+
+Dimensiones originales: (59885, 84)
+
+1. ANÁLISIS DE VALORES FALTANTES:
+   - Flow Bytes/s: 224 (0.37%)
+
+2. ANÁLISIS DE FILAS DUPLICADAS:
+   - Filas duplicadas: 11
+
+3. ANÁLISIS DE COLUMNAS CONSTANTES:
+   - Bwd PSH Flags
+   - Bwd URG Flags
+   - Fwd Bulk Rate Avg
+   - Fwd Bytes/Bulk Avg
+   - Fwd Packet/Bulk Avg
+   - Fwd URG Flags
+   - URG Flag Count
+
+4. ANÁLISIS DE COLUMNAS CASI CONSTANTES (>99%):
+   - CWR Flag Count: 99.89%
+   - ECE Flag Count: 99.90%
+
+5. ANÁLISIS DE FILAS CON TODOS LOS VALORES EN CERO:
+   - Filas con todos los valores en 0: 0
+
+6. ANÁLISIS DE VALORES INFINITOS:
+   - Flow Bytes/s: 61 valores infinitos
+   - Flow Packets/s: 285 valores infinitos
+
+7. ANÁLISIS DE VALORES NEGATIVOS ANÓMALOS:
+   [OK] No se encontraron valores negativos anomalos
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Total de filas a eliminar: 286 (0.48%)
+  Filas que permanecerán: 59599
+  Muestra de índices marcados: 286
+================================================================================
+
+================================================================================
+Analizando: DoS-UDP_Flood14.pcap_Flow.csv
+Tipo de ataque: DoS
+================================================================================
+
+Dimensiones originales: (64565, 84)
+
+1. ANÁLISIS DE VALORES FALTANTES:
+   - Flow Bytes/s: 165 (0.26%)
+
+2. ANÁLISIS DE FILAS DUPLICADAS:
+   - Filas duplicadas: 31
+
+3. ANÁLISIS DE COLUMNAS CONSTANTES:
+   - Bwd PSH Flags
+   - Bwd URG Flags
+   - Fwd Bulk Rate Avg
+   - Fwd Bytes/Bulk Avg
+   - Fwd Packet/Bulk Avg
+   - Fwd URG Flags
+   - URG Flag Count
+
+4. ANÁLISIS DE COLUMNAS CASI CONSTANTES (>99%):
+   - CWR Flag Count: 99.86%
+   - ECE Flag Count: 99.86%
+
+5. ANÁLISIS DE FILAS CON TODOS LOS VALORES EN CERO:
+   - Filas con todos los valores en 0: 0
+
+6. ANÁLISIS DE VALORES INFINITOS:
+   - Flow Bytes/s: 79 valores infinitos
+   - Flow Packets/s: 244 valores infinitos
+
+7. ANÁLISIS DE VALORES NEGATIVOS ANÓMALOS:
+   [OK] No se encontraron valores negativos anomalos
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Total de filas a eliminar: 246 (0.38%)
+  Filas que permanecerán: 64319
+  Muestra de índices marcados: 246
+================================================================================
+
+================================================================================
+Analizando: DoS-UDP_Flood15.pcap_Flow.csv
+Tipo de ataque: DoS
+================================================================================
+
+Dimensiones originales: (66453, 84)
+
+1. ANÁLISIS DE VALORES FALTANTES:
+   - Flow Bytes/s: 391 (0.59%)
+
+2. ANÁLISIS DE FILAS DUPLICADAS:
+   - Filas duplicadas: 42
+
+3. ANÁLISIS DE COLUMNAS CONSTANTES:
+   - Bwd PSH Flags
+   - Bwd URG Flags
+   - Fwd Bulk Rate Avg
+   - Fwd Bytes/Bulk Avg
+   - Fwd Packet/Bulk Avg
+   - Fwd URG Flags
+   - URG Flag Count
+
+4. ANÁLISIS DE COLUMNAS CASI CONSTANTES (>99%):
+   - CWR Flag Count: 99.74%
+   - ECE Flag Count: 99.74%
+
+5. ANÁLISIS DE FILAS CON TODOS LOS VALORES EN CERO:
+   - Filas con todos los valores en 0: 0
+
+6. ANÁLISIS DE VALORES INFINITOS:
+   - Flow Bytes/s: 49 valores infinitos
+   - Flow Packets/s: 440 valores infinitos
+
+7. ANÁLISIS DE VALORES NEGATIVOS ANÓMALOS:
+   [OK] No se encontraron valores negativos anomalos
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Total de filas a eliminar: 442 (0.67%)
+  Filas que permanecerán: 66011
+  Muestra de índices marcados: 442
+================================================================================
+
+================================================================================
+Analizando: DoS-UDP_Flood16.pcap_Flow.csv
+Tipo de ataque: DoS
+================================================================================
+
+Dimensiones originales: (35173, 84)
+
+1. ANÁLISIS DE VALORES FALTANTES:
+   - Flow Bytes/s: 106 (0.30%)
+
+2. ANÁLISIS DE FILAS DUPLICADAS:
+   - Filas duplicadas: 10
+
+3. ANÁLISIS DE COLUMNAS CONSTANTES:
+   - Bwd PSH Flags
+   - Bwd URG Flags
+   - Fwd Bulk Rate Avg
+   - Fwd Bytes/Bulk Avg
+   - Fwd Packet/Bulk Avg
+   - Fwd URG Flags
+   - URG Flag Count
+
+4. ANÁLISIS DE COLUMNAS CASI CONSTANTES (>99%):
+   - CWR Flag Count: 99.82%
+   - ECE Flag Count: 99.82%
+
+5. ANÁLISIS DE FILAS CON TODOS LOS VALORES EN CERO:
+   - Filas con todos los valores en 0: 0
+
+6. ANÁLISIS DE VALORES INFINITOS:
+   - Flow Bytes/s: 37 valores infinitos
+   - Flow Packets/s: 143 valores infinitos
+
+7. ANÁLISIS DE VALORES NEGATIVOS ANÓMALOS:
+   [OK] No se encontraron valores negativos anomalos
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Total de filas a eliminar: 143 (0.41%)
+  Filas que permanecerán: 35030
+  Muestra de índices marcados: 143
+================================================================================
+
+================================================================================
+Analizando: DoS-UDP_Flood3.pcap_Flow.csv
+Tipo de ataque: DoS
+================================================================================
+
+Dimensiones originales: (589185, 84)
+
+1. ANÁLISIS DE VALORES FALTANTES:
+   - Flow Bytes/s: 134 (0.02%)
+
+2. ANÁLISIS DE FILAS DUPLICADAS:
+   - Filas duplicadas: 41
+
+3. ANÁLISIS DE COLUMNAS CONSTANTES:
+   - Bwd PSH Flags
+   - Bwd URG Flags
+   - CWR Flag Count
+   - ECE Flag Count
+   - Fwd Bulk Rate Avg
+   - Fwd Bytes/Bulk Avg
+   - Fwd Packet/Bulk Avg
+   - Fwd URG Flags
+   - URG Flag Count
+
+4. ANÁLISIS DE COLUMNAS CASI CONSTANTES (>99%):
+   - Fwd Packet Length Std: 99.49%
+   - Bwd Packet Length Min: 99.33%
+   - Bwd Packet Length Std: 99.56%
+   - Bwd IAT Total: 99.35%
+   - Bwd IAT Mean: 99.35%
+   - Bwd IAT Std: 99.46%
+   - Bwd IAT Max: 99.35%
+   - Bwd IAT Min: 99.64%
+   - Fwd PSH Flags: 99.91%
+   - FIN Flag Count: 99.34%
+   - SYN Flag Count: 99.53%
+   - RST Flag Count: 99.76%
+   - PSH Flag Count: 99.49%
+   - ACK Flag Count: 99.12%
+   - Bwd Bytes/Bulk Avg: 99.60%
+   - Bwd Packet/Bulk Avg: 99.60%
+   - Bwd Bulk Rate Avg: 99.61%
+   - Subflow Bwd Packets: 99.64%
+   - Subflow Bwd Bytes: 99.71%
+   - FWD Init Win Bytes: 99.11%
+   - Bwd Init Win Bytes: 99.22%
+   - Active Std: 99.88%
+
+5. ANÁLISIS DE FILAS CON TODOS LOS VALORES EN CERO:
+   - Filas con todos los valores en 0: 0
+
+6. ANÁLISIS DE VALORES INFINITOS:
+   - Flow Bytes/s: 97 valores infinitos
+   - Flow Packets/s: 231 valores infinitos
+
+7. ANÁLISIS DE VALORES NEGATIVOS ANÓMALOS:
+   [OK] No se encontraron valores negativos anomalos
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Total de filas a eliminar: 232 (0.04%)
+  Filas que permanecerán: 588953
+  Muestra de índices marcados: 232
+================================================================================
+
+================================================================================
+Analizando: DoS-UDP_Flood4.pcap_Flow.csv
+Tipo de ataque: DoS
+================================================================================
+
+Dimensiones originales: (901794, 84)
+
+1. ANÁLISIS DE VALORES FALTANTES:
+   - Flow Bytes/s: 129 (0.01%)
+
+2. ANÁLISIS DE FILAS DUPLICADAS:
+   - Filas duplicadas: 19
+
+3. ANÁLISIS DE COLUMNAS CONSTANTES:
+   - Bwd PSH Flags
+   - Bwd URG Flags
+   - Fwd Bulk Rate Avg
+   - Fwd Bytes/Bulk Avg
+   - Fwd Packet/Bulk Avg
+   - Fwd URG Flags
+   - URG Flag Count
+
+4. ANÁLISIS DE COLUMNAS CASI CONSTANTES (>99%):
+   - Protocol: 99.10%
+   - Bwd Packet Length Std: 99.47%
+   - Fwd PSH Flags: 99.89%
+   - FIN Flag Count: 99.40%
+   - SYN Flag Count: 99.49%
+   - RST Flag Count: 99.83%
+   - PSH Flag Count: 99.41%
+   - ACK Flag Count: 99.19%
+   - CWR Flag Count: 99.99%
+   - ECE Flag Count: 99.99%
+   - Bwd Bytes/Bulk Avg: 99.74%
+   - Bwd Packet/Bulk Avg: 99.74%
+   - Bwd Bulk Rate Avg: 99.74%
+   - Subflow Bwd Packets: 99.63%
+   - FWD Init Win Bytes: 99.17%
+   - Bwd Init Win Bytes: 99.28%
+   - Fwd Seg Size Min: 99.10%
+
+5. ANÁLISIS DE FILAS CON TODOS LOS VALORES EN CERO:
+   - Filas con todos los valores en 0: 0
+
+6. ANÁLISIS DE VALORES INFINITOS:
+   - Flow Bytes/s: 54 valores infinitos
+   - Flow Packets/s: 183 valores infinitos
+
+7. ANÁLISIS DE VALORES NEGATIVOS ANÓMALOS:
+   [OK] No se encontraron valores negativos anomalos
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Total de filas a eliminar: 184 (0.02%)
+  Filas que permanecerán: 901610
+  Muestra de índices marcados: 184
+================================================================================
+
+================================================================================
+Analizando: DoS-UDP_Flood5.pcap_Flow.csv
+Tipo de ataque: DoS
+================================================================================
+
+Dimensiones originales: (842995, 84)
+
+1. ANÁLISIS DE VALORES FALTANTES:
+   - Flow Bytes/s: 90 (0.01%)
+
+2. ANÁLISIS DE FILAS DUPLICADAS:
+   - Filas duplicadas: 25
+
+3. ANÁLISIS DE COLUMNAS CONSTANTES:
+   - Bwd PSH Flags
+   - Bwd URG Flags
+   - Fwd Bulk Rate Avg
+   - Fwd Bytes/Bulk Avg
+   - Fwd Packet/Bulk Avg
+   - Fwd URG Flags
+   - URG Flag Count
+
+4. ANÁLISIS DE COLUMNAS CASI CONSTANTES (>99%):
+   - Protocol: 99.22%
+   - Fwd Packet Length Std: 99.51%
+   - Bwd Packet Length Min: 99.36%
+   - Bwd Packet Length Std: 99.58%
+   - Bwd IAT Total: 99.44%
+   - Bwd IAT Mean: 99.44%
+   - Bwd IAT Std: 99.53%
+   - Bwd IAT Max: 99.44%
+   - Bwd IAT Min: 99.69%
+   - Fwd PSH Flags: 99.92%
+   - FIN Flag Count: 99.47%
+   - SYN Flag Count: 99.57%
+   - RST Flag Count: 99.83%
+   - PSH Flag Count: 99.51%
+   - ACK Flag Count: 99.30%
+   - CWR Flag Count: 100.00%
+   - ECE Flag Count: 100.00%
+   - Down/Up Ratio: 99.05%
+   - Bwd Bytes/Bulk Avg: 99.82%
+   - Bwd Packet/Bulk Avg: 99.82%
+   - Bwd Bulk Rate Avg: 99.82%
+   - Subflow Bwd Packets: 99.69%
+   - Subflow Bwd Bytes: 99.73%
+   - FWD Init Win Bytes: 99.28%
+   - Bwd Init Win Bytes: 99.38%
+   - Fwd Seg Size Min: 99.22%
+   - Active Std: 99.89%
+
+5. ANÁLISIS DE FILAS CON TODOS LOS VALORES EN CERO:
+   - Filas con todos los valores en 0: 0
+
+6. ANÁLISIS DE VALORES INFINITOS:
+   - Flow Bytes/s: 28 valores infinitos
+   - Flow Packets/s: 118 valores infinitos
+
+7. ANÁLISIS DE VALORES NEGATIVOS ANÓMALOS:
+   [OK] No se encontraron valores negativos anomalos
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Total de filas a eliminar: 122 (0.01%)
+  Filas que permanecerán: 842873
+  Muestra de índices marcados: 122
+================================================================================
+
+================================================================================
+Analizando: DoS-UDP_Flood6.pcap_Flow.csv
+Tipo de ataque: DoS
+================================================================================
+
+Dimensiones originales: (862694, 84)
+
+1. ANÁLISIS DE VALORES FALTANTES:
+   - Flow Bytes/s: 89 (0.01%)
+
+2. ANÁLISIS DE FILAS DUPLICADAS:
+   - Filas duplicadas: 12
+
+3. ANÁLISIS DE COLUMNAS CONSTANTES:
+   - Bwd PSH Flags
+   - Bwd URG Flags
+   - Fwd Bulk Rate Avg
+   - Fwd Bytes/Bulk Avg
+   - Fwd Packet/Bulk Avg
+   - Fwd URG Flags
+   - URG Flag Count
+
+4. ANÁLISIS DE COLUMNAS CASI CONSTANTES (>99%):
+   - Protocol: 99.31%
+   - Total Length of Bwd Packet: 99.06%
+   - Fwd Packet Length Std: 99.59%
+   - Bwd Packet Length Max: 99.06%
+   - Bwd Packet Length Min: 99.40%
+   - Bwd Packet Length Mean: 99.06%
+   - Bwd Packet Length Std: 99.63%
+   - Bwd IAT Total: 99.49%
+   - Bwd IAT Mean: 99.49%
+   - Bwd IAT Std: 99.57%
+   - Bwd IAT Max: 99.49%
+   - Bwd IAT Min: 99.73%
+   - Fwd PSH Flags: 99.93%
+   - Packet Length Std: 99.06%
+   - Packet Length Variance: 99.06%
+   - FIN Flag Count: 99.55%
+   - SYN Flag Count: 99.62%
+   - RST Flag Count: 99.84%
+   - PSH Flag Count: 99.60%
+   - ACK Flag Count: 99.37%
+   - CWR Flag Count: 100.00%
+   - ECE Flag Count: 100.00%
+   - Down/Up Ratio: 99.13%
+   - Bwd Segment Size Avg: 99.06%
+   - Bwd Bytes/Bulk Avg: 99.84%
+   - Bwd Packet/Bulk Avg: 99.84%
+   - Bwd Bulk Rate Avg: 99.84%
+   - Subflow Bwd Packets: 99.71%
+   - Subflow Bwd Bytes: 99.75%
+   - FWD Init Win Bytes: 99.35%
+   - Bwd Init Win Bytes: 99.45%
+   - Fwd Seg Size Min: 99.31%
+
+5. ANÁLISIS DE FILAS CON TODOS LOS VALORES EN CERO:
+   - Filas con todos los valores en 0: 0
+
+6. ANÁLISIS DE VALORES INFINITOS:
+   - Flow Bytes/s: 38 valores infinitos
+   - Flow Packets/s: 127 valores infinitos
+
+7. ANÁLISIS DE VALORES NEGATIVOS ANÓMALOS:
+   [OK] No se encontraron valores negativos anomalos
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Total de filas a eliminar: 129 (0.01%)
+  Filas que permanecerán: 862565
+  Muestra de índices marcados: 129
+================================================================================
+
+================================================================================
+Analizando: DoS-UDP_Flood7.pcap_Flow.csv
+Tipo de ataque: DoS
+================================================================================
+
+Dimensiones originales: (539459, 84)
+
+1. ANÁLISIS DE VALORES FALTANTES:
+   - Flow Bytes/s: 193 (0.04%)
+
+2. ANÁLISIS DE FILAS DUPLICADAS:
+   - Filas duplicadas: 26
+
+3. ANÁLISIS DE COLUMNAS CONSTANTES:
+   - Bwd PSH Flags
+   - Bwd URG Flags
+   - Fwd Bulk Rate Avg
+   - Fwd Bytes/Bulk Avg
+   - Fwd Packet/Bulk Avg
+   - Fwd URG Flags
+   - URG Flag Count
+
+4. ANÁLISIS DE COLUMNAS CASI CONSTANTES (>99%):
+   - Fwd Packet Length Std: 99.09%
+   - Bwd Packet Length Std: 99.13%
+   - Bwd IAT Min: 99.13%
+   - Fwd PSH Flags: 99.83%
+   - FIN Flag Count: 99.01%
+   - SYN Flag Count: 99.09%
+   - RST Flag Count: 99.53%
+   - PSH Flag Count: 99.07%
+   - CWR Flag Count: 99.98%
+   - ECE Flag Count: 99.98%
+   - Subflow Bwd Packets: 99.15%
+   - Subflow Bwd Bytes: 99.35%
+   - Active Mean: 99.46%
+   - Active Std: 99.77%
+   - Active Max: 99.46%
+   - Active Min: 99.46%
+
+5. ANÁLISIS DE FILAS CON TODOS LOS VALORES EN CERO:
+   - Filas con todos los valores en 0: 0
+
+6. ANÁLISIS DE VALORES INFINITOS:
+   - Flow Bytes/s: 34 valores infinitos
+   - Flow Packets/s: 227 valores infinitos
+
+7. ANÁLISIS DE VALORES NEGATIVOS ANÓMALOS:
+   [OK] No se encontraron valores negativos anomalos
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Total de filas a eliminar: 232 (0.04%)
+  Filas que permanecerán: 539227
+  Muestra de índices marcados: 232
+================================================================================
+
+================================================================================
+Analizando: DoS-UDP_Flood8.pcap_Flow.csv
+Tipo de ataque: DoS
+================================================================================
+
+Dimensiones originales: (74524, 84)
+
+1. ANÁLISIS DE VALORES FALTANTES:
+   - Flow Bytes/s: 342 (0.46%)
+
+2. ANÁLISIS DE FILAS DUPLICADAS:
+   - Filas duplicadas: 10
+
+3. ANÁLISIS DE COLUMNAS CONSTANTES:
+   - Bwd PSH Flags
+   - Bwd URG Flags
+   - Fwd Bulk Rate Avg
+   - Fwd Bytes/Bulk Avg
+   - Fwd Packet/Bulk Avg
+   - Fwd URG Flags
+   - URG Flag Count
+
+4. ANÁLISIS DE COLUMNAS CASI CONSTANTES (>99%):
+   - CWR Flag Count: 99.65%
+   - ECE Flag Count: 99.66%
+
+5. ANÁLISIS DE FILAS CON TODOS LOS VALORES EN CERO:
+   - Filas con todos los valores en 0: 0
+
+6. ANÁLISIS DE VALORES INFINITOS:
+   - Flow Bytes/s: 83 valores infinitos
+   - Flow Packets/s: 425 valores infinitos
+
+7. ANÁLISIS DE VALORES NEGATIVOS ANÓMALOS:
+   [OK] No se encontraron valores negativos anomalos
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Total de filas a eliminar: 425 (0.57%)
+  Filas que permanecerán: 74099
+  Muestra de índices marcados: 425
+================================================================================
+
+================================================================================
+Analizando: DoS-UDP_Flood9.pcap_Flow.csv
+Tipo de ataque: DoS
+================================================================================
+
+Dimensiones originales: (70798, 84)
+
+1. ANÁLISIS DE VALORES FALTANTES:
+   - Flow Bytes/s: 358 (0.51%)
+
+2. ANÁLISIS DE FILAS DUPLICADAS:
+   - Filas duplicadas: 24
+
+3. ANÁLISIS DE COLUMNAS CONSTANTES:
+   - Bwd PSH Flags
+   - Bwd URG Flags
+   - Fwd Bulk Rate Avg
+   - Fwd Bytes/Bulk Avg
+   - Fwd Packet/Bulk Avg
+   - Fwd URG Flags
+   - URG Flag Count
+
+4. ANÁLISIS DE COLUMNAS CASI CONSTANTES (>99%):
+   - CWR Flag Count: 99.90%
+   - ECE Flag Count: 99.90%
+
+5. ANÁLISIS DE FILAS CON TODOS LOS VALORES EN CERO:
+   - Filas con todos los valores en 0: 0
+
+6. ANÁLISIS DE VALORES INFINITOS:
+   - Flow Bytes/s: 56 valores infinitos
+   - Flow Packets/s: 414 valores infinitos
+
+7. ANÁLISIS DE VALORES NEGATIVOS ANÓMALOS:
+   [OK] No se encontraron valores negativos anomalos
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Total de filas a eliminar: 415 (0.59%)
+  Filas que permanecerán: 70383
+  Muestra de índices marcados: 415
+================================================================================
+
+
+################################################################################
+# CATEGORÍA: Mirai (29 archivos a analizar)
+################################################################################
+
+================================================================================
+Analizando: Mirai-greeth_flood.pcap_Flow.csv
+Tipo de ataque: Mirai
+================================================================================
+
+Dimensiones originales: (5172, 84)
+
+1. ANÁLISIS DE VALORES FALTANTES:
+   [OK] No se encontraron valores faltantes
+
+2. ANÁLISIS DE FILAS DUPLICADAS:
+   - Filas duplicadas: 22
+
+3. ANÁLISIS DE COLUMNAS CONSTANTES:
+   - Bwd PSH Flags
+   - Bwd URG Flags
+   - CWR Flag Count
+   - ECE Flag Count
+   - Fwd Bulk Rate Avg
+   - Fwd Bytes/Bulk Avg
+   - Fwd Packet/Bulk Avg
+   - Fwd URG Flags
+   - URG Flag Count
+
+4. ANÁLISIS DE COLUMNAS CASI CONSTANTES (>99%):
+   [OK] No se encontraron columnas casi constantes
+
+5. ANÁLISIS DE FILAS CON TODOS LOS VALORES EN CERO:
+   - Filas con todos los valores en 0: 0
+
+6. ANÁLISIS DE VALORES INFINITOS:
+   - Flow Bytes/s: 2 valores infinitos
+   - Flow Packets/s: 2 valores infinitos
+
+7. ANÁLISIS DE VALORES NEGATIVOS ANÓMALOS:
+   [OK] No se encontraron valores negativos anomalos
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Total de filas a eliminar: 24 (0.46%)
+  Filas que permanecerán: 5148
+  Muestra de índices marcados: 24
+================================================================================
+
+================================================================================
+Analizando: Mirai-greeth_flood1.pcap_Flow.csv
+Tipo de ataque: Mirai
+================================================================================
+
+Dimensiones originales: (10856, 84)
+
+1. ANÁLISIS DE VALORES FALTANTES:
+   [OK] No se encontraron valores faltantes
+
+2. ANÁLISIS DE FILAS DUPLICADAS:
+   - Filas duplicadas: 6
+
+3. ANÁLISIS DE COLUMNAS CONSTANTES:
+   - Bwd PSH Flags
+   - Bwd URG Flags
+   - Fwd Bulk Rate Avg
+   - Fwd Bytes/Bulk Avg
+   - Fwd Packet/Bulk Avg
+   - Fwd URG Flags
+   - URG Flag Count
+
+4. ANÁLISIS DE COLUMNAS CASI CONSTANTES (>99%):
+   - CWR Flag Count: 99.95%
+   - ECE Flag Count: 99.96%
+
+5. ANÁLISIS DE FILAS CON TODOS LOS VALORES EN CERO:
+   - Filas con todos los valores en 0: 0
+
+6. ANÁLISIS DE VALORES INFINITOS:
+   - Flow Bytes/s: 4 valores infinitos
+   - Flow Packets/s: 4 valores infinitos
+
+7. ANÁLISIS DE VALORES NEGATIVOS ANÓMALOS:
+   [OK] No se encontraron valores negativos anomalos
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Total de filas a eliminar: 10 (0.09%)
+  Filas que permanecerán: 10846
+  Muestra de índices marcados: 10
+================================================================================
+
+================================================================================
+Analizando: Mirai-greeth_flood10.pcap_Flow.csv
+Tipo de ataque: Mirai
+================================================================================
+
+Dimensiones originales: (8187, 84)
+
+1. ANÁLISIS DE VALORES FALTANTES:
+   - Flow Bytes/s: 2 (0.02%)
+
+2. ANÁLISIS DE FILAS DUPLICADAS:
+   - Filas duplicadas: 8
+
+3. ANÁLISIS DE COLUMNAS CONSTANTES:
+   - Bwd PSH Flags
+   - Bwd URG Flags
+   - Fwd Bulk Rate Avg
+   - Fwd Bytes/Bulk Avg
+   - Fwd Packet/Bulk Avg
+   - Fwd URG Flags
+   - URG Flag Count
+
+4. ANÁLISIS DE COLUMNAS CASI CONSTANTES (>99%):
+   - CWR Flag Count: 99.90%
+   - ECE Flag Count: 99.91%
+
+5. ANÁLISIS DE FILAS CON TODOS LOS VALORES EN CERO:
+   - Filas con todos los valores en 0: 0
+
+6. ANÁLISIS DE VALORES INFINITOS:
+   - Flow Packets/s: 2 valores infinitos
+
+7. ANÁLISIS DE VALORES NEGATIVOS ANÓMALOS:
+   [OK] No se encontraron valores negativos anomalos
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Total de filas a eliminar: 10 (0.12%)
+  Filas que permanecerán: 8177
+  Muestra de índices marcados: 10
+================================================================================
+
+================================================================================
+Analizando: Mirai-greeth_flood11.pcap_Flow.csv
+Tipo de ataque: Mirai
+================================================================================
+
+Dimensiones originales: (8377, 84)
+
+1. ANÁLISIS DE VALORES FALTANTES:
+   - Flow Bytes/s: 1 (0.01%)
+
+2. ANÁLISIS DE FILAS DUPLICADAS:
+   - Filas duplicadas: 5
+
+3. ANÁLISIS DE COLUMNAS CONSTANTES:
+   - Bwd PSH Flags
+   - Bwd URG Flags
+   - CWR Flag Count
+   - ECE Flag Count
+   - Fwd Bulk Rate Avg
+   - Fwd Bytes/Bulk Avg
+   - Fwd Packet/Bulk Avg
+   - Fwd URG Flags
+   - URG Flag Count
+
+4. ANÁLISIS DE COLUMNAS CASI CONSTANTES (>99%):
+   [OK] No se encontraron columnas casi constantes
+
+5. ANÁLISIS DE FILAS CON TODOS LOS VALORES EN CERO:
+   - Filas con todos los valores en 0: 0
+
+6. ANÁLISIS DE VALORES INFINITOS:
+   - Flow Bytes/s: 3 valores infinitos
+   - Flow Packets/s: 4 valores infinitos
+
+7. ANÁLISIS DE VALORES NEGATIVOS ANÓMALOS:
+   [OK] No se encontraron valores negativos anomalos
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Total de filas a eliminar: 9 (0.11%)
+  Filas que permanecerán: 8368
+  Muestra de índices marcados: 9
+================================================================================
+
+================================================================================
+Analizando: Mirai-greeth_flood12.pcap_Flow.csv
+Tipo de ataque: Mirai
+================================================================================
+
+Dimensiones originales: (6423, 84)
+
+1. ANÁLISIS DE VALORES FALTANTES:
+   - Flow Bytes/s: 6 (0.09%)
+
+2. ANÁLISIS DE FILAS DUPLICADAS:
+   - Filas duplicadas: 23
+
+3. ANÁLISIS DE COLUMNAS CONSTANTES:
+   - Bwd PSH Flags
+   - Bwd URG Flags
+   - ECE Flag Count
+   - Fwd Bulk Rate Avg
+   - Fwd Bytes/Bulk Avg
+   - Fwd Packet/Bulk Avg
+   - Fwd URG Flags
+   - URG Flag Count
+
+4. ANÁLISIS DE COLUMNAS CASI CONSTANTES (>99%):
+   - CWR Flag Count: 99.97%
+
+5. ANÁLISIS DE FILAS CON TODOS LOS VALORES EN CERO:
+   - Filas con todos los valores en 0: 0
+
+6. ANÁLISIS DE VALORES INFINITOS:
+   - Flow Bytes/s: 1 valores infinitos
+   - Flow Packets/s: 7 valores infinitos
+
+7. ANÁLISIS DE VALORES NEGATIVOS ANÓMALOS:
+   [OK] No se encontraron valores negativos anomalos
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Total de filas a eliminar: 30 (0.47%)
+  Filas que permanecerán: 6393
+  Muestra de índices marcados: 30
+================================================================================
+
+================================================================================
+Analizando: Mirai-greeth_flood13.pcap_Flow.csv
+Tipo de ataque: Mirai
+================================================================================
+
+Dimensiones originales: (10306, 84)
+
+1. ANÁLISIS DE VALORES FALTANTES:
+   - Flow Bytes/s: 4 (0.04%)
+
+2. ANÁLISIS DE FILAS DUPLICADAS:
+   - Filas duplicadas: 38
+
+3. ANÁLISIS DE COLUMNAS CONSTANTES:
+   - Bwd PSH Flags
+   - Bwd URG Flags
+   - CWR Flag Count
+   - ECE Flag Count
+   - Fwd Bulk Rate Avg
+   - Fwd Bytes/Bulk Avg
+   - Fwd Packet/Bulk Avg
+   - Fwd URG Flags
+   - URG Flag Count
+
+4. ANÁLISIS DE COLUMNAS CASI CONSTANTES (>99%):
+   [OK] No se encontraron columnas casi constantes
+
+5. ANÁLISIS DE FILAS CON TODOS LOS VALORES EN CERO:
+   - Filas con todos los valores en 0: 0
+
+6. ANÁLISIS DE VALORES INFINITOS:
+   - Flow Packets/s: 4 valores infinitos
+
+7. ANÁLISIS DE VALORES NEGATIVOS ANÓMALOS:
+   [OK] No se encontraron valores negativos anomalos
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Total de filas a eliminar: 42 (0.41%)
+  Filas que permanecerán: 10264
+  Muestra de índices marcados: 42
+================================================================================
+
+================================================================================
+Analizando: Mirai-greeth_flood14.pcap_Flow.csv
+Tipo de ataque: Mirai
+================================================================================
+
+Dimensiones originales: (2977, 84)
+
+1. ANÁLISIS DE VALORES FALTANTES:
+   [OK] No se encontraron valores faltantes
+
+2. ANÁLISIS DE FILAS DUPLICADAS:
+   - Filas duplicadas: 0
+
+3. ANÁLISIS DE COLUMNAS CONSTANTES:
+   - Bwd PSH Flags
+   - Bwd URG Flags
+   - CWR Flag Count
+   - ECE Flag Count
+   - Fwd Bulk Rate Avg
+   - Fwd Bytes/Bulk Avg
+   - Fwd Packet/Bulk Avg
+   - Fwd URG Flags
+   - URG Flag Count
+
+4. ANÁLISIS DE COLUMNAS CASI CONSTANTES (>99%):
+   [OK] No se encontraron columnas casi constantes
+
+5. ANÁLISIS DE FILAS CON TODOS LOS VALORES EN CERO:
+   - Filas con todos los valores en 0: 0
+
+6. ANÁLISIS DE VALORES INFINITOS:
+   [OK] No se encontraron valores infinitos
+
+7. ANÁLISIS DE VALORES NEGATIVOS ANÓMALOS:
+   [OK] No se encontraron valores negativos anomalos
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Total de filas a eliminar: 0 (0.00%)
+  Filas que permanecerán: 2977
+  Muestra de índices marcados: 0
+================================================================================
+
+================================================================================
+Analizando: Mirai-greeth_flood15.pcap_Flow.csv
+Tipo de ataque: Mirai
+================================================================================
+
+Dimensiones originales: (3247, 84)
+
+1. ANÁLISIS DE VALORES FALTANTES:
+   - Flow Bytes/s: 2 (0.06%)
+
+2. ANÁLISIS DE FILAS DUPLICADAS:
+   - Filas duplicadas: 2
+
+3. ANÁLISIS DE COLUMNAS CONSTANTES:
+   - Bwd PSH Flags
+   - Bwd URG Flags
+   - CWR Flag Count
+   - ECE Flag Count
+   - Fwd Bulk Rate Avg
+   - Fwd Bytes/Bulk Avg
+   - Fwd Packet/Bulk Avg
+   - Fwd URG Flags
+   - URG Flag Count
+
+4. ANÁLISIS DE COLUMNAS CASI CONSTANTES (>99%):
+   [OK] No se encontraron columnas casi constantes
+
+5. ANÁLISIS DE FILAS CON TODOS LOS VALORES EN CERO:
+   - Filas con todos los valores en 0: 0
+
+6. ANÁLISIS DE VALORES INFINITOS:
+   - Flow Packets/s: 2 valores infinitos
+
+7. ANÁLISIS DE VALORES NEGATIVOS ANÓMALOS:
+   [OK] No se encontraron valores negativos anomalos
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Total de filas a eliminar: 4 (0.12%)
+  Filas que permanecerán: 3243
+  Muestra de índices marcados: 4
+================================================================================
+
+================================================================================
+Analizando: Mirai-greeth_flood16.pcap_Flow.csv
+Tipo de ataque: Mirai
+================================================================================
+
+Dimensiones originales: (4438, 84)
+
+1. ANÁLISIS DE VALORES FALTANTES:
+   [OK] No se encontraron valores faltantes
+
+2. ANÁLISIS DE FILAS DUPLICADAS:
+   - Filas duplicadas: 0
+
+3. ANÁLISIS DE COLUMNAS CONSTANTES:
+   - Bwd PSH Flags
+   - Bwd URG Flags
+   - ECE Flag Count
+   - Fwd Bulk Rate Avg
+   - Fwd Bytes/Bulk Avg
+   - Fwd Packet/Bulk Avg
+   - Fwd URG Flags
+   - URG Flag Count
+
+4. ANÁLISIS DE COLUMNAS CASI CONSTANTES (>99%):
+   - CWR Flag Count: 99.98%
+
+5. ANÁLISIS DE FILAS CON TODOS LOS VALORES EN CERO:
+   - Filas con todos los valores en 0: 0
+
+6. ANÁLISIS DE VALORES INFINITOS:
+   [OK] No se encontraron valores infinitos
+
+7. ANÁLISIS DE VALORES NEGATIVOS ANÓMALOS:
+   [OK] No se encontraron valores negativos anomalos
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Total de filas a eliminar: 0 (0.00%)
+  Filas que permanecerán: 4438
+  Muestra de índices marcados: 0
+================================================================================
+
+================================================================================
+Analizando: Mirai-greeth_flood17.pcap_Flow.csv
+Tipo de ataque: Mirai
+================================================================================
+
+Dimensiones originales: (2790, 84)
+
+1. ANÁLISIS DE VALORES FALTANTES:
+   [OK] No se encontraron valores faltantes
+
+2. ANÁLISIS DE FILAS DUPLICADAS:
+   - Filas duplicadas: 0
+
+3. ANÁLISIS DE COLUMNAS CONSTANTES:
+   - Bwd PSH Flags
+   - Bwd URG Flags
+   - Fwd Bulk Rate Avg
+   - Fwd Bytes/Bulk Avg
+   - Fwd Packet/Bulk Avg
+   - Fwd URG Flags
+   - URG Flag Count
+
+4. ANÁLISIS DE COLUMNAS CASI CONSTANTES (>99%):
+   [OK] No se encontraron columnas casi constantes
+
+5. ANÁLISIS DE FILAS CON TODOS LOS VALORES EN CERO:
+   - Filas con todos los valores en 0: 0
+
+6. ANÁLISIS DE VALORES INFINITOS:
+   - Flow Bytes/s: 2 valores infinitos
+   - Flow Packets/s: 2 valores infinitos
+
+7. ANÁLISIS DE VALORES NEGATIVOS ANÓMALOS:
+   [OK] No se encontraron valores negativos anomalos
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Total de filas a eliminar: 2 (0.07%)
+  Filas que permanecerán: 2788
+  Muestra de índices marcados: 2
+================================================================================
+
+================================================================================
+Analizando: Mirai-greeth_flood18.pcap_Flow.csv
+Tipo de ataque: Mirai
+================================================================================
+
+Dimensiones originales: (3265, 84)
+
+1. ANÁLISIS DE VALORES FALTANTES:
+   [OK] No se encontraron valores faltantes
+
+2. ANÁLISIS DE FILAS DUPLICADAS:
+   - Filas duplicadas: 2
+
+3. ANÁLISIS DE COLUMNAS CONSTANTES:
+   - Bwd PSH Flags
+   - Bwd URG Flags
+   - Fwd Bulk Rate Avg
+   - Fwd Bytes/Bulk Avg
+   - Fwd Packet/Bulk Avg
+   - Fwd URG Flags
+   - URG Flag Count
+
+4. ANÁLISIS DE COLUMNAS CASI CONSTANTES (>99%):
+   - CWR Flag Count: 99.02%
+   - ECE Flag Count: 99.02%
+
+5. ANÁLISIS DE FILAS CON TODOS LOS VALORES EN CERO:
+   - Filas con todos los valores en 0: 0
+
+6. ANÁLISIS DE VALORES INFINITOS:
+   [OK] No se encontraron valores infinitos
+
+7. ANÁLISIS DE VALORES NEGATIVOS ANÓMALOS:
+   [OK] No se encontraron valores negativos anomalos
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Total de filas a eliminar: 2 (0.06%)
+  Filas que permanecerán: 3263
+  Muestra de índices marcados: 2
+================================================================================
+
+================================================================================
+Analizando: Mirai-greeth_flood19.pcap_Flow.csv
+Tipo de ataque: Mirai
+================================================================================
+
+Dimensiones originales: (3481, 84)
+
+1. ANÁLISIS DE VALORES FALTANTES:
+   - Flow Bytes/s: 3 (0.09%)
+
+2. ANÁLISIS DE FILAS DUPLICADAS:
+   - Filas duplicadas: 2
+
+3. ANÁLISIS DE COLUMNAS CONSTANTES:
+   - Bwd PSH Flags
+   - Bwd URG Flags
+   - CWR Flag Count
+   - ECE Flag Count
+   - Fwd Bulk Rate Avg
+   - Fwd Bytes/Bulk Avg
+   - Fwd Packet/Bulk Avg
+   - Fwd URG Flags
+   - URG Flag Count
+
+4. ANÁLISIS DE COLUMNAS CASI CONSTANTES (>99%):
+   [OK] No se encontraron columnas casi constantes
+
+5. ANÁLISIS DE FILAS CON TODOS LOS VALORES EN CERO:
+   - Filas con todos los valores en 0: 0
+
+6. ANÁLISIS DE VALORES INFINITOS:
+   - Flow Packets/s: 3 valores infinitos
+
+7. ANÁLISIS DE VALORES NEGATIVOS ANÓMALOS:
+   [OK] No se encontraron valores negativos anomalos
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Total de filas a eliminar: 5 (0.14%)
+  Filas que permanecerán: 3476
+  Muestra de índices marcados: 5
+================================================================================
+
+================================================================================
+Analizando: Mirai-greeth_flood2.pcap_Flow.csv
+Tipo de ataque: Mirai
+================================================================================
+
+Dimensiones originales: (4071, 84)
+
+1. ANÁLISIS DE VALORES FALTANTES:
+   - Flow Bytes/s: 1 (0.02%)
+
+2. ANÁLISIS DE FILAS DUPLICADAS:
+   - Filas duplicadas: 0
+
+3. ANÁLISIS DE COLUMNAS CONSTANTES:
+   - Bwd PSH Flags
+   - Bwd URG Flags
+   - Fwd Bulk Rate Avg
+   - Fwd Bytes/Bulk Avg
+   - Fwd Packet/Bulk Avg
+   - Fwd URG Flags
+   - URG Flag Count
+
+4. ANÁLISIS DE COLUMNAS CASI CONSTANTES (>99%):
+   - ECE Flag Count: 99.04%
+
+5. ANÁLISIS DE FILAS CON TODOS LOS VALORES EN CERO:
+   - Filas con todos los valores en 0: 0
+
+6. ANÁLISIS DE VALORES INFINITOS:
+   - Flow Bytes/s: 1 valores infinitos
+   - Flow Packets/s: 2 valores infinitos
+
+7. ANÁLISIS DE VALORES NEGATIVOS ANÓMALOS:
+   [OK] No se encontraron valores negativos anomalos
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Total de filas a eliminar: 2 (0.05%)
+  Filas que permanecerán: 4069
+  Muestra de índices marcados: 2
+================================================================================
+
+================================================================================
+Analizando: Mirai-greeth_flood20.pcap_Flow.csv
+Tipo de ataque: Mirai
+================================================================================
+
+Dimensiones originales: (4100, 84)
+
+1. ANÁLISIS DE VALORES FALTANTES:
+   [OK] No se encontraron valores faltantes
+
+2. ANÁLISIS DE FILAS DUPLICADAS:
+   - Filas duplicadas: 5
+
+3. ANÁLISIS DE COLUMNAS CONSTANTES:
+   - Bwd PSH Flags
+   - Bwd URG Flags
+   - CWR Flag Count
+   - ECE Flag Count
+   - Fwd Bulk Rate Avg
+   - Fwd Bytes/Bulk Avg
+   - Fwd Packet/Bulk Avg
+   - Fwd URG Flags
+   - URG Flag Count
+
+4. ANÁLISIS DE COLUMNAS CASI CONSTANTES (>99%):
+   [OK] No se encontraron columnas casi constantes
+
+5. ANÁLISIS DE FILAS CON TODOS LOS VALORES EN CERO:
+   - Filas con todos los valores en 0: 0
+
+6. ANÁLISIS DE VALORES INFINITOS:
+   - Flow Bytes/s: 1 valores infinitos
+   - Flow Packets/s: 1 valores infinitos
+
+7. ANÁLISIS DE VALORES NEGATIVOS ANÓMALOS:
+   [OK] No se encontraron valores negativos anomalos
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Total de filas a eliminar: 6 (0.15%)
+  Filas que permanecerán: 4094
+  Muestra de índices marcados: 6
+================================================================================
+
+================================================================================
+Analizando: Mirai-greeth_flood21.pcap_Flow.csv
+Tipo de ataque: Mirai
+================================================================================
+
+Dimensiones originales: (4507, 84)
+
+1. ANÁLISIS DE VALORES FALTANTES:
+   [OK] No se encontraron valores faltantes
+
+2. ANÁLISIS DE FILAS DUPLICADAS:
+   - Filas duplicadas: 0
+
+3. ANÁLISIS DE COLUMNAS CONSTANTES:
+   - Bwd PSH Flags
+   - Bwd URG Flags
+   - ECE Flag Count
+   - Fwd Bulk Rate Avg
+   - Fwd Bytes/Bulk Avg
+   - Fwd Packet/Bulk Avg
+   - Fwd URG Flags
+   - URG Flag Count
+
+4. ANÁLISIS DE COLUMNAS CASI CONSTANTES (>99%):
+   - CWR Flag Count: 99.93%
+
+5. ANÁLISIS DE FILAS CON TODOS LOS VALORES EN CERO:
+   - Filas con todos los valores en 0: 0
+
+6. ANÁLISIS DE VALORES INFINITOS:
+   - Flow Bytes/s: 3 valores infinitos
+   - Flow Packets/s: 3 valores infinitos
+
+7. ANÁLISIS DE VALORES NEGATIVOS ANÓMALOS:
+   [OK] No se encontraron valores negativos anomalos
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Total de filas a eliminar: 3 (0.07%)
+  Filas que permanecerán: 4504
+  Muestra de índices marcados: 3
+================================================================================
+
+================================================================================
+Analizando: Mirai-greeth_flood22.pcap_Flow.csv
+Tipo de ataque: Mirai
+================================================================================
+
+Dimensiones originales: (6609, 84)
+
+1. ANÁLISIS DE VALORES FALTANTES:
+   - Flow Bytes/s: 6 (0.09%)
+
+2. ANÁLISIS DE FILAS DUPLICADAS:
+   - Filas duplicadas: 12
+
+3. ANÁLISIS DE COLUMNAS CONSTANTES:
+   - Bwd PSH Flags
+   - Bwd URG Flags
+   - CWR Flag Count
+   - ECE Flag Count
+   - Fwd Bulk Rate Avg
+   - Fwd Bytes/Bulk Avg
+   - Fwd Packet/Bulk Avg
+   - Fwd URG Flags
+   - URG Flag Count
+
+4. ANÁLISIS DE COLUMNAS CASI CONSTANTES (>99%):
+   [OK] No se encontraron columnas casi constantes
+
+5. ANÁLISIS DE FILAS CON TODOS LOS VALORES EN CERO:
+   - Filas con todos los valores en 0: 0
+
+6. ANÁLISIS DE VALORES INFINITOS:
+   - Flow Bytes/s: 2 valores infinitos
+   - Flow Packets/s: 8 valores infinitos
+
+7. ANÁLISIS DE VALORES NEGATIVOS ANÓMALOS:
+   [OK] No se encontraron valores negativos anomalos
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Total de filas a eliminar: 20 (0.30%)
+  Filas que permanecerán: 6589
+  Muestra de índices marcados: 20
+================================================================================
+
+================================================================================
+Analizando: Mirai-greeth_flood23.pcap_Flow.csv
+Tipo de ataque: Mirai
+================================================================================
+
+Dimensiones originales: (4572, 84)
+
+1. ANÁLISIS DE VALORES FALTANTES:
+   - Flow Bytes/s: 2 (0.04%)
+
+2. ANÁLISIS DE FILAS DUPLICADAS:
+   - Filas duplicadas: 4
+
+3. ANÁLISIS DE COLUMNAS CONSTANTES:
+   - Bwd PSH Flags
+   - Bwd URG Flags
+   - CWR Flag Count
+   - ECE Flag Count
+   - Fwd Bulk Rate Avg
+   - Fwd Bytes/Bulk Avg
+   - Fwd Packet/Bulk Avg
+   - Fwd URG Flags
+   - URG Flag Count
+
+4. ANÁLISIS DE COLUMNAS CASI CONSTANTES (>99%):
+   [OK] No se encontraron columnas casi constantes
+
+5. ANÁLISIS DE FILAS CON TODOS LOS VALORES EN CERO:
+   - Filas con todos los valores en 0: 0
+
+6. ANÁLISIS DE VALORES INFINITOS:
+   - Flow Packets/s: 2 valores infinitos
+
+7. ANÁLISIS DE VALORES NEGATIVOS ANÓMALOS:
+   [OK] No se encontraron valores negativos anomalos
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Total de filas a eliminar: 6 (0.13%)
+  Filas que permanecerán: 4566
+  Muestra de índices marcados: 6
+================================================================================
+
+================================================================================
+Analizando: Mirai-greeth_flood24.pcap_Flow.csv
+Tipo de ataque: Mirai
+================================================================================
+
+Dimensiones originales: (2546, 84)
+
+1. ANÁLISIS DE VALORES FALTANTES:
+   [OK] No se encontraron valores faltantes
+
+2. ANÁLISIS DE FILAS DUPLICADAS:
+   - Filas duplicadas: 0
+
+3. ANÁLISIS DE COLUMNAS CONSTANTES:
+   - Bwd PSH Flags
+   - Bwd URG Flags
+   - CWR Flag Count
+   - ECE Flag Count
+   - Fwd Bulk Rate Avg
+   - Fwd Bytes/Bulk Avg
+   - Fwd Packet/Bulk Avg
+   - Fwd URG Flags
+   - URG Flag Count
+
+4. ANÁLISIS DE COLUMNAS CASI CONSTANTES (>99%):
+   [OK] No se encontraron columnas casi constantes
+
+5. ANÁLISIS DE FILAS CON TODOS LOS VALORES EN CERO:
+   - Filas con todos los valores en 0: 0
+
+6. ANÁLISIS DE VALORES INFINITOS:
+   - Flow Bytes/s: 2 valores infinitos
+   - Flow Packets/s: 2 valores infinitos
+
+7. ANÁLISIS DE VALORES NEGATIVOS ANÓMALOS:
+   [OK] No se encontraron valores negativos anomalos
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Total de filas a eliminar: 2 (0.08%)
+  Filas que permanecerán: 2544
+  Muestra de índices marcados: 2
+================================================================================
+
+================================================================================
+Analizando: Mirai-greeth_flood25.pcap_Flow.csv
+Tipo de ataque: Mirai
+================================================================================
+
+Dimensiones originales: (2500, 84)
+
+1. ANÁLISIS DE VALORES FALTANTES:
+   - Flow Bytes/s: 1 (0.04%)
+
+2. ANÁLISIS DE FILAS DUPLICADAS:
+   - Filas duplicadas: 0
+
+3. ANÁLISIS DE COLUMNAS CONSTANTES:
+   - Bwd PSH Flags
+   - Bwd URG Flags
+   - CWR Flag Count
+   - ECE Flag Count
+   - Fwd Bulk Rate Avg
+   - Fwd Bytes/Bulk Avg
+   - Fwd Packet/Bulk Avg
+   - Fwd URG Flags
+   - URG Flag Count
+
+4. ANÁLISIS DE COLUMNAS CASI CONSTANTES (>99%):
+   [OK] No se encontraron columnas casi constantes
+
+5. ANÁLISIS DE FILAS CON TODOS LOS VALORES EN CERO:
+   - Filas con todos los valores en 0: 0
+
+6. ANÁLISIS DE VALORES INFINITOS:
+   - Flow Packets/s: 1 valores infinitos
+
+7. ANÁLISIS DE VALORES NEGATIVOS ANÓMALOS:
+   [OK] No se encontraron valores negativos anomalos
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Total de filas a eliminar: 1 (0.04%)
+  Filas que permanecerán: 2499
+  Muestra de índices marcados: 1
+================================================================================
+
+================================================================================
+Analizando: Mirai-greeth_flood26.pcap_Flow.csv
+Tipo de ataque: Mirai
+================================================================================
+
+Dimensiones originales: (5482, 84)
+
+1. ANÁLISIS DE VALORES FALTANTES:
+   - Flow Bytes/s: 2 (0.04%)
+
+2. ANÁLISIS DE FILAS DUPLICADAS:
+   - Filas duplicadas: 4
+
+3. ANÁLISIS DE COLUMNAS CONSTANTES:
+   - Bwd PSH Flags
+   - Bwd URG Flags
+   - CWR Flag Count
+   - ECE Flag Count
+   - Fwd Bulk Rate Avg
+   - Fwd Bytes/Bulk Avg
+   - Fwd Packet/Bulk Avg
+   - Fwd URG Flags
+   - URG Flag Count
+
+4. ANÁLISIS DE COLUMNAS CASI CONSTANTES (>99%):
+   [OK] No se encontraron columnas casi constantes
+
+5. ANÁLISIS DE FILAS CON TODOS LOS VALORES EN CERO:
+   - Filas con todos los valores en 0: 0
+
+6. ANÁLISIS DE VALORES INFINITOS:
+   - Flow Bytes/s: 2 valores infinitos
+   - Flow Packets/s: 4 valores infinitos
+
+7. ANÁLISIS DE VALORES NEGATIVOS ANÓMALOS:
+   [OK] No se encontraron valores negativos anomalos
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Total de filas a eliminar: 8 (0.15%)
+  Filas que permanecerán: 5474
+  Muestra de índices marcados: 8
+================================================================================
+
+================================================================================
+Analizando: Mirai-greeth_flood27.pcap_Flow.csv
+Tipo de ataque: Mirai
+================================================================================
+
+Dimensiones originales: (7602, 84)
+
+1. ANÁLISIS DE VALORES FALTANTES:
+   - Flow Bytes/s: 1 (0.01%)
+
+2. ANÁLISIS DE FILAS DUPLICADAS:
+   - Filas duplicadas: 12
+
+3. ANÁLISIS DE COLUMNAS CONSTANTES:
+   - Bwd PSH Flags
+   - Bwd URG Flags
+   - CWR Flag Count
+   - ECE Flag Count
+   - Fwd Bulk Rate Avg
+   - Fwd Bytes/Bulk Avg
+   - Fwd Packet/Bulk Avg
+   - Fwd URG Flags
+   - URG Flag Count
+
+4. ANÁLISIS DE COLUMNAS CASI CONSTANTES (>99%):
+   [OK] No se encontraron columnas casi constantes
+
+5. ANÁLISIS DE FILAS CON TODOS LOS VALORES EN CERO:
+   - Filas con todos los valores en 0: 0
+
+6. ANÁLISIS DE VALORES INFINITOS:
+   - Flow Packets/s: 1 valores infinitos
+
+7. ANÁLISIS DE VALORES NEGATIVOS ANÓMALOS:
+   [OK] No se encontraron valores negativos anomalos
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Total de filas a eliminar: 13 (0.17%)
+  Filas que permanecerán: 7589
+  Muestra de índices marcados: 13
+================================================================================
+
+================================================================================
+Analizando: Mirai-greeth_flood28.pcap_Flow.csv
+Tipo de ataque: Mirai
+================================================================================
+
+Dimensiones originales: (8451, 84)
+
+1. ANÁLISIS DE VALORES FALTANTES:
+   - Flow Bytes/s: 1 (0.01%)
+
+2. ANÁLISIS DE FILAS DUPLICADAS:
+   - Filas duplicadas: 7
+
+3. ANÁLISIS DE COLUMNAS CONSTANTES:
+   - Bwd PSH Flags
+   - Bwd URG Flags
+   - CWR Flag Count
+   - ECE Flag Count
+   - Fwd Bulk Rate Avg
+   - Fwd Bytes/Bulk Avg
+   - Fwd Packet/Bulk Avg
+   - Fwd URG Flags
+   - URG Flag Count
+
+4. ANÁLISIS DE COLUMNAS CASI CONSTANTES (>99%):
+   [OK] No se encontraron columnas casi constantes
+
+5. ANÁLISIS DE FILAS CON TODOS LOS VALORES EN CERO:
+   - Filas con todos los valores en 0: 0
+
+6. ANÁLISIS DE VALORES INFINITOS:
+   - Flow Packets/s: 1 valores infinitos
+
+7. ANÁLISIS DE VALORES NEGATIVOS ANÓMALOS:
+   [OK] No se encontraron valores negativos anomalos
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Total de filas a eliminar: 8 (0.09%)
+  Filas que permanecerán: 8443
+  Muestra de índices marcados: 8
+================================================================================
+
+================================================================================
+Analizando: Mirai-greeth_flood3.pcap_Flow.csv
+Tipo de ataque: Mirai
+================================================================================
+
+Dimensiones originales: (4647, 84)
+
+1. ANÁLISIS DE VALORES FALTANTES:
+   [OK] No se encontraron valores faltantes
+
+2. ANÁLISIS DE FILAS DUPLICADAS:
+   - Filas duplicadas: 0
+
+3. ANÁLISIS DE COLUMNAS CONSTANTES:
+   - Bwd PSH Flags
+   - Bwd URG Flags
+   - CWR Flag Count
+   - ECE Flag Count
+   - Fwd Bulk Rate Avg
+   - Fwd Bytes/Bulk Avg
+   - Fwd Packet/Bulk Avg
+   - Fwd URG Flags
+   - URG Flag Count
+
+4. ANÁLISIS DE COLUMNAS CASI CONSTANTES (>99%):
+   [OK] No se encontraron columnas casi constantes
+
+5. ANÁLISIS DE FILAS CON TODOS LOS VALORES EN CERO:
+   - Filas con todos los valores en 0: 0
+
+6. ANÁLISIS DE VALORES INFINITOS:
+   - Flow Bytes/s: 1 valores infinitos
+   - Flow Packets/s: 1 valores infinitos
+
+7. ANÁLISIS DE VALORES NEGATIVOS ANÓMALOS:
+   [OK] No se encontraron valores negativos anomalos
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Total de filas a eliminar: 1 (0.02%)
+  Filas que permanecerán: 4646
+  Muestra de índices marcados: 1
+================================================================================
+
+================================================================================
+Analizando: Mirai-greeth_flood4.pcap_Flow.csv
+Tipo de ataque: Mirai
+================================================================================
+
+Dimensiones originales: (9012, 84)
+
+1. ANÁLISIS DE VALORES FALTANTES:
+   [OK] No se encontraron valores faltantes
+
+2. ANÁLISIS DE FILAS DUPLICADAS:
+   - Filas duplicadas: 8
+
+3. ANÁLISIS DE COLUMNAS CONSTANTES:
+   - Bwd PSH Flags
+   - Bwd URG Flags
+   - CWR Flag Count
+   - ECE Flag Count
+   - Fwd Bulk Rate Avg
+   - Fwd Bytes/Bulk Avg
+   - Fwd Packet/Bulk Avg
+   - Fwd URG Flags
+   - URG Flag Count
+
+4. ANÁLISIS DE COLUMNAS CASI CONSTANTES (>99%):
+   [OK] No se encontraron columnas casi constantes
+
+5. ANÁLISIS DE FILAS CON TODOS LOS VALORES EN CERO:
+   - Filas con todos los valores en 0: 0
+
+6. ANÁLISIS DE VALORES INFINITOS:
+   [OK] No se encontraron valores infinitos
+
+7. ANÁLISIS DE VALORES NEGATIVOS ANÓMALOS:
+   [OK] No se encontraron valores negativos anomalos
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Total de filas a eliminar: 8 (0.09%)
+  Filas que permanecerán: 9004
+  Muestra de índices marcados: 8
+================================================================================
+
+================================================================================
+Analizando: Mirai-greeth_flood5.pcap_Flow.csv
+Tipo de ataque: Mirai
+================================================================================
+
+Dimensiones originales: (3873, 84)
+
+1. ANÁLISIS DE VALORES FALTANTES:
+   [OK] No se encontraron valores faltantes
+
+2. ANÁLISIS DE FILAS DUPLICADAS:
+   - Filas duplicadas: 0
+
+3. ANÁLISIS DE COLUMNAS CONSTANTES:
+   - Bwd PSH Flags
+   - Bwd URG Flags
+   - Fwd Bulk Rate Avg
+   - Fwd Bytes/Bulk Avg
+   - Fwd Packet/Bulk Avg
+   - Fwd URG Flags
+   - URG Flag Count
+
+4. ANÁLISIS DE COLUMNAS CASI CONSTANTES (>99%):
+   - CWR Flag Count: 99.90%
+   - ECE Flag Count: 99.92%
+
+5. ANÁLISIS DE FILAS CON TODOS LOS VALORES EN CERO:
+   - Filas con todos los valores en 0: 0
+
+6. ANÁLISIS DE VALORES INFINITOS:
+   [OK] No se encontraron valores infinitos
+
+7. ANÁLISIS DE VALORES NEGATIVOS ANÓMALOS:
+   [OK] No se encontraron valores negativos anomalos
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Total de filas a eliminar: 0 (0.00%)
+  Filas que permanecerán: 3873
+  Muestra de índices marcados: 0
+================================================================================
+
+================================================================================
+Analizando: Mirai-greeth_flood6.pcap_Flow.csv
+Tipo de ataque: Mirai
+================================================================================
+
+Dimensiones originales: (11786, 84)
+
+1. ANÁLISIS DE VALORES FALTANTES:
+   - Flow Bytes/s: 2 (0.02%)
+
+2. ANÁLISIS DE FILAS DUPLICADAS:
+   - Filas duplicadas: 24
+
+3. ANÁLISIS DE COLUMNAS CONSTANTES:
+   - Bwd PSH Flags
+   - Bwd URG Flags
+   - CWR Flag Count
+   - ECE Flag Count
+   - Fwd Bulk Rate Avg
+   - Fwd Bytes/Bulk Avg
+   - Fwd Packet/Bulk Avg
+   - Fwd URG Flags
+   - URG Flag Count
+
+4. ANÁLISIS DE COLUMNAS CASI CONSTANTES (>99%):
+   [OK] No se encontraron columnas casi constantes
+
+5. ANÁLISIS DE FILAS CON TODOS LOS VALORES EN CERO:
+   - Filas con todos los valores en 0: 0
+
+6. ANÁLISIS DE VALORES INFINITOS:
+   - Flow Bytes/s: 2 valores infinitos
+   - Flow Packets/s: 4 valores infinitos
+
+7. ANÁLISIS DE VALORES NEGATIVOS ANÓMALOS:
+   [OK] No se encontraron valores negativos anomalos
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Total de filas a eliminar: 28 (0.24%)
+  Filas que permanecerán: 11758
+  Muestra de índices marcados: 28
+================================================================================
+
+================================================================================
+Analizando: Mirai-greeth_flood7.pcap_Flow.csv
+Tipo de ataque: Mirai
+================================================================================
+
+Dimensiones originales: (7789, 84)
+
+1. ANÁLISIS DE VALORES FALTANTES:
+   [OK] No se encontraron valores faltantes
+
+2. ANÁLISIS DE FILAS DUPLICADAS:
+   - Filas duplicadas: 2
+
+3. ANÁLISIS DE COLUMNAS CONSTANTES:
+   - Bwd PSH Flags
+   - Bwd URG Flags
+   - CWR Flag Count
+   - ECE Flag Count
+   - Fwd Bulk Rate Avg
+   - Fwd Bytes/Bulk Avg
+   - Fwd Packet/Bulk Avg
+   - Fwd URG Flags
+   - URG Flag Count
+
+4. ANÁLISIS DE COLUMNAS CASI CONSTANTES (>99%):
+   [OK] No se encontraron columnas casi constantes
+
+5. ANÁLISIS DE FILAS CON TODOS LOS VALORES EN CERO:
+   - Filas con todos los valores en 0: 0
+
+6. ANÁLISIS DE VALORES INFINITOS:
+   - Flow Bytes/s: 3 valores infinitos
+   - Flow Packets/s: 3 valores infinitos
+
+7. ANÁLISIS DE VALORES NEGATIVOS ANÓMALOS:
+   [OK] No se encontraron valores negativos anomalos
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Total de filas a eliminar: 5 (0.06%)
+  Filas que permanecerán: 7784
+  Muestra de índices marcados: 5
+================================================================================
+
+================================================================================
+Analizando: Mirai-greeth_flood8.pcap_Flow.csv
+Tipo de ataque: Mirai
+================================================================================
+
+Dimensiones originales: (5443, 84)
+
+1. ANÁLISIS DE VALORES FALTANTES:
+   - Flow Bytes/s: 1 (0.02%)
+
+2. ANÁLISIS DE FILAS DUPLICADAS:
+   - Filas duplicadas: 0
+
+3. ANÁLISIS DE COLUMNAS CONSTANTES:
+   - Bwd PSH Flags
+   - Bwd URG Flags
+   - Fwd Bulk Rate Avg
+   - Fwd Bytes/Bulk Avg
+   - Fwd Packet/Bulk Avg
+   - Fwd URG Flags
+   - URG Flag Count
+
+4. ANÁLISIS DE COLUMNAS CASI CONSTANTES (>99%):
+   - CWR Flag Count: 99.87%
+   - ECE Flag Count: 99.91%
+
+5. ANÁLISIS DE FILAS CON TODOS LOS VALORES EN CERO:
+   - Filas con todos los valores en 0: 0
+
+6. ANÁLISIS DE VALORES INFINITOS:
+   - Flow Bytes/s: 1 valores infinitos
+   - Flow Packets/s: 2 valores infinitos
+
+7. ANÁLISIS DE VALORES NEGATIVOS ANÓMALOS:
+   [OK] No se encontraron valores negativos anomalos
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Total de filas a eliminar: 2 (0.04%)
+  Filas que permanecerán: 5441
+  Muestra de índices marcados: 2
+================================================================================
+
+================================================================================
+Analizando: Mirai-greeth_flood9.pcap_Flow.csv
+Tipo de ataque: Mirai
+================================================================================
+
+Dimensiones originales: (12079, 84)
+
+1. ANÁLISIS DE VALORES FALTANTES:
+   - Flow Bytes/s: 3 (0.02%)
+
+2. ANÁLISIS DE FILAS DUPLICADAS:
+   - Filas duplicadas: 15
+
+3. ANÁLISIS DE COLUMNAS CONSTANTES:
+   - Bwd PSH Flags
+   - Bwd URG Flags
+   - CWR Flag Count
+   - ECE Flag Count
+   - Fwd Bulk Rate Avg
+   - Fwd Bytes/Bulk Avg
+   - Fwd Packet/Bulk Avg
+   - Fwd URG Flags
+   - URG Flag Count
+
+4. ANÁLISIS DE COLUMNAS CASI CONSTANTES (>99%):
+   [OK] No se encontraron columnas casi constantes
+
+5. ANÁLISIS DE FILAS CON TODOS LOS VALORES EN CERO:
+   - Filas con todos los valores en 0: 0
+
+6. ANÁLISIS DE VALORES INFINITOS:
+   - Flow Bytes/s: 2 valores infinitos
+   - Flow Packets/s: 5 valores infinitos
+
+7. ANÁLISIS DE VALORES NEGATIVOS ANÓMALOS:
+   [OK] No se encontraron valores negativos anomalos
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Total de filas a eliminar: 20 (0.17%)
+  Filas que permanecerán: 12059
+  Muestra de índices marcados: 20
+================================================================================
+
+
+################################################################################
+# CATEGORÍA: Recon (1 archivos a analizar)
+################################################################################
+
+================================================================================
+Analizando: VulnerabilityScan.pcap_Flow.csv
+Tipo de ataque: Recon
+================================================================================
+
+Dimensiones originales: (442158, 84)
+
+1. ANÁLISIS DE VALORES FALTANTES:
+   - Flow Bytes/s: 521 (0.12%)
+
+2. ANÁLISIS DE FILAS DUPLICADAS:
+   - Filas duplicadas: 22
+
+3. ANÁLISIS DE COLUMNAS CONSTANTES:
+   - Bwd PSH Flags
+   - Bwd URG Flags
+   - CWR Flag Count
+   - ECE Flag Count
+   - Fwd Bulk Rate Avg
+   - Fwd Bytes/Bulk Avg
+   - Fwd Packet/Bulk Avg
+   - Fwd URG Flags
+   - URG Flag Count
+
+4. ANÁLISIS DE COLUMNAS CASI CONSTANTES (>99%):
+   [OK] No se encontraron columnas casi constantes
+
+5. ANÁLISIS DE FILAS CON TODOS LOS VALORES EN CERO:
+   - Filas con todos los valores en 0: 0
+
+6. ANÁLISIS DE VALORES INFINITOS:
+   - Flow Bytes/s: 606 valores infinitos
+   - Flow Packets/s: 1127 valores infinitos
+
+7. ANÁLISIS DE VALORES NEGATIVOS ANÓMALOS:
+   [OK] No se encontraron valores negativos anomalos
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Total de filas a eliminar: 1135 (0.26%)
+  Filas que permanecerán: 441023
+  Muestra de índices marcados: 1000
+================================================================================
+
+
+################################################################################
+# CATEGORÍA: Spoofing (3 archivos a analizar)
+################################################################################
+
+================================================================================
+Analizando: MITM-ArpSpoofing.pcap_Flow.csv
+Tipo de ataque: Spoofing
+================================================================================
+
+Dimensiones originales: (73033, 84)
+
+1. ANÁLISIS DE VALORES FALTANTES:
+   - Flow Bytes/s: 25 (0.03%)
+
+2. ANÁLISIS DE FILAS DUPLICADAS:
+   - Filas duplicadas: 29
+
+3. ANÁLISIS DE COLUMNAS CONSTANTES:
+   - Bwd PSH Flags
+   - Bwd URG Flags
+   - Fwd Bulk Rate Avg
+   - Fwd Bytes/Bulk Avg
+   - Fwd Packet/Bulk Avg
+   - Fwd URG Flags
+   - URG Flag Count
+
+4. ANÁLISIS DE COLUMNAS CASI CONSTANTES (>99%):
+   [OK] No se encontraron columnas casi constantes
+
+5. ANÁLISIS DE FILAS CON TODOS LOS VALORES EN CERO:
+   - Filas con todos los valores en 0: 0
+
+6. ANÁLISIS DE VALORES INFINITOS:
+   - Flow Bytes/s: 12 valores infinitos
+   - Flow Packets/s: 37 valores infinitos
+
+7. ANÁLISIS DE VALORES NEGATIVOS ANÓMALOS:
+   [OK] No se encontraron valores negativos anomalos
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Total de filas a eliminar: 65 (0.09%)
+  Filas que permanecerán: 72968
+  Muestra de índices marcados: 65
+================================================================================
+
+================================================================================
+Analizando: MITM-ArpSpoofing1.pcap_Flow.csv
+Tipo de ataque: Spoofing
+================================================================================
+
+Dimensiones originales: (9349, 84)
+
+1. ANÁLISIS DE VALORES FALTANTES:
+   - Flow Bytes/s: 3 (0.03%)
+
+2. ANÁLISIS DE FILAS DUPLICADAS:
+   - Filas duplicadas: 10
+
+3. ANÁLISIS DE COLUMNAS CONSTANTES:
+   - Bwd PSH Flags
+   - Bwd URG Flags
+   - Fwd Bulk Rate Avg
+   - Fwd Bytes/Bulk Avg
+   - Fwd Packet/Bulk Avg
+   - Fwd URG Flags
+   - URG Flag Count
+
+4. ANÁLISIS DE COLUMNAS CASI CONSTANTES (>99%):
+   [OK] No se encontraron columnas casi constantes
+
+5. ANÁLISIS DE FILAS CON TODOS LOS VALORES EN CERO:
+   - Filas con todos los valores en 0: 0
+
+6. ANÁLISIS DE VALORES INFINITOS:
+   - Flow Bytes/s: 3 valores infinitos
+   - Flow Packets/s: 6 valores infinitos
+
+7. ANÁLISIS DE VALORES NEGATIVOS ANÓMALOS:
+   [OK] No se encontraron valores negativos anomalos
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Total de filas a eliminar: 16 (0.17%)
+  Filas que permanecerán: 9333
+  Muestra de índices marcados: 16
+================================================================================
+
+================================================================================
+Analizando: DNS_Spoofing.pcap_Flow.csv
+Tipo de ataque: Spoofing
+================================================================================
+
+Dimensiones originales: (74856, 84)
+
+1. ANÁLISIS DE VALORES FALTANTES:
+   - Flow Bytes/s: 48 (0.06%)
+
+2. ANÁLISIS DE FILAS DUPLICADAS:
+   - Filas duplicadas: 32
+
+3. ANÁLISIS DE COLUMNAS CONSTANTES:
+   - Bwd PSH Flags
+   - Bwd URG Flags
+   - Fwd Bulk Rate Avg
+   - Fwd Bytes/Bulk Avg
+   - Fwd Packet/Bulk Avg
+   - Fwd URG Flags
+   - URG Flag Count
+
+4. ANÁLISIS DE COLUMNAS CASI CONSTANTES (>99%):
+   - CWR Flag Count: 99.25%
+   - ECE Flag Count: 99.27%
+
+5. ANÁLISIS DE FILAS CON TODOS LOS VALORES EN CERO:
+   - Filas con todos los valores en 0: 0
+
+6. ANÁLISIS DE VALORES INFINITOS:
+   - Flow Bytes/s: 13 valores infinitos
+   - Flow Packets/s: 61 valores infinitos
+
+7. ANÁLISIS DE VALORES NEGATIVOS ANÓMALOS:
+   [OK] No se encontraron valores negativos anomalos
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Total de filas a eliminar: 92 (0.12%)
+  Filas que permanecerán: 74764
+  Muestra de índices marcados: 92
+================================================================================
+
+
+################################################################################
+# CATEGORÍA: Web-Based (3 archivos a analizar)
+################################################################################
+
+================================================================================
+Analizando: SqlInjection.pcap_Flow.csv
+Tipo de ataque: Web-Based
+================================================================================
+
+Dimensiones originales: (6603, 84)
+
+1. ANÁLISIS DE VALORES FALTANTES:
+   - Flow Bytes/s: 1 (0.02%)
+
+2. ANÁLISIS DE FILAS DUPLICADAS:
+   - Filas duplicadas: 0
+
+3. ANÁLISIS DE COLUMNAS CONSTANTES:
+   - Bwd PSH Flags
+   - Bwd URG Flags
+   - CWR Flag Count
+   - ECE Flag Count
+   - Fwd Bulk Rate Avg
+   - Fwd Bytes/Bulk Avg
+   - Fwd Packet/Bulk Avg
+   - Fwd URG Flags
+   - URG Flag Count
+
+4. ANÁLISIS DE COLUMNAS CASI CONSTANTES (>99%):
+   [OK] No se encontraron columnas casi constantes
+
+5. ANÁLISIS DE FILAS CON TODOS LOS VALORES EN CERO:
+   - Filas con todos los valores en 0: 0
+
+6. ANÁLISIS DE VALORES INFINITOS:
+   - Flow Bytes/s: 2 valores infinitos
+   - Flow Packets/s: 3 valores infinitos
+
+7. ANÁLISIS DE VALORES NEGATIVOS ANÓMALOS:
+   [OK] No se encontraron valores negativos anomalos
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Total de filas a eliminar: 3 (0.05%)
+  Filas que permanecerán: 6600
+  Muestra de índices marcados: 3
+================================================================================
+
+================================================================================
+Analizando: Uploading_Attack.pcap_Flow.csv
+Tipo de ataque: Web-Based
+================================================================================
+
+Dimensiones originales: (1348, 84)
+
+1. ANÁLISIS DE VALORES FALTANTES:
+   [OK] No se encontraron valores faltantes
+
+2. ANÁLISIS DE FILAS DUPLICADAS:
+   - Filas duplicadas: 0
+
+3. ANÁLISIS DE COLUMNAS CONSTANTES:
+   - Bwd PSH Flags
+   - Bwd URG Flags
+   - Fwd Bulk Rate Avg
+   - Fwd Bytes/Bulk Avg
+   - Fwd Packet/Bulk Avg
+   - Fwd URG Flags
+   - URG Flag Count
+
+4. ANÁLISIS DE COLUMNAS CASI CONSTANTES (>99%):
+   - CWR Flag Count: 99.78%
+   - ECE Flag Count: 99.78%
+
+5. ANÁLISIS DE FILAS CON TODOS LOS VALORES EN CERO:
+   - Filas con todos los valores en 0: 0
+
+6. ANÁLISIS DE VALORES INFINITOS:
+   [OK] No se encontraron valores infinitos
+
+7. ANÁLISIS DE VALORES NEGATIVOS ANÓMALOS:
+   [OK] No se encontraron valores negativos anomalos
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Total de filas a eliminar: 0 (0.00%)
+  Filas que permanecerán: 1348
+  Muestra de índices marcados: 0
+================================================================================
+
+================================================================================
+Analizando: XSS.pcap_Flow.csv
+Tipo de ataque: Web-Based
+================================================================================
+
+Dimensiones originales: (3377, 84)
+
+1. ANÁLISIS DE VALORES FALTANTES:
+   [OK] No se encontraron valores faltantes
+
+2. ANÁLISIS DE FILAS DUPLICADAS:
+   - Filas duplicadas: 0
+
+3. ANÁLISIS DE COLUMNAS CONSTANTES:
+   - Bwd PSH Flags
+   - Bwd URG Flags
+   - Fwd Bulk Rate Avg
+   - Fwd Bytes/Bulk Avg
+   - Fwd Packet/Bulk Avg
+   - Fwd URG Flags
+   - URG Flag Count
+
+4. ANÁLISIS DE COLUMNAS CASI CONSTANTES (>99%):
+   - CWR Flag Count: 99.11%
+   - ECE Flag Count: 99.23%
+
+5. ANÁLISIS DE FILAS CON TODOS LOS VALORES EN CERO:
+   - Filas con todos los valores en 0: 0
+
+6. ANÁLISIS DE VALORES INFINITOS:
+   [OK] No se encontraron valores infinitos
+
+7. ANÁLISIS DE VALORES NEGATIVOS ANÓMALOS:
+   [OK] No se encontraron valores negativos anomalos
+
+================================================================================
+RESUMEN DE LIMPIEZA:
+  Total de filas a eliminar: 0 (0.00%)
+  Filas que permanecerán: 3377
+  Muestra de índices marcados: 0
+================================================================================
+
+[OK] Resultados guardados en: F:\Dataset\profiling_results.json
+
+
+====================================================================================================
+REPORTE RESUMEN DE DATA PROFILING
+====================================================================================================
+
+1. RESUMEN POR CATEGORÍA DE ATAQUE:
+----------------------------------------------------------------------------------------------------
+
+Benign:
+  - Archivos analizados: 4
+  - Total de filas: 398,330
+  - Filas a eliminar: 148 (0.04%)
+  - Archivos con problemas: 4
+
+BruteForce:
+  - Archivos analizados: 1
+  - Total de filas: 3,619
+  - Filas a eliminar: 0 (0.00%)
+  - Archivos con problemas: 0
+
+DDoS:
+  - Archivos analizados: 61
+  - Total de filas: 3,478,814
+  - Filas a eliminar: 7,025 (0.20%)
+  - Archivos con problemas: 58
+
+DoS:
+  - Archivos analizados: 30
+  - Total de filas: 23,143,924
+  - Filas a eliminar: 87,714 (0.38%)
+  - Archivos con problemas: 25
+
+Mirai:
+  - Archivos analizados: 29
+  - Total de filas: 174,588
+  - Filas a eliminar: 271 (0.16%)
+  - Archivos con problemas: 26
+
+Recon:
+  - Archivos analizados: 1
+  - Total de filas: 442,158
+  - Filas a eliminar: 1,135 (0.26%)
+  - Archivos con problemas: 1
+
+Spoofing:
+  - Archivos analizados: 3
+  - Total de filas: 157,238
+  - Filas a eliminar: 173 (0.11%)
+  - Archivos con problemas: 3
+
+Web-Based:
+  - Archivos analizados: 3
+  - Total de filas: 11,328
+  - Filas a eliminar: 3 (0.03%)
+  - Archivos con problemas: 1
+
+
+2. PROBLEMAS MÁS COMUNES ENCONTRADOS:
+----------------------------------------------------------------------------------------------------
+  - Archivos con valores faltantes: 105
+  - Total de filas duplicadas: 33,091
+  - Total de filas con todos los valores en 0: 0
+  - Archivos con valores infinitos: 220
+
+
+3. COLUMNAS CONSTANTES ENCONTRADAS:
+----------------------------------------------------------------------------------------------------
+  Estas columnas tienen un valor constante en uno o más archivos:
+    - Bwd PSH Flags
+    - Bwd URG Flags
+    - CWR Flag Count
+    - ECE Flag Count
+    - Fwd Bulk Rate Avg
+    - Fwd Bytes/Bulk Avg
+    - Fwd Packet/Bulk Avg
+    - Fwd URG Flags
+    - URG Flag Count
+
+====================================================================================================
+FIN DEL REPORTE
+====================================================================================================

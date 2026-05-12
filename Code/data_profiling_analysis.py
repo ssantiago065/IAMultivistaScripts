@@ -1,3 +1,16 @@
+# =============================================================================
+# DATA PROFILING ANALYSIS SCRIPT
+# -----------------------------------------------------------------------------
+# Este script realiza un análisis detallado de archivos CSV de tráfico IoT,
+# detectando valores faltantes, duplicados, columnas constantes, valores anómalos,
+# y genera reportes en consola y archivos JSON.
+# =============================================================================
+# =========================
+# IMPORTACIÓN DE LIBRERÍAS
+# =========================
+# =========================
+# CONFIGURACIÓN DE RUTAS Y VARIABLES PRINCIPALES
+# =========================
 import json
 import sys
 import warnings
@@ -19,7 +32,17 @@ PROJECT_ROOT = SCRIPT_DIR.parent
 FLOW_DIR = PROJECT_ROOT / 'Anomaly Detection - Flow Based features'
 OUTPUT_FILE = PROJECT_ROOT / 'profiling_results.json'
 
+# =========================
+# CLASE PRINCIPAL DE PERFILADO DE DATOS
+# =========================
 class DataProfiler:
+        # Constructor: inicializa rutas y variables
+        # Convierte valores a formato serializable para JSON
+        # Analiza un archivo CSV por chunks, mostrando y devolviendo métricas de calidad de datos
+        # - Detecta valores faltantes, duplicados, columnas constantes, valores infinitos y negativos
+        # - Calcula filas a eliminar y muestra resumen en consola
+        # Analiza todos los archivos de todas las categorías o una muestra
+        # Genera un resumen global del análisis de todos los archivos
     def __init__(self, flow_based_path, output_file):
         self.flow_based_path = Path(flow_based_path)
         self.output_file = Path(output_file)
@@ -438,7 +461,14 @@ class DataProfiler:
         print("="*100)
 
 
+# =========================
+# FUNCIÓN PRINCIPAL Y PARSEO DE ARGUMENTOS
+# =========================
 def main():
+        # Parsea argumentos de línea de comandos y ejecuta el análisis completo
+    # =========================
+    # EJECUCIÓN DEL SCRIPT
+    # =========================
     """Función principal"""
     parser = argparse.ArgumentParser(description='Data profiling para dataset Flow Based')
     parser.add_argument('--dataset-dir', type=Path, default=FLOW_DIR, help='Ruta al dataset Flow Based')

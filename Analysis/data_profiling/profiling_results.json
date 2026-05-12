@@ -20141,6 +20141,45 @@
     "percentage_to_remove": 0.12290263973495777
   },
   {
+    "file": "SqlInjection.pcap_Flow.csv",
+    "attack_type": "Web-Based",
+    "total_rows": 6603,
+    "total_columns": 84,
+    "missing_values": {
+      "Flow Bytes/s": {
+        "count": 1,
+        "percentage": 0.015144631228229594
+      }
+    },
+    "duplicate_rows": 0,
+    "constant_columns": [
+      "Bwd PSH Flags",
+      "Bwd URG Flags",
+      "CWR Flag Count",
+      "ECE Flag Count",
+      "Fwd Bulk Rate Avg",
+      "Fwd Bytes/Bulk Avg",
+      "Fwd Packet/Bulk Avg",
+      "Fwd URG Flags",
+      "URG Flag Count"
+    ],
+    "near_constant_columns": [],
+    "all_zero_rows": 0,
+    "infinite_values": {
+      "Flow Bytes/s": 2,
+      "Flow Packets/s": 3
+    },
+    "negative_values": {},
+    "rows_to_remove": [
+      650,
+      3474,
+      4000
+    ],
+    "rows_to_remove_sample_limit": 1000,
+    "total_rows_to_remove": 3,
+    "percentage_to_remove": 0.045433893684688774
+  },
+  {
     "file": "Uploading_Attack.pcap_Flow.csv",
     "attack_type": "Web-Based",
     "total_rows": 1348,
@@ -20211,44 +20250,5 @@
     "rows_to_remove_sample_limit": 1000,
     "total_rows_to_remove": 0,
     "percentage_to_remove": 0.0
-  },
-  {
-    "file": "SqlInjection.pcap_Flow.csv",
-    "attack_type": "Web-Based",
-    "total_rows": 6603,
-    "total_columns": 84,
-    "missing_values": {
-      "Flow Bytes/s": {
-        "count": 1,
-        "percentage": 0.015144631228229594
-      }
-    },
-    "duplicate_rows": 0,
-    "constant_columns": [
-      "Bwd PSH Flags",
-      "Bwd URG Flags",
-      "CWR Flag Count",
-      "ECE Flag Count",
-      "Fwd Bulk Rate Avg",
-      "Fwd Bytes/Bulk Avg",
-      "Fwd Packet/Bulk Avg",
-      "Fwd URG Flags",
-      "URG Flag Count"
-    ],
-    "near_constant_columns": [],
-    "all_zero_rows": 0,
-    "infinite_values": {
-      "Flow Bytes/s": 2,
-      "Flow Packets/s": 3
-    },
-    "negative_values": {},
-    "rows_to_remove": [
-      650,
-      3474,
-      4000
-    ],
-    "rows_to_remove_sample_limit": 1000,
-    "total_rows_to_remove": 3,
-    "percentage_to_remove": 0.045433893684688774
   }
 ]
