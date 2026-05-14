@@ -16,6 +16,7 @@ OUTPUT_FILE = PROJECT_ROOT / "dataset_poc_multivista.csv"
 TARGET_SAMPLES_PER_CLASS = 100_000
 CHUNK_SIZE = 100_000
 RANDOM_STATE = 42
+VALID_CLASSES = ["Benign", "DDoS", "DoS", "Mirai", "Recon", "Spoofing"]
 
 # Columnas estrictamente prohibidas (identificadores y fugas de tiempo)
 COLUMNAS_A_ELIMINAR = ["Flow ID", "Src IP", "Dst IP", "Timestamp"]
@@ -29,6 +30,7 @@ def get_class_dirs(flow_dir: Path) -> list[Path]:
 
 def read_class_data(class_dir: Path, target_samples: int) -> pd.DataFrame:
     class_label = class_dir.name
+    
     csv_files = sorted(class_dir.rglob("*.csv"), key=lambda p: str(p).lower())
 
     if not csv_files:
@@ -90,10 +92,14 @@ def generar_dataset_balanceado():
 
     df_parts = []
     for class_dir in class_dirs:
-        print(f"\nProcesando clase: {class_dir.name}")
-        df_class = read_class_data(class_dir, TARGET_SAMPLES_PER_CLASS)
-        if not df_class.empty:
-            df_parts.append(df_class)
+
+        if class_dir.name in VALID_CLASSES:
+            print(f"\nProcesando clase: {class_dir.name}")
+            df_class = read_class_data(class_dir, TARGET_SAMPLES_PER_CLASS)
+            if not df_class.empty:
+                df_parts.append(df_class)
+        else:
+            print(f"\nClase {class_dir.name} no procesada por no estas en clases validas")
 
     if not df_parts:
         raise RuntimeError("No se genero ningun dataframe de clase. Revisa los archivos de entrada.")

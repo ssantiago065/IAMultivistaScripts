@@ -68,5 +68,4 @@ def generar_graficos():
     print("🎉 Gráficos generados con éxito.")
 
 if __name__ == "__main__":
-    # Asegúrate de tener seaborn instalado: pip install seaborn
     generar_graficos()
