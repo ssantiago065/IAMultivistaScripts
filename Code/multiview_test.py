@@ -24,7 +24,7 @@ INPUT_DATASET = PROJECT_ROOT / "dataset_poc_multivista.csv"
 N_RUNS = 20
 SEED_GENERATOR_SEED = 2026
 TEST_SIZE = 0.30
-RF_ESTIMATORS = 100
+RF_ESTIMATORS = 150
 KFOLD = 3
 
 OUTPUT_DIR = PROJECT_ROOT / "Analysis" / "comparing"
@@ -148,8 +148,8 @@ def evaluate_multiview(X_train, y_train, X_test, y_test, seed, ind_vistas):
     ]
     """
 
-    #meta_learner = RandomForestClassifier(n_estimators=RF_ESTIMATORS, random_state=seed, n_jobs=-1) #Meta learner con random forest
-    meta_learner = LogisticRegression(random_state=seed, max_iter=1000) #Meta learner con regresión logística para evitar sobreajuste en el meta nivel
+    meta_learner = RandomForestClassifier(n_estimators=RF_ESTIMATORS, random_state=seed, n_jobs=-1) #Meta learner con random forest
+    #meta_learner = LogisticRegression(random_state=seed, max_iter=1000) #Meta learner con regresión logística para evitar sobreajuste en el meta nivel
 
     mv_model = MultiViewStacking(
         views_indices=ind_vistas,
@@ -220,10 +220,7 @@ def main():
         X_train_scaled = scaler.fit_transform(X_train_clean)
         X_test_scaled = scaler.transform(X_test_clean)
 
-        # Para compatibilidad con librerías que exigen numpy arrays o dataframes
-        # (El scaler ya devuelve numpy arrays)
-
-        # --- ENTRENAMIENTO Y EVALUACIÓN ---
+        # --- ENTRENAMIENTO Y EVALUACIÓN (Ensambles) ---
         sv_result, sv_preds = evaluate_singleview(
             X_train_scaled, y_train, X_test_scaled, y_test, run_seed
         )
@@ -231,7 +228,7 @@ def main():
             X_train_scaled, y_train, X_test_scaled, y_test, run_seed, ind_vistas
         )
 
-        # --- RECOLECCIÓN DE MÉTRICAS ---
+        # --- RECOLECCIÓN DE MÉTRICAS (Ensambles) ---
         mv_result["run"] = run_idx + 1
         sv_result["run"] = run_idx + 1
         all_results.extend([mv_result, sv_result])
@@ -244,6 +241,31 @@ def main():
             f"SingleView acc={sv_result['accuracy']:.4f} | "
             f"MultiView acc={mv_result['accuracy']:.4f}"
         )
+
+        # =========================================================
+        # NUEVO: EVALUACIÓN DE VISTAS INDIVIDUALES
+        # =========================================================
+        nombres_vistas = ["Tiempo", "Volumen", "Banderas", "Topologia"]
+        
+        for i, indices_vista in enumerate(ind_vistas):
+            
+            # Recortamos los datos para pasar solo las columnas de esta vista
+            X_train_vista = X_train_scaled[:, indices_vista]
+            X_test_vista = X_test_scaled[:, indices_vista]
+            
+            # Reutilizamos la función singleview para entrenar un RF puro en esta vista
+            v_result, v_preds = evaluate_singleview(
+                X_train_vista, y_train, X_test_vista, y_test, run_seed
+            )
+            
+            nombre_modelo_vista = f"Vista_{nombres_vistas[i]}"
+            v_result["model"] = nombre_modelo_vista
+            v_result["run"] = run_idx + 1
+            
+            all_results.append(v_result)
+            all_per_class.extend(metrics_per_class(y_test, v_preds, le, nombre_modelo_vista, run_idx + 1, run_seed))
+            
+            print(f"    -> {nombre_modelo_vista} acc: {v_result['accuracy']:.4f}")
 
     # --- GUARDADO DE RESULTADOS ---
     print("\n💾 Guardando reportes en disco...")
