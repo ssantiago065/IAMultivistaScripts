@@ -32,8 +32,8 @@ def generar_graficas():
     plt.figure(figsize=(12, 6))
     sns.set_theme(style="whitegrid")
     
-    orden_modelos = ["SingleView", "MultiViewStacking", "Vista_Tiempo", "Vista_Volumen", "Vista_Banderas", "Vista_Topologia"]
-    colores_box = {"SingleView": "#7f8c8d", "MultiViewStacking": "#2c3e50", "Vista_Tiempo": "#e74c3c", "Vista_Volumen": "#3498db", "Vista_Banderas": "#f1c40f", "Vista_Topologia": "#2ecc71"}
+    orden_modelos = ["SingleView", "MultiViewStacking", "Voting_Hard", "Voting_Soft", "Vista_Tiempo", "Vista_Volumen", "Vista_Banderas", "Vista_Topologia"]
+    colores_box = {"SingleView": "#7f8c8d", "MultiViewStacking": "#2c3e50", "Voting_Hard": "#e67e22", "Voting_Soft": "#9b59b6", "Vista_Tiempo": "#e74c3c", "Vista_Volumen": "#3498db", "Vista_Banderas": "#f1c40f", "Vista_Topologia": "#2ecc71"}
 
     sns.boxplot(data=df_runs, x="model", y="accuracy", order=orden_modelos, palette=colores_box, width=0.5, showfliers=False)
     sns.swarmplot(data=df_runs, x="model", y="accuracy", order=orden_modelos, color=".25", alpha=0.7, size=4)
@@ -57,14 +57,14 @@ def generar_graficas():
     df_class = pd.read_csv(INPUT_CLASS)
     
     # Separar los datos
-    df_ensambles = df_class[df_class["model"].isin(["SingleView", "MultiViewStacking"])]
+    df_ensambles = df_class[df_class["model"].isin(["SingleView", "MultiViewStacking", "Voting_Hard", "Voting_Soft"])]
     df_vistas = df_class[df_class["model"].isin(["Vista_Tiempo", "Vista_Volumen", "Vista_Banderas", "Vista_Topologia"])]
 
     # =========================================================
     # GRÁFICA 2: ENSAMBLES POR CLASE (Single vs Multi)
     # =========================================================
     plt.figure(figsize=(14, 7))
-    colores_ensambles = {"SingleView": "#bdc3c7", "MultiViewStacking": "#2980b9"}
+    colores_ensambles = {"SingleView": "#bdc3c7", "MultiViewStacking": "#2980b9", "Voting_Hard": "#e67e22", "Voting_Soft": "#9b59b6"}
     
     sns.barplot(
         data=df_ensambles, x="class", y="f1-score", hue="model", 

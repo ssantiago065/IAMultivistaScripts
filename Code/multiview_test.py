@@ -3,7 +3,7 @@ import numpy as np
 import pandas as pd
 
 from sklearn.linear_model import LogisticRegression
-from sklearn.ensemble import RandomForestClassifier, ExtraTreesClassifier
+from sklearn.ensemble import RandomForestClassifier, ExtraTreesClassifier, VotingClassifier
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.naive_bayes import GaussianNB
 from xgboost import XGBClassifier
@@ -11,6 +11,8 @@ from sklearn.metrics import accuracy_score, f1_score, classification_report
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import LabelEncoder, MinMaxScaler
 from sklearn.impute import SimpleImputer
+from sklearn.pipeline import Pipeline
+from sklearn.base import BaseEstimator, TransformerMixin
 
 from multiviewstacking import MultiViewStacking
 
@@ -167,6 +169,29 @@ def evaluate_multiview(X_train, y_train, X_test, y_test, seed, ind_vistas):
     
     return {"model": "MultiViewStacking", "accuracy": acc, "f1_macro": f1}, preds
 
+class ColumnSelector(BaseEstimator, TransformerMixin):
+    def __init__(self, indices): self.indices = indices
+    def fit(self, X, y=None): return self
+    def transform(self, X): return X[:, self.indices]
+
+def evaluate_voting(X_train, y_train, X_test, y_test, seed, ind_vistas, voting='hard'):
+    estimators = [
+        (f"vista_{i}", Pipeline([
+            ("selector", ColumnSelector(indices)),
+            ("rf", RandomForestClassifier(
+                n_estimators=RF_ESTIMATORS, random_state=seed, class_weight='balanced'
+            ))
+        ]))
+        for i, indices in enumerate(ind_vistas)
+    ]
+    model_name = f"Voting_{voting.capitalize()}"
+    vc = VotingClassifier(estimators=estimators, voting=voting)
+    vc.fit(X_train, y_train)
+    preds = vc.predict(X_test)
+    acc = accuracy_score(y_test, preds)
+    f1 = f1_score(y_test, preds, average='macro')
+    return {"model": model_name, "accuracy": acc, "f1_macro": f1}, preds
+
 def summarize_results(df_runs):
     """Genera un resumen estadístico (Media y Desviación Estándar) de las corridas."""
     return df_runs.groupby("model")[["accuracy", "f1_macro"]].agg(["mean", "std"]).reset_index()
@@ -235,6 +260,21 @@ def main():
 
         all_per_class.extend(metrics_per_class(y_test, mv_preds, le, "MultiViewStacking", run_idx + 1, run_seed))
         all_per_class.extend(metrics_per_class(y_test, sv_preds, le, "SingleView", run_idx + 1, run_seed))
+
+        # --- ENTRENAMIENTO Y EVALUACIÓN (Voting Classifiers) ---
+        hv_result, hv_preds = evaluate_voting(
+            X_train_scaled, y_train, X_test_scaled, y_test, run_seed, ind_vistas, voting='hard'
+        )
+        sv_voting_result, sv_voting_preds = evaluate_voting(
+            X_train_scaled, y_train, X_test_scaled, y_test, run_seed, ind_vistas, voting='soft'
+        )
+
+        hv_result["run"] = run_idx + 1
+        sv_voting_result["run"] = run_idx + 1
+        all_results.extend([hv_result, sv_voting_result])
+
+        all_per_class.extend(metrics_per_class(y_test, hv_preds, le, "Voting_Hard", run_idx + 1, run_seed))
+        all_per_class.extend(metrics_per_class(y_test, sv_voting_preds, le, "Voting_Soft", run_idx + 1, run_seed))
 
         print(
             f"Run {run_idx + 1:02d}/{N_RUNS} | seed={run_seed} | "
