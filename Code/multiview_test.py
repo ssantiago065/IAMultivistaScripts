@@ -11,6 +11,7 @@ from sklearn.metrics import accuracy_score, f1_score, classification_report
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import LabelEncoder, MinMaxScaler
 from sklearn.impute import SimpleImputer
+from imblearn.over_sampling import SMOTE
 
 from multiviewstacking import MultiViewStacking
 
@@ -210,22 +211,42 @@ def main():
         )
 
         # --- PREPROCESAMIENTO DINÁMICO (Cero Fugas) ---
-        # 1. Imputación de NaNs (Aprende la mediana SOLO del Train)
+        # 1. Imputación de NaNs
         imputer = SimpleImputer(strategy='median')
         X_train_clean = imputer.fit_transform(X_train)
         X_test_clean = imputer.transform(X_test)
 
-        # 2. Escalado de Datos (Aprende min/max SOLO del Train)
+        # 2. Escalado de Datos
         scaler = MinMaxScaler()
         X_train_scaled = scaler.fit_transform(X_train_clean)
         X_test_scaled = scaler.transform(X_test_clean)
 
+        # 3. SMOTE (Solo en Train)
+        # Calculamos dinámicamente un objetivo de balanceo para no sobreajustar.
+        # Las clases mayoritarias tendrán ~70,000 datos en Train. 
+        # Subiremos las minoritarias a un máximo de 30,000 para darles peso sin ahogar el modelo.
+        
+        conteo_clases_train = pd.Series(y_train).value_counts().to_dict()
+        estrategia_smote = {}
+        LIMITE_SINTETICO = 30000 
+        
+        for clase, cantidad in conteo_clases_train.items():
+            if cantidad < LIMITE_SINTETICO:
+                estrategia_smote[clase] = LIMITE_SINTETICO
+            else:
+                estrategia_smote[clase] = cantidad # Las mayoritarias se quedan igual
+
+        print(f"   🧹 Aplicando SMOTE... Generando datos sintéticos hasta un límite de {LIMITE_SINTETICO} por clase minoritaria.")
+        smote = SMOTE(sampling_strategy=estrategia_smote, random_state=run_seed)
+        X_train_bal, y_train_bal = smote.fit_resample(X_train_scaled, y_train)
+
         # --- ENTRENAMIENTO Y EVALUACIÓN (Ensambles) ---
+        # ATENCIÓN: Pasamos los datos balanceados al Train, pero el Test permanece puro
         sv_result, sv_preds = evaluate_singleview(
-            X_train_scaled, y_train, X_test_scaled, y_test, run_seed
+            X_train_bal, y_train_bal, X_test_scaled, y_test, run_seed
         )
         mv_result, mv_preds = evaluate_multiview(
-            X_train_scaled, y_train, X_test_scaled, y_test, run_seed, ind_vistas
+            X_train_bal, y_train_bal, X_test_scaled, y_test, run_seed, ind_vistas
         )
 
         # --- RECOLECCIÓN DE MÉTRICAS (Ensambles) ---
@@ -243,19 +264,19 @@ def main():
         )
 
         # =========================================================
-        # NUEVO: EVALUACIÓN DE VISTAS INDIVIDUALES
+        # EVALUACIÓN DE VISTAS INDIVIDUALES
         # =========================================================
         nombres_vistas = ["Tiempo", "Volumen", "Banderas", "Topologia"]
         
         for i, indices_vista in enumerate(ind_vistas):
-            
             # Recortamos los datos para pasar solo las columnas de esta vista
-            X_train_vista = X_train_scaled[:, indices_vista]
+            # Usamos el set balanceado con SMOTE
+            X_train_vista = X_train_bal[:, indices_vista]
             X_test_vista = X_test_scaled[:, indices_vista]
             
             # Reutilizamos la función singleview para entrenar un RF puro en esta vista
             v_result, v_preds = evaluate_singleview(
-                X_train_vista, y_train, X_test_vista, y_test, run_seed
+                X_train_vista, y_train_bal, X_test_vista, y_test, run_seed
             )
             
             nombre_modelo_vista = f"Vista_{nombres_vistas[i]}"
