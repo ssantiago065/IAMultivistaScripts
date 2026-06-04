@@ -2,7 +2,11 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
-from sklearn.ensemble import RandomForestClassifier
+from sklearn.linear_model import LogisticRegression
+from sklearn.ensemble import RandomForestClassifier, ExtraTreesClassifier
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.naive_bayes import GaussianNB
+from xgboost import XGBClassifier
 from sklearn.metrics import accuracy_score, f1_score, classification_report
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import LabelEncoder, MinMaxScaler
@@ -13,8 +17,8 @@ from multiviewstacking import MultiViewStacking
 # =====================================================================
 # CONFIGURACIÓN Y CONSTANTES
 # =====================================================================
-SCRIPT_DIR   = Path(__file__).resolve().parent
-PROJECT_ROOT = SCRIPT_DIR.parent
+SCRIPT_DIR    = Path(__file__).resolve().parent
+PROJECT_ROOT  = SCRIPT_DIR.parent
 INPUT_DATASET = PROJECT_ROOT / "dataset_poc_multivista.csv"
 
 N_RUNS              = 20
@@ -23,7 +27,7 @@ TEST_SIZE           = 0.30
 RF_ESTIMATORS       = 150
 KFOLD               = 3
 
-OUTPUT_DIR = PROJECT_ROOT / "Analysis" / "comparing3"
+OUTPUT_DIR = PROJECT_ROOT / "Analysis" / "comparing"
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
 OUTPUT_PER_RUN   = OUTPUT_DIR / "multiview_vs_singleview_per_run.csv"
@@ -63,30 +67,95 @@ _banderas = [
 _topologia = ["Protocol", "Src Port", "Dst Port"]
 
 # =====================================================================
-# DIAGNÓSTICO ACTUALIZADO (runs con RF como meta-learner, 20k muestras/clase)
+# FACTORIES DE CLASIFICADORES
 # =====================================================================
-# Resultados mostraron que el meta-learner RF supera a LR en todos los casos.
-# El meta-dataset (avgscores + OHE de predicciones) tiene estructura no lineal:
-#   "si Vista_Volumen vota clase X con alta confianza y Vista_Banderas discrepa,
-#    confía en Volumen" → reglas tipo if/then que RF aprende y LR no.
-# Por eso el baseline RF base + RF meta es la configuración correcta hoy.
+# Todos los experimentos usan RF base + RF meta (configuración ganadora).
+# Definidas aquí como funciones para ser explícitas y reutilizables.
+
+def rf_base(seed, n):
+    """RF-150 para cada vista base. n = número de vistas del experimento."""
+    return [
+        RandomForestClassifier(n_estimators=RF_ESTIMATORS, random_state=seed, n_jobs=-1)
+        for _ in range(n)
+    ]
+
+def rf_meta(seed):
+    """RF-150 como meta-learner."""
+    return RandomForestClassifier(n_estimators=RF_ESTIMATORS, random_state=seed, n_jobs=-1)
+
+# =====================================================================
+# CONFIGURACIÓN DE EXPERIMENTOS
+# =====================================================================
+# Historial de decisiones:
+#
+#   Experimento base RF+RF con 4 vistas (100k muestras/clase):
+#     SingleView        acc=88.68%  f1=88.74%
+#     MultiViewStacking acc=88.50%  f1=88.57%   ← MV pierde −0.18%
+#     Vista_Volumen     acc=83.19%  (más fuerte)
+#     Vista_Tiempo      acc=76.36%
+#     Vista_Topologia   acc=69.77%  (3 features, débil)
+#     Vista_Banderas    acc=65.63%  (más débil)
+#
+#   Ablación de meta-learner (mismo setup):
+#     RF+RF  diff=−0.176%  ← menor pérdida, mejor opción
+#     LR     diff=−0.354%  ← peor: LR no captura interacciones no lineales
+#     RF-small diff=−1.305% ← peor aún: underfitting en meta-nivel
+#
+#   Conclusión: RF base + RF meta es la configuración correcta.
+#   Siguiente palanca: configuración de vistas.
+#
+# Hipótesis a probar:
+#   BASELINE: 4 vistas originales separadas
+#   EXP A:    Topologia (3 cols, 69%) se funde en Volumen → 3 vistas
+#   EXP B:    Fundir Topologia + eliminar Banderas → 2 vistas fuertes
+#   EXP C:    Quitar solo Topologia, mantener Banderas → 3 vistas
+#   EXP D:    Solo Tiempo + Volumen → mínimo absoluto
+
+_rf = {"base_fn": rf_base, "meta_fn": rf_meta}   # shorthand, mismo para todos
 
 EXPERIMENTS = [
     {
-        # RF-150 base + RF-150 meta (baseline ganador)
-        "name": "4v_baseline_RF_RF",
+        "name": "4vistas_original",
+        **_rf,
         "vistas": [
             ("Tiempo",    _tiempo),
             ("Volumen",   _volumen),
             ("Banderas",  _banderas),
             ("Topologia", _topologia),
         ],
-        "meta_fn": lambda seed: RandomForestClassifier(
-            n_estimators=RF_ESTIMATORS, random_state=seed, n_jobs=-1
-        ),
-        "base_fn": lambda seed, n: [
-            RandomForestClassifier(n_estimators=RF_ESTIMATORS, random_state=seed, n_jobs=-1)
-            for _ in range(n)
+    },
+    {
+        "name": "3vistas_volumen+topo",
+        **_rf,
+        "vistas": [
+            ("Tiempo",       _tiempo),
+            ("Volumen+Topo", _volumen + _topologia),
+            ("Banderas",     _banderas),
+        ],
+    },
+    {
+        "name": "2vistas_tiempo+volumen+topo",
+        **_rf,
+        "vistas": [
+            ("Tiempo",       _tiempo),
+            ("Volumen+Topo", _volumen + _topologia),
+        ],
+    },
+    {
+        "name": "3vistas_sin_topologia",
+        **_rf,
+        "vistas": [
+            ("Tiempo",   _tiempo),
+            ("Volumen",  _volumen),
+            ("Banderas", _banderas),
+        ],
+    },
+    {
+        "name": "2vistas_tiempo+volumen",
+        **_rf,
+        "vistas": [
+            ("Tiempo",  _tiempo),
+            ("Volumen", _volumen),
         ],
     },
 ]
@@ -96,6 +165,7 @@ EXPERIMENTS = [
 # =====================================================================
 
 def metrics_per_class(y_true, y_pred, le, model_name, experiment_name, run_idx, seed):
+    """Métricas detalladas por clase para un modelo y experimento dado."""
     report = classification_report(y_true, y_pred, output_dict=True, zero_division=0)
     metrics_list = []
     for class_index_str, metrics in report.items():
@@ -110,13 +180,13 @@ def metrics_per_class(y_true, y_pred, le, model_name, experiment_name, run_idx, 
                 "precision":  metrics["precision"],
                 "recall":     metrics["recall"],
                 "f1-score":   metrics["f1-score"],
-                "support":    metrics["support"]
+                "support":    metrics["support"],
             })
     return metrics_list
 
 
 def evaluate_singleview(X_train, y_train, X_test, y_test, seed):
-    """RF sobre todas las features — baseline absoluto que no cambia entre experimentos."""
+    """RF sobre todas las features — baseline absoluto, no cambia entre experimentos."""
     rf = RandomForestClassifier(n_estimators=RF_ESTIMATORS, random_state=seed, n_jobs=-1)
     rf.fit(X_train, y_train)
     preds = rf.predict(X_test)
@@ -128,17 +198,13 @@ def evaluate_singleview(X_train, y_train, X_test, y_test, seed):
 
 
 def evaluate_multiview(X_train, y_train, X_test, y_test, seed, ind_vistas, base_fn, meta_fn):
-    """MultiViewStacking parametrizado: base_fn y meta_fn son factories que reciben seed."""
-    n = len(ind_vistas)
-    base_learners = base_fn(seed, n)
-    meta_learner  = meta_fn(seed)
-
+    """MultiViewStacking parametrizado. base_fn y meta_fn reciben seed y devuelven estimators."""
     mv_model = MultiViewStacking(
         views_indices=ind_vistas,
-        first_level_learners=base_learners,
-        meta_learner=meta_learner,
+        first_level_learners=base_fn(seed, len(ind_vistas)),
+        meta_learner=meta_fn(seed),
         k=KFOLD,
-        random_state=seed
+        random_state=seed,
     )
     mv_model.fit(X_train, y_train)
     preds = mv_model.predict(X_test)
@@ -175,7 +241,7 @@ def summarize_results(df_runs):
 
 def main():
     print("=" * 70)
-    print("EXPERIMENTO: ABLACION DE META-LEARNER EN MULTIVIEW STACKING")
+    print("EXPERIMENTO: CONFIGURACIONES DE VISTAS (base RF + meta RF)")
     print(f"   RF_ESTIMATORS={RF_ESTIMATORS} | KFOLD={KFOLD} | N_RUNS={N_RUNS}")
     print(f"   Experimentos: {[e['name'] for e in EXPERIMENTS]}")
     print("=" * 70)
@@ -184,8 +250,8 @@ def main():
     df.replace([np.inf, -np.inf], np.nan, inplace=True)
 
     le = LabelEncoder()
-    y  = le.fit_transform(df['Label'])
-    X  = df.drop(columns=['Label'])
+    y  = le.fit_transform(df["Label"])
+    X  = df.drop(columns=["Label"])
     colnames = list(X.columns)
 
     seeds = np.random.RandomState(SEED_GENERATOR_SEED).randint(0, 10000, size=N_RUNS)
@@ -194,23 +260,20 @@ def main():
     all_per_class = []
 
     for exp in EXPERIMENTS:
-        exp_name   = exp["name"]
-        vistas_def = exp["vistas"]
-        nombres_v  = [v[0] for v in vistas_def]
-        features_v = [v[1] for v in vistas_def]
-        base_fn    = exp["base_fn"]
-        meta_fn    = exp["meta_fn"]
+        exp_name  = exp["name"]
+        nombres_v = [v[0] for v in exp["vistas"]]
+        base_fn   = exp["base_fn"]
+        meta_fn   = exp["meta_fn"]
 
         ind_vistas = [
             [colnames.index(c) for c in feat_list if c in colnames]
-            for feat_list in features_v
+            for _, feat_list in exp["vistas"]
         ]
 
         print(f"\n{'='*70}")
-        print(f"EXPERIMENTO: {exp_name}")
-        print(f"   Meta-learner: {meta_fn(0).__class__.__name__}")
-        for n, idx in zip(nombres_v, ind_vistas):
-            print(f"   Vista '{n}': {len(idx)} features")
+        print(f"EXPERIMENTO: {exp_name}  |  base={base_fn(0,1)[0].__class__.__name__}  meta={meta_fn(0).__class__.__name__}")
+        for nombre, idx in zip(nombres_v, ind_vistas):
+            print(f"   Vista '{nombre}': {len(idx)} features")
         print(f"{'='*70}")
 
         for run_idx, run_seed in enumerate(seeds):
@@ -219,7 +282,7 @@ def main():
                 X, y, test_size=TEST_SIZE, random_state=run_seed, stratify=y
             )
 
-            imputer = SimpleImputer(strategy='median')
+            imputer = SimpleImputer(strategy="median")
             X_train_clean = imputer.fit_transform(X_train)
             X_test_clean  = imputer.transform(X_test)
 
@@ -227,7 +290,7 @@ def main():
             X_train_scaled = scaler.fit_transform(X_train_clean)
             X_test_scaled  = scaler.transform(X_test_clean)
 
-            # SingleView — referencia estable
+            # SingleView — referencia estable (igual en todos los experimentos)
             sv_result, sv_preds = evaluate_singleview(
                 X_train_scaled, y_train, X_test_scaled, y_test, run_seed
             )
@@ -238,7 +301,7 @@ def main():
                 y_test, sv_preds, le, "SingleView", exp_name, run_idx + 1, run_seed
             ))
 
-            # MultiViewStacking con configuración del experimento
+            # MultiViewStacking con vistas y clasificadores del experimento
             mv_result, mv_preds = evaluate_multiview(
                 X_train_scaled, y_train, X_test_scaled, y_test,
                 run_seed, ind_vistas, base_fn, meta_fn
@@ -264,7 +327,7 @@ def main():
                 ))
 
             vista_accs = " | ".join(
-                f"{vr['model'].replace('Vista_','')}={vr['accuracy']:.4f}"
+                f"{vr['model'].replace('Vista_', '')}={vr['accuracy']:.4f}"
                 for vr, _ in vista_results
             )
             print(
@@ -282,9 +345,9 @@ def main():
     df_summary.to_csv(OUTPUT_SUMMARY,   index=False)
     df_per_class.to_csv(OUTPUT_PER_CLASS, index=False)
 
-    # Resumen comparativo
+    # Resumen comparativo en consola
     print("\n" + "=" * 70)
-    print("RESUMEN: MultiViewStacking vs SingleView  (diff = MV - SV)")
+    print("RESUMEN: MultiViewStacking vs SingleView  (diff = MV − SV)")
     print("=" * 70)
     mv_sv = df_runs[df_runs["model"].isin(["SingleView", "MultiViewStacking"])]
     pivot = mv_sv.groupby(["experiment", "model"])["accuracy"].mean().unstack("model")
