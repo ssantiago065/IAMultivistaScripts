@@ -2,3 +2,6 @@
 *.csv
 /FlowBased
 /cleaned_dataset_flowbased
+
+!Analysis/comparing/*.csv
+!Analysis/comparing/*.png
