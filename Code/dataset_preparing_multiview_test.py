@@ -13,7 +13,7 @@ PROJECT_ROOT = SCRIPT_DIR.parent
 FLOW_DIR = PROJECT_ROOT / "cleaned_dataset_flowbased"
 OUTPUT_FILE = PROJECT_ROOT / "dataset_poc_multivista.csv"
 
-TARGET_SAMPLES_PER_CLASS = 50_000
+TARGET_SAMPLES_PER_CLASS = 100_000
 CHUNK_SIZE = 100_000
 RANDOM_STATE = 42
 VALID_CLASSES = ["Benign", "DDoS", "DoS", "Mirai", "Recon", "Spoofing","BruteForce", "Web-Based"]
