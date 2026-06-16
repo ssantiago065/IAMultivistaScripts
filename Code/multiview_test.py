@@ -98,9 +98,7 @@ def metrics_per_class(y_true, y_pred, le, model_name, run_idx, seed):
 
 def evaluate_singleview(X_train, y_train, X_test, y_test, seed):
     """Entrena y evalúa el modelo tradicional (Todas las características juntas)."""
-    # IMPORTANTE: Se añade class_weight='balanced' aquí también
     rf = RandomForestClassifier(n_estimators=RF_ESTIMATORS, random_state=seed, n_jobs=-1) #class_weight='balanced' para manejar clases desbalanceadas eliminar si no hay desbalanceo
-    #rf = XGBClassifier(n_estimators=RF_ESTIMATORS, random_state=seed, n_jobs=-1, eval_metric='mlogloss')
     rf.fit(X_train, y_train)
     preds = rf.predict(X_test)
     
@@ -120,36 +118,7 @@ def evaluate_multiview(X_train, y_train, X_test, y_test, seed, ind_vistas):
         RandomForestClassifier(n_estimators=RF_ESTIMATORS, random_state=seed, n_jobs=-1)
     ]
 
-
-    """
-    # Probar con XGBoost 
-    base_learners = [
-        XGBClassifier(n_estimators=RF_ESTIMATORS, random_state=seed, n_jobs=-1, eval_metric='mlogloss'),
-        XGBClassifier(n_estimators=RF_ESTIMATORS, random_state=seed, n_jobs=-1, eval_metric='mlogloss'),
-        XGBClassifier(n_estimators=RF_ESTIMATORS, random_state=seed, n_jobs=-1, eval_metric='mlogloss'),
-        XGBClassifier(n_estimators=RF_ESTIMATORS, random_state=seed, n_jobs=-1, eval_metric='mlogloss')
-    ]
-    """
-    """
-    Entrenar con diferentes algoritmos para cada vista para fomentar diversidad en el ensamble
-    base_learners = [
-        # Vista 1 (Tiempo): Random Forest es excelente para relaciones no lineales complejas en tiempo.
-        RandomForestClassifier(n_estimators=RF_ESTIMATORS, random_state=seed, n_jobs=-1),
-        
-        # Vista 2 (Volumen): Decision Tree puro para crear cortes jerárquicos rápidos sobre tamaños de bytes.
-        DecisionTreeClassifier(random_state=seed),
-        
-        # Vista 3 (Banderas): Gaussian Naive Bayes es matemáticamente perfecto para conteos y valores binarios (Flags).
-        GaussianNB(),
-        
-        # Vista 4 (Topología): Extra Trees (Extremely Randomized Trees) añade una capa extra 
-        # de aleatoriedad espacial que funciona muy bien con puertos y protocolos, y es muy rápido.
-        ExtraTreesClassifier(n_estimators=RF_ESTIMATORS, random_state=seed, n_jobs=-1)
-    ]
-    """
-
     meta_learner = RandomForestClassifier(n_estimators=RF_ESTIMATORS, random_state=seed, n_jobs=-1) #Meta learner con random forest
-    #meta_learner = LogisticRegression(random_state=seed, max_iter=1000) #Meta learner con regresión logística para evitar sobreajuste en el meta nivel
 
     mv_model = MultiViewStacking(
         views_indices=ind_vistas,
