@@ -16,7 +16,7 @@ OUTPUT_FILE = PROJECT_ROOT / "dataset_poc_multivista.csv"
 TARGET_SAMPLES_PER_CLASS = 100_000
 CHUNK_SIZE = 100_000
 RANDOM_STATE = 42
-VALID_CLASSES = ["Benign", "DDoS", "DoS", "Mirai", "Recon", "Spoofing","BruteForce", "Web-Based"]
+VALID_CLASSES = ["Benign", "DDoS", "DoS", "Mirai", "Recon", "Spoofing"]
 
 # Columnas estrictamente prohibidas (identificadores y fugas de tiempo)
 COLUMNAS_A_ELIMINAR = ["Flow ID", "Src IP", "Dst IP", "Timestamp"]
