@@ -1,7 +1,9 @@
 /venv
-*.csv
+
 /FlowBased
 /cleaned_dataset_flowbased
 
 !Analysis/comparing/*.csv
 !Analysis/comparing/*.png
+# per-run results of the paper
+!paper/data/*.csv
