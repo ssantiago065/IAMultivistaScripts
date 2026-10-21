@@ -17,6 +17,7 @@ from https://www.unb.ca/cic/datasets/iot-diad-2024.html and place them in `FlowB
 | MultiView Stacking vs. SingleView (experiment A) | `Code/multiview_test.py` |
 | Control experiments (capacity, random views, SMOTE inside folds) | `Code/exp_controls.py`, `Code/analyze_controls.py`, `Code/test_controls.py` (see `README_CONTROLS.md`) |
 | Tables and figures | `paper/scripts/make_figures.py` reads `paper/data/` and writes `paper/figures/` |
+| Accuracy and F1-Macro at natural class prevalence | `paper/scripts/prevalence_accuracy.py` |
 
 `paper/data/` holds the per-run results behind every table and figure of the paper, so they can be
 rebuilt without retraining. The meta-learner of the reported MultiView Stacking is a Random Forest of
