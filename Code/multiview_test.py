@@ -179,10 +179,14 @@ def main():
         X_train_scaled = scaler.fit_transform(X_train_clean)
         X_test_scaled  = scaler.transform(X_test_clean)
 
-        # --- LÓGICA DE SMOTE DINÁMICO (El aporte de tu rama) ---
+        # --- SMOTE (regla del experimento A, commit 1363933) ---
+        # Las clases con menos de 30,000 flujos en train (Web-Based y Brute Force) se elevan a
+        # 30,000; las demas se quedan igual. Es la regla que reproducen Code/exp_controls.py
+        # (SMOTE_LIMIT) y los resultados de paper/data/. La version anterior de este script elevaba
+        # todas las clases al tamano de la mayor (35,000), que NO es lo que produjo los resultados.
         conteo_clases_train = pd.Series(y_train).value_counts()
-        TARGET_MAX_SAMPLES = int(conteo_clases_train.max()) # Busca automáticamente la clase más grande
-        
+        TARGET_MAX_SAMPLES = 30_000
+
         estrategia_smote = {}
         for clase, cantidad in conteo_clases_train.items():
             if cantidad < TARGET_MAX_SAMPLES:

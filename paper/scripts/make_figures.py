@@ -152,11 +152,11 @@ def value_grid(ax, axis: str) -> None:
 
 
 def save(fig, name: str) -> None:
-    FIGS.mkdir(exist_ok=True)
+    FIGS.mkdir(parents=True, exist_ok=True)
     out = FIGS / name
     fig.savefig(out, format="pdf")
     plt.close(fig)
-    print(f"  wrote figures/{name}")
+    print(f"  wrote {out.relative_to(ROOT)}")
 
 
 def boxplot_with_points(ax, series, colors, labels) -> None:
@@ -176,27 +176,27 @@ def boxplot_with_points(ax, series, colors, labels) -> None:
     value_grid(ax, "y")
 
 
-# --- fig:global-boxplot (Section 7.1, experiment A) -------------------------
+# --- fig:global-boxplot (Section VII-A, main protocol) ------------------------
 
 def global_boxplot() -> None:
+    """Per-run accuracy and F1-Macro of the paper's main comparison: MultiView Stacking with SMOTE
+    inside the stacking folds (MVS_RF_FOLDSMOTE) vs. a 150-tree SingleView (SV150), both from the
+    control runs, which share experiment A's 20 partitions and seeds."""
     print("fig:global-boxplot")
-    df = load("multiview_vs_singleview_per_run.csv")
+    df = load("controls_per_run.csv")
     if df is None:
         return
-    mcol = pick(df, MODEL_CANDIDATES, "model")
-    pair = ["SingleView", "MultiView Stacking"]
-    sub = df[df[mcol].isin(pair)]
-    if sub.empty:
-        print("  skip: no SingleView/MVS rows")
-        return
-    for metric_cands, fname, ylabel in (
-        (ACC_CANDIDATES, "global_boxplot_accuracy.pdf", "Accuracy (%)"),
-        (F1_CANDIDATES, "global_boxplot_f1.pdf", "F1-Macro (%)"),
+    pair = {"SingleView": "SV150", "MVS": "MVS_RF_FOLDSMOTE"}
+    for col, fname, ylabel in (
+        ("accuracy", "global_boxplot_accuracy.pdf", "Accuracy (%)"),
+        ("f1_macro", "global_boxplot_f1.pdf", "F1-Macro (%)"),
     ):
-        col = pick(sub, metric_cands, "metric")
-        data = [sub.loc[sub[mcol] == m, col].to_numpy() for m in pair]
+        data = [df.loc[df["model"] == m].sort_values("run")[col].to_numpy() for m in pair.values()]
+        if any(len(x) == 0 for x in data):
+            print("  skip: SV150 or MVS_RF_FOLDSMOTE rows missing")
+            return
         fig, ax = plt.subplots(figsize=(HALF, 2.1))
-        boxplot_with_points(ax, data, (COLOR_SV, COLOR_MVS), ["SingleView", "MVS"])
+        boxplot_with_points(ax, data, (COLOR_SV, COLOR_MVS), list(pair))
         ax.set_ylabel(ylabel)
         save(fig, fname)
 
@@ -230,12 +230,16 @@ def view_ablation() -> None:
     # two-word class names on two lines so the labels stay horizontal
     ax.set_xticks(x, [str(c).replace(" ", "\n").replace("Web-Based", "Web-\nBased")
                       for c in wide.index])
+    if FULL < 4:  # IEEE column: smaller class labels so the eight names do not collide
+        ax.set_xticks(x, [str(c).replace(" ", "\n").replace("Web-Based", "Web-\nBased")
+                          .replace("Spoofing", "Spoof-\ning") for c in wide.index],
+                      fontsize=6.5)
     ax.set_ylabel("F1 (%)")
     ax.set_ylim(0, 115)
     ax.set_yticks([0, 20, 40, 60, 80, 100])
     value_grid(ax, "y")
     ax.legend(frameon=False, ncol=4, loc="upper center", handlelength=1.6,
-              columnspacing=1.2)
+              columnspacing=1.2, fontsize=7 if FULL < 4 else 8)
     save(fig, "view_ablation_per_class.pdf")
 
 
@@ -345,6 +349,7 @@ def balanced_only() -> None:
 BUILDERS = [global_boxplot, view_ablation, learning_curve, balanced_only]
 
 EXPECTED = [
+    "controls_per_run.csv",
     "multiview_vs_singleview_per_run.csv",
     "multiview_vs_singleview_per_class.csv",
     "learning_curve_per_run.csv",
@@ -358,7 +363,13 @@ def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--list", action="store_true",
                     help="report which expected inputs are present and exit")
+    ap.add_argument("--ieee", action="store_true",
+                    help="draw at IEEE two-column sizes (3.45 in column) into figures/ieee/")
     args = ap.parse_args()
+
+    if args.ieee:
+        global FULL, HALF, FIGS
+        FULL, HALF, FIGS = 3.45, 1.68, ROOT / "figures" / "ieee"
 
     if args.list:
         for name in EXPECTED:
