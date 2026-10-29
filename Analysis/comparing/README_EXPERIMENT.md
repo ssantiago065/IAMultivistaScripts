@@ -8,12 +8,20 @@ Este experimento busca evaluar el rendimiento de la arquitectura MultiView frent
   - _Oversampling (SMOTE):_ Las clases minoritarias (BruteForce, Web-Based) se amplificaron artificialmente hasta un límite de **30,000 muestras** (solo en el set de entrenamiento para evitar fuga de datos).
 - **Dataset Final:** ~314,000 filas.
 
+> **Corrección (30-oct-2026).** Esta nota es anterior a la verificación del código y tiene dos errores:
+> los bosques tienen **150** árboles (no 100) y el meta-learner que produjo estos CSV es un
+> **Random Forest de 150 árboles**, no una regresión logística (en el commit `1363933` la línea de RF
+> es la activa y la de LR está comentada; `Code/exp_controls.py` lo confirma: `MVS_RF` reproduce estos
+> resultados y `MVS_LR` no). La conclusión de abajo, que atribuye la ventaja a la regresión logística,
+> no se sostiene: con meta-learner logístico MultiView Stacking pierde contra SingleView. Ver
+> `README.md` y `README_CONTROLS.md`.
+
 ## 🏗️ Arquitectura de los Modelos
 
-- **SingleView:** RandomForestClassifier (n_estimators=100, n_jobs=-1)
+- **SingleView:** RandomForestClassifier (n_estimators=150, n_jobs=-1)
 - **MultiViewStacking:**
-  - _Base Learners (4 vistas):_ RandomForestClassifier (n_estimators=100, n_jobs=-1)
-  - _Meta Learner:_ LogisticRegression(max_iter=1000)
+  - _Base Learners (4 vistas):_ RandomForestClassifier (n_estimators=150, n_jobs=-1)
+  - _Meta Learner:_ RandomForestClassifier (n_estimators=150, n_jobs=-1)
 
 ## 📊 Resultados Principales (Media de 20 Corridas)
 

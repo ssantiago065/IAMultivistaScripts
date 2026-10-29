@@ -7,3 +7,5 @@
 !Analysis/comparing/*.png
 # per-run results of the paper
 !paper/data/*.csv
+
+__pycache__/

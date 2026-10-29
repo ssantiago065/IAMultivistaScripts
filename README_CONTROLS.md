@@ -13,6 +13,12 @@ así que cada número nuevo queda **pareado** con los del paper.
 | `MVS_RF` | MVS, meta-learner Random Forest | El modelo del paper: reproduce A (idéntico en 10 de 20 corridas, el resto a <= 0.12 pp) |
 | `MVS_LR_RANDVIEWS` | MVS con vistas **aleatorias** del mismo tamaño (27/32/7/3) | **Semántica**: ¿importa la partición semántica o cualquier partición sirve? |
 | `MVS_LR_FOLDSMOTE` | MVS con SMOTE **dentro de cada fold interno** | **Fuga de SMOTE**: el meta-learner solo ve flujos reales |
+| `MVS_RF_RANDVIEWS` | Igual que `MVS_LR_RANDVIEWS`, con meta-learner Random Forest | Control de semántica con el meta-learner del paper (una asignación aleatoria distinta por corrida) |
+| `MVS_RF_FOLDSMOTE` | Igual que `MVS_LR_FOLDSMOTE`, con meta-learner Random Forest | **Configuración principal del paper** desde la versión IEEE (ver `paper/scripts/main_results.py`) |
+
+> Nota (30-oct): las columnas `fit_seconds` y `predict_seconds_per_flow` se midieron mientras dos
+> copias de la corrida se ejecutaban en paralelo por error; no sirven como estimación de costo. Los
+> CSV de `paper/data/` son el conjunto reconstruido (primera aparición íntegra por corrida y modelo).
 
 ## Cómo correrlo
 
