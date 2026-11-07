@@ -1,0 +1,378 @@
+2026-11-04 11:35:46 START -m pytest test_round3.py test_controls.py -q -p no:cacheprovider
+.......2026-11-04 12:01:23 START -m pytest test_round3.py test_controls.py -q -p no:cacheprovider
+...........                                                              [100%]
+11 passed in 72.52s (0:01:12)
+2026-11-04 12:02:42 END code=0
+2026-11-04 12:02:42 START Code/exp_round3.py --dataset H:/Dataset/dataset_expA_8clases.csv
+Dataset (314944, 70), view sizes [27, 32, 7, 3]
+run 01 seed=2305 MAIN       acc=0.9026 f1=0.8273 fit=103s
+run 01 seed=2305 SV69       acc=0.8893 f1=0.8078 fit=11s
+run 01 seed=2305 RANDV_FS   acc=0.9033 f1=0.8154 fit=82s
+run 01 seed=2305 LOVO_TIME  acc=0.8844 f1=0.7919 fit=49s
+run 01 seed=2305 LOVO_VOLUME acc=0.8579 f1=0.7761 fit=78s
+run 01 seed=2305 LOVO_FLAGS acc=0.9014 f1=0.8243 fit=93s
+run 01 seed=2305 LOVO_TOPOLOGY acc=0.8736 f1=0.7740 fit=62s
+run 01 seed=2305 LGBM       acc=0.8989 f1=0.8189 fit=17s
+run 01 seed=2305 STACK_HET  acc=0.9114 f1=0.8341 fit=201s
+run 01 seed=2305 META_BAL   acc=0.9010 f1=0.8310 fit=104s
+run 02 seed=8986 MAIN       acc=0.9004 f1=0.8208 fit=120s
+run 02 seed=8986 SV69       acc=0.8896 f1=0.8068 fit=13s
+run 02 seed=8986 RANDV_FS   acc=0.9002 f1=0.8147 fit=95s
+run 02 seed=8986 LOVO_TIME  acc=0.8856 f1=0.7952 fit=62s
+run 02 seed=8986 LOVO_VOLUME acc=0.8632 f1=0.7816 fit=79s
+run 02 seed=8986 LOVO_FLAGS acc=0.9014 f1=0.8255 fit=90s
+run 02 seed=8986 LOVO_TOPOLOGY acc=0.8721 f1=0.7669 fit=80s
+run 02 seed=8986 LGBM       acc=0.8978 f1=0.8154 fit=18s
+run 02 seed=8986 STACK_HET  acc=0.9112 f1=0.8258 fit=220s
+run 02 seed=8986 META_BAL   acc=0.9002 f1=0.8259 fit=102s
+run 03 seed=2125 MAIN       acc=0.9022 f1=0.8282 fit=109s
+run 03 seed=2125 SV69       acc=0.8886 f1=0.8066 fit=10s
+run 03 seed=2125 RANDV_FS   acc=0.8990 f1=0.8156 fit=87s
+run 03 seed=2125 LOVO_TIME  acc=0.8843 f1=0.7835 fit=61s
+run 03 seed=2125 LOVO_VOLUME acc=0.8619 f1=0.7769 fit=80s
+run 03 seed=2125 LOVO_FLAGS acc=0.9003 f1=0.8239 fit=94s
+run 03 seed=2125 LOVO_TOPOLOGY acc=0.8715 f1=0.7686 fit=80s
+run 03 seed=2125 LGBM       acc=0.8984 f1=0.8171 fit=20s
+run 03 seed=2125 STACK_HET  acc=0.9110 f1=0.8298 fit=216s
+run 03 seed=2125 META_BAL   acc=0.8999 f1=0.8279 fit=103s
+run 04 seed=6477 MAIN       acc=0.9024 f1=0.8268 fit=325s
+run 04 seed=6477 SV69       acc=0.8890 f1=0.8060 fit=15s
+run 04 seed=6477 RANDV_FS   acc=0.9017 f1=0.8164 fit=124s
+run 04 seed=6477 LOVO_TIME  acc=0.8843 f1=0.7896 fit=73s
+run 04 seed=6477 LOVO_VOLUME acc=0.8615 f1=0.7774 fit=102s
+run 04 seed=6477 LOVO_FLAGS acc=0.9019 f1=0.8255 fit=116s
+run 04 seed=6477 LOVO_TOPOLOGY acc=0.8726 f1=0.7749 fit=96s
+run 04 seed=6477 LGBM       acc=0.6635 f1=0.6024 fit=26s
+run 04 seed=6477 STACK_HET  acc=0.9128 f1=0.8332 fit=269s
+run 04 seed=6477 META_BAL   acc=0.9007 f1=0.8282 fit=130s
+run 05 seed=5661 MAIN       acc=0.9010 f1=0.8285 fit=129s
+run 05 seed=5661 SV69       acc=0.8911 f1=0.8113 fit=15s
+run 05 seed=5661 RANDV_FS   acc=0.9031 f1=0.8215 fit=118s
+run 05 seed=5661 LOVO_TIME  acc=0.8843 f1=0.7953 fit=74s
+run 05 seed=5661 LOVO_VOLUME acc=0.8586 f1=0.7792 fit=96s
+run 05 seed=5661 LOVO_FLAGS acc=0.9012 f1=0.8292 fit=113s
+run 05 seed=5661 LOVO_TOPOLOGY acc=0.8732 f1=0.7765 fit=90s
+run 05 seed=5661 LGBM       acc=0.8989 f1=0.8196 fit=25s
+run 05 seed=5661 STACK_HET  acc=0.9137 f1=0.8368 fit=256s
+run 05 seed=5661 META_BAL   acc=0.8993 f1=0.8305 fit=122s
+run 06 seed=9651 MAIN       acc=0.9017 f1=0.8248 fit=129s
+run 06 seed=9651 SV69       acc=0.8908 f1=0.8081 fit=14s
+run 06 seed=9651 RANDV_FS   acc=0.8995 f1=0.8107 fit=201s
+run 06 seed=9651 LOVO_TIME  acc=0.8854 f1=0.7920 fit=201s
+run 06 seed=9651 LOVO_VOLUME acc=0.8617 f1=0.7766 fit=259s
+run 06 seed=9651 LOVO_FLAGS acc=0.9008 f1=0.8218 fit=310s
+run 06 seed=9651 LOVO_TOPOLOGY acc=0.8731 f1=0.7653 fit=161s
+run 06 seed=9651 LGBM       acc=0.9001 f1=0.8190 fit=18s
+run 06 seed=9651 STACK_HET  acc=0.9100 f1=0.8264 fit=219s
+run 06 seed=9651 META_BAL   acc=0.9001 f1=0.8277 fit=100s
+run 07 seed=7167 MAIN       acc=0.9027 f1=0.8311 fit=98s
+run 07 seed=7167 SV69       acc=0.8902 f1=0.8087 fit=11s
+run 07 seed=7167 RANDV_FS   acc=0.9022 f1=0.8171 fit=88s
+run 07 seed=7167 LOVO_TIME  acc=0.8872 f1=0.8000 fit=64s
+run 07 seed=7167 LOVO_VOLUME acc=0.8590 f1=0.7775 fit=78s
+run 07 seed=7167 LOVO_FLAGS acc=0.9020 f1=0.8272 fit=87s
+run 07 seed=7167 LOVO_TOPOLOGY acc=0.8726 f1=0.7672 fit=73s
+run 07 seed=7167 LGBM       acc=0.5322 f1=0.4425 fit=18s
+run 07 seed=7167 STACK_HET  acc=0.9131 f1=0.8335 fit=208s
+run 07 seed=7167 META_BAL   acc=0.9007 f1=0.8301 fit=86s
+run 08 seed=1989 MAIN       acc=0.9023 f1=0.8251 fit=110s
+run 08 seed=1989 SV69       acc=0.8910 f1=0.8092 fit=11s
+run 08 seed=1989 RANDV_FS   acc=0.8978 f1=0.8094 fit=99s
+run 08 seed=1989 LOVO_TIME  acc=0.8850 f1=0.7868 fit=62s
+run 08 seed=1989 LOVO_VOLUME acc=0.8589 f1=0.7761 fit=83s
+run 08 seed=1989 LOVO_FLAGS acc=0.9021 f1=0.8233 fit=99s
+run 08 seed=1989 LOVO_TOPOLOGY acc=0.8652 f1=0.7591 fit=82s
+run 08 seed=1989 LGBM       acc=0.8986 f1=0.8180 fit=20s
+run 08 seed=1989 STACK_HET  acc=0.9129 f1=0.8333 fit=210s
+run 08 seed=1989 META_BAL   acc=0.9004 f1=0.8291 fit=97s
+run 09 seed=8140 MAIN       acc=0.8995 f1=0.8238 fit=99s
+run 09 seed=8140 SV69       acc=0.8918 f1=0.8099 fit=11s
+run 09 seed=8140 RANDV_FS   acc=0.9006 f1=0.8186 fit=97s
+run 09 seed=8140 LOVO_TIME  acc=0.8833 f1=0.7948 fit=66s
+run 09 seed=8140 LOVO_VOLUME acc=0.8602 f1=0.7773 fit=80s
+run 09 seed=8140 LOVO_FLAGS acc=0.8982 f1=0.8218 fit=91s
+run 09 seed=8140 LOVO_TOPOLOGY acc=0.8724 f1=0.7672 fit=77s
+run 09 seed=8140 LGBM       acc=0.9007 f1=0.8203 fit=19s
+run 09 seed=8140 STACK_HET  acc=0.8993 f1=0.8135 fit=219s
+run 09 seed=8140 META_BAL   acc=0.8981 f1=0.8262 fit=226s
+run 10 seed=28 MAIN       acc=0.9027 f1=0.8259 fit=294s
+run 10 seed=28 SV69       acc=0.8900 f1=0.8069 fit=10s
+run 10 seed=28 RANDV_FS   acc=0.8991 f1=0.8080 fit=101s
+run 10 seed=28 LOVO_TIME  acc=0.8848 f1=0.7927 fit=61s
+run 10 seed=28 LOVO_VOLUME acc=0.8575 f1=0.7696 fit=79s
+run 10 seed=28 LOVO_FLAGS acc=0.9020 f1=0.8231 fit=90s
+run 10 seed=28 LOVO_TOPOLOGY acc=0.8744 f1=0.7741 fit=75s
+run 10 seed=28 LGBM       acc=0.8990 f1=0.8186 fit=18s
+run 10 seed=28 STACK_HET  acc=0.9101 f1=0.8281 fit=222s
+run 10 seed=28 META_BAL   acc=0.8997 f1=0.8258 fit=88s
+run 11 seed=4534 MAIN       acc=0.9027 f1=0.8255 fit=121s
+run 11 seed=4534 SV69       acc=0.8897 f1=0.8067 fit=39s
+run 11 seed=4534 RANDV_FS   acc=0.9010 f1=0.8119 fit=353s
+run 11 seed=4534 LOVO_TIME  acc=0.8861 f1=0.7945 fit=192s
+run 11 seed=4534 LOVO_VOLUME acc=0.8657 f1=0.7823 fit=249s
+run 11 seed=4534 LOVO_FLAGS acc=0.9018 f1=0.8222 fit=296s
+run 11 seed=4534 LOVO_TOPOLOGY acc=0.8723 f1=0.7737 fit=152s
+run 11 seed=4534 LGBM       acc=0.8953 f1=0.8144 fit=21s
+run 11 seed=4534 STACK_HET  acc=0.7828 f1=0.6854 fit=219s
+run 11 seed=4534 META_BAL   acc=0.9006 f1=0.8295 fit=109s
+run 12 seed=9243 MAIN       acc=0.9011 f1=0.8244 fit=120s
+run 12 seed=9243 SV69       acc=0.8903 f1=0.8088 fit=14s
+run 12 seed=9243 RANDV_FS   acc=0.9021 f1=0.8198 fit=124s
+run 12 seed=9243 LOVO_TIME  acc=0.8846 f1=0.7905 fit=65s
+run 12 seed=9243 LOVO_VOLUME acc=0.8659 f1=0.7847 fit=83s
+run 12 seed=9243 LOVO_FLAGS acc=0.9001 f1=0.8214 fit=95s
+run 12 seed=9243 LOVO_TOPOLOGY acc=0.8726 f1=0.7651 fit=77s
+run 12 seed=9243 LGBM       acc=0.8968 f1=0.8141 fit=20s
+run 12 seed=9243 STACK_HET  acc=0.9126 f1=0.8314 fit=254s
+run 12 seed=9243 META_BAL   acc=0.8997 f1=0.8262 fit=111s
+run 13 seed=4857 MAIN       acc=0.9020 f1=0.8269 fit=99s
+run 13 seed=4857 SV69       acc=0.8907 f1=0.8082 fit=11s
+run 13 seed=4857 RANDV_FS   acc=0.8976 f1=0.8244 fit=119s
+run 13 seed=4857 LOVO_TIME  acc=0.8857 f1=0.7959 fit=63s
+run 13 seed=4857 LOVO_VOLUME acc=0.8668 f1=0.7874 fit=83s
+run 13 seed=4857 LOVO_FLAGS acc=0.9008 f1=0.8234 fit=93s
+run 13 seed=4857 LOVO_TOPOLOGY acc=0.8731 f1=0.7661 fit=78s
+run 13 seed=4857 LGBM       acc=0.8985 f1=0.8174 fit=23s
+run 13 seed=4857 STACK_HET  acc=0.7794 f1=0.6868 fit=271s
+run 13 seed=4857 META_BAL   acc=0.9007 f1=0.8288 fit=102s
+run 14 seed=6919 MAIN       acc=0.9025 f1=0.8285 fit=103s
+run 14 seed=6919 SV69       acc=0.8899 f1=0.8075 fit=11s
+run 14 seed=6919 RANDV_FS   acc=0.8991 f1=0.8136 fit=94s
+run 14 seed=6919 LOVO_TIME  acc=0.8861 f1=0.7876 fit=60s
+run 14 seed=6919 LOVO_VOLUME acc=0.8602 f1=0.7794 fit=79s
+run 14 seed=6919 LOVO_FLAGS acc=0.9013 f1=0.8265 fit=89s
+run 14 seed=6919 LOVO_TOPOLOGY acc=0.8720 f1=0.7765 fit=75s
+run 14 seed=6919 LGBM       acc=0.8989 f1=0.8180 fit=18s
+run 14 seed=6919 STACK_HET  acc=0.9105 f1=0.8300 fit=212s
+run 14 seed=6919 META_BAL   acc=0.9014 f1=0.8310 fit=104s
+run 15 seed=2656 MAIN       acc=0.9032 f1=0.8265 fit=100s
+run 15 seed=2656 SV69       acc=0.8918 f1=0.8095 fit=11s
+run 15 seed=2656 RANDV_FS   acc=0.9027 f1=0.8180 fit=91s
+run 15 seed=2656 LOVO_TIME  acc=0.8860 f1=0.7965 fit=53s
+run 15 seed=2656 LOVO_VOLUME acc=0.8641 f1=0.7830 fit=67s
+run 15 seed=2656 LOVO_FLAGS acc=0.9025 f1=0.8265 fit=75s
+run 15 seed=2656 LOVO_TOPOLOGY acc=0.8744 f1=0.7734 fit=75s
+run 15 seed=2656 LGBM       acc=0.8989 f1=0.8183 fit=18s
+run 15 seed=2656 STACK_HET  acc=0.9134 f1=0.8330 fit=212s
+run 15 seed=2656 META_BAL   acc=0.9007 f1=0.8280 fit=104s
+run 16 seed=1159 MAIN       acc=0.9024 f1=0.8265 fit=101s
+run 16 seed=1159 SV69       acc=0.8901 f1=0.8076 fit=10s
+run 16 seed=1159 RANDV_FS   acc=0.8938 f1=0.8127 fit=79s
+run 16 seed=1159 LOVO_TIME  acc=0.8860 f1=0.7852 fit=50s
+run 16 seed=1159 LOVO_VOLUME acc=0.8625 f1=0.7801 fit=66s
+run 16 seed=1159 LOVO_FLAGS acc=0.9011 f1=0.8223 fit=75s
+run 16 seed=1159 LOVO_TOPOLOGY acc=0.8700 f1=0.7668 fit=63s
+run 16 seed=1159 LGBM       acc=0.5151 f1=0.4112 fit=25s
+run 16 seed=1159 STACK_HET  acc=0.9137 f1=0.8332 fit=262s
+run 16 seed=1159 META_BAL   acc=0.9013 f1=0.8298 fit=244s
+run 17 seed=4719 MAIN       acc=0.9012 f1=0.8241 fit=302s
+run 17 seed=4719 SV69       acc=0.8906 f1=0.8068 fit=38s
+run 17 seed=4719 RANDV_FS   acc=0.9020 f1=0.8120 fit=289s
+run 17 seed=4719 LOVO_TIME  acc=0.8847 f1=0.7950 fit=192s
+run 17 seed=4719 LOVO_VOLUME acc=0.8578 f1=0.7758 fit=278s
+run 17 seed=4719 LOVO_FLAGS acc=0.9003 f1=0.8225 fit=227s
+run 17 seed=4719 LOVO_TOPOLOGY acc=0.8704 f1=0.7652 fit=76s
+run 17 seed=4719 LGBM       acc=0.3028 f1=0.2891 fit=20s
+run 17 seed=4719 STACK_HET  acc=0.9047 f1=0.8198 fit=222s
+run 17 seed=4719 META_BAL   acc=0.8996 f1=0.8274 fit=102s
+run 18 seed=916 MAIN       acc=0.9024 f1=0.8285 fit=99s
+run 18 seed=916 SV69       acc=0.8911 f1=0.8078 fit=11s
+run 18 seed=916 RANDV_FS   acc=0.9015 f1=0.8170 fit=101s
+run 18 seed=916 LOVO_TIME  acc=0.8855 f1=0.7954 fit=59s
+run 18 seed=916 LOVO_VOLUME acc=0.8641 f1=0.7818 fit=82s
+run 18 seed=916 LOVO_FLAGS acc=0.9017 f1=0.8262 fit=90s
+run 18 seed=916 LOVO_TOPOLOGY acc=0.8735 f1=0.7765 fit=75s
+run 18 seed=916 LGBM       acc=0.8999 f1=0.8189 fit=18s
+run 18 seed=916 STACK_HET  acc=0.9145 f1=0.8372 fit=213s
+run 18 seed=916 META_BAL   acc=0.9015 f1=0.8315 fit=98s
+run 19 seed=4513 MAIN       acc=0.9003 f1=0.8181 fit=98s
+run 19 seed=4513 SV69       acc=0.8902 f1=0.8085 fit=10s
+run 19 seed=4513 RANDV_FS   acc=0.8997 f1=0.8129 fit=94s
+run 19 seed=4513 LOVO_TIME  acc=0.8837 f1=0.7906 fit=60s
+run 19 seed=4513 LOVO_VOLUME acc=0.8576 f1=0.7733 fit=79s
+run 19 seed=4513 LOVO_FLAGS acc=0.9018 f1=0.8223 fit=91s
+run 19 seed=4513 LOVO_TOPOLOGY acc=0.8718 f1=0.7610 fit=75s
+run 19 seed=4513 LGBM       acc=0.8988 f1=0.8185 fit=18s
+run 19 seed=4513 STACK_HET  acc=0.9103 f1=0.8313 fit=215s
+run 19 seed=4513 META_BAL   acc=0.8991 f1=0.8228 fit=101s
+run 20 seed=5414 MAIN       acc=0.9016 f1=0.8234 fit=101s
+run 20 seed=5414 SV69       acc=0.8896 f1=0.8075 fit=11s
+run 20 seed=5414 RANDV_FS   acc=0.9011 f1=0.8184 fit=94s
+run 20 seed=5414 LOVO_TIME  acc=0.8835 f1=0.7910 fit=63s
+run 20 seed=5414 LOVO_VOLUME acc=0.8646 f1=0.7807 fit=82s
+run 20 seed=5414 LOVO_FLAGS acc=0.9004 f1=0.8179 fit=90s
+run 20 seed=5414 LOVO_TOPOLOGY acc=0.8720 f1=0.7680 fit=75s
+run 20 seed=5414 LGBM       acc=0.5902 f1=0.5206 fit=19s
+run 20 seed=5414 STACK_HET  acc=0.9138 f1=0.8346 fit=214s
+run 20 seed=5414 META_BAL   acc=0.9003 f1=0.8267 fit=101s
+Done. Results in H:\IAMultivistaScripts\Analysis\round3
+2026-11-04 19:39:45 END code=0
+2026-11-04 19:39:45 START Code/exp_allsub.py --dataset H:\Dataset\dataset_allsub_8clases.csv --protocol random
+Dataset (314944, 70), view sizes [27, 32, 7, 3]
+random run 01 SV150  acc=0.7141 f1=0.6563
+random run 01 MAIN   acc=0.7241 f1=0.6822
+random run 02 SV150  acc=0.7152 f1=0.6571
+random run 02 MAIN   acc=0.7248 f1=0.6811
+random run 03 SV150  acc=0.7122 f1=0.6560
+random run 03 MAIN   acc=0.7245 f1=0.6800
+random run 04 SV150  acc=0.7115 f1=0.6531
+random run 04 MAIN   acc=0.7240 f1=0.6810
+random run 05 SV150  acc=0.7142 f1=0.6556
+random run 05 MAIN   acc=0.7244 f1=0.6801
+random run 06 SV150  acc=0.7142 f1=0.6563
+random run 06 MAIN   acc=0.7230 f1=0.6802
+random run 07 SV150  acc=0.7142 f1=0.6557
+Traceback (most recent call last):
+  File "H:\IAMultivistaScripts\Code\exp_allsub.py", line 129, in <module>
+    main()
+    ~~~~^^
+  File "H:\IAMultivistaScripts\Code\exp_allsub.py", line 112, in main
+    preds = np.asarray(model.fit(Xtr, ytr).predict(data["X_test"]))
+                       ~~~~~~~~~^^^^^^^^^^
+  File "H:\IAMultivistaScripts\Code\exp_controls.py", line 175, in fit
+    m_v = self.first_level_learners[j].fit(xtrain[:, self.views_indices[j]], ytrain)
+  File "C:\Users\takat\AppData\Roaming\Python\Python314\site-packages\sklearn\base.py", line 1403, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+  File "C:\Users\takat\AppData\Roaming\Python\Python314\site-packages\sklearn\ensemble\_forest.py", line 468, in fit
+    trees = Parallel(
+    ...<2 lines>...
+        prefer="threads",
+    )(
+        delayed(_parallel_build_trees)(
+    ...<12 lines>...
+        for i, t in enumerate(trees)
+    )
+  File "C:\Users\takat\AppData\Roaming\Python\Python314\site-packages\sklearn\utils\parallel.py", line 91, in __call__
+    return super().__call__(iterable_with_config_and_warning_filters)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\takat\AppData\Roaming\Python\Python314\site-packages\joblib\parallel.py", line 2098, in __call__
+    return output if self.return_generator else list(output)
+                                                ~~~~^^^^^^^^
+  File "C:\Users\takat\AppData\Roaming\Python\Python314\site-packages\joblib\parallel.py", line 1704, in _get_outputs
+    yield from self._retrieve()
+  File "C:\Users\takat\AppData\Roaming\Python\Python314\site-packages\joblib\parallel.py", line 1822, in _retrieve
+    time.sleep(0.01)
+    ~~~~~~~~~~^^^^^^
+KeyboardInterrupt
+2026-11-04 22:52:13 START -m pytest test_round3.py test_controls.py -q -p no:cacheprovider
+............                                                             [100%]
+12 passed in 145.48s (0:02:25)
+2026-11-04 22:54:40 END code=0
+2026-11-04 22:54:40 START Code/exp_round3.py --dataset H:/Dataset/dataset_expA_8clases.csv
+Dataset (314944, 70), view sizes [27, 32, 7, 3]
+run 01 seed=2305 LGBM       acc=0.8981 f1=0.8176 fit=50s
+run 01 seed=2305 STACK_HET  acc=0.9119 f1=0.8346 fit=691s
+run 02 seed=8986 LGBM       acc=0.8969 f1=0.8142 fit=55s
+run 02 seed=8986 STACK_HET  acc=0.9118 f1=0.8298 fit=378s
+run 03 seed=2125 LGBM       acc=0.8967 f1=0.8152 fit=19s
+run 03 seed=2125 STACK_HET  acc=0.9111 f1=0.8310 fit=197s
+run 04 seed=6477 LGBM       acc=0.8975 f1=0.8172 fit=18s
+run 04 seed=6477 STACK_HET  acc=0.9120 f1=0.8331 fit=199s
+run 05 seed=5661 LGBM       acc=0.8980 f1=0.8198 fit=18s
+run 05 seed=5661 STACK_HET  acc=0.9137 f1=0.8350 fit=201s
+run 06 seed=9651 LGBM       acc=0.8986 f1=0.8167 fit=21s
+run 06 seed=9651 STACK_HET  acc=0.9127 f1=0.8312 fit=253s
+run 07 seed=7167 LGBM       acc=0.8975 f1=0.8181 fit=24s
+run 07 seed=7167 STACK_HET  acc=0.9128 f1=0.8333 fit=251s
+run 08 seed=1989 LGBM       acc=0.8980 f1=0.8173 fit=23s
+run 08 seed=1989 STACK_HET  acc=0.9120 f1=0.8307 fit=324s
+run 09 seed=8140 LGBM       acc=0.8995 f1=0.8194 fit=20s
+run 09 seed=8140 STACK_HET  acc=0.9142 f1=0.8375 fit=244s
+run 10 seed=28 LGBM       acc=0.8973 f1=0.8163 fit=28s
+run 10 seed=28 STACK_HET  acc=0.9116 f1=0.8293 fit=252s
+run 11 seed=4534 LGBM       acc=0.8976 f1=0.8163 fit=23s
+run 11 seed=4534 STACK_HET  acc=0.9126 f1=0.8345 fit=241s
+run 12 seed=9243 LGBM       acc=0.8960 f1=0.8135 fit=19s
+run 12 seed=9243 STACK_HET  acc=0.9120 f1=0.8300 fit=214s
+run 13 seed=4857 LGBM       acc=0.8981 f1=0.8169 fit=19s
+run 13 seed=4857 STACK_HET  acc=0.9128 f1=0.8348 fit=213s
+run 14 seed=6919 LGBM       acc=0.8975 f1=0.8166 fit=19s
+run 14 seed=6919 STACK_HET  acc=0.9123 f1=0.8330 fit=212s
+run 15 seed=2656 LGBM       acc=0.8980 f1=0.8182 fit=19s
+run 15 seed=2656 STACK_HET  acc=0.9132 f1=0.8309 fit=215s
+run 16 seed=1159 LGBM       acc=0.8976 f1=0.8159 fit=19s
+run 16 seed=1159 STACK_HET  acc=0.9134 f1=0.8328 fit=216s
+run 17 seed=4719 LGBM       acc=0.8967 f1=0.8140 fit=19s
+run 17 seed=4719 STACK_HET  acc=0.9113 f1=0.8303 fit=223s
+run 18 seed=916 LGBM       acc=0.8998 f1=0.8190 fit=22s
+run 18 seed=916 STACK_HET  acc=0.9137 f1=0.8351 fit=296s
+run 19 seed=4513 LGBM       acc=0.8978 f1=0.8172 fit=32s
+run 19 seed=4513 STACK_HET  acc=0.9121 f1=0.8341 fit=222s
+run 20 seed=5414 LGBM       acc=0.8976 f1=0.8174 fit=20s
+run 20 seed=5414 STACK_HET  acc=0.9130 f1=0.8337 fit=236s
+Done. Results in H:\IAMultivistaScripts\Analysis\round3
+2026-11-05 00:40:05 END code=0
+2026-11-05 00:40:05 START Code/exp_allsub.py --dataset H:\Dataset\dataset_allsub_8clases.csv --protocol random
+Dataset (314944, 70), view sizes [27, 32, 7, 3]
+random run 07 MAIN   acc=0.7261 f1=0.6807
+random run 08 SV150  acc=0.7131 f1=0.6553
+random run 08 MAIN   acc=0.7246 f1=0.6803
+random run 09 SV150  acc=0.7145 f1=0.6556
+random run 09 MAIN   acc=0.7253 f1=0.6809
+random run 10 SV150  acc=0.7135 f1=0.6550
+random run 10 MAIN   acc=0.7233 f1=0.6817
+random run 11 SV150  acc=0.7127 f1=0.6546
+random run 11 MAIN   acc=0.7251 f1=0.6821
+random run 12 SV150  acc=0.7146 f1=0.6568
+random run 12 MAIN   acc=0.7241 f1=0.6829
+random run 13 SV150  acc=0.7118 f1=0.6539
+random run 13 MAIN   acc=0.7224 f1=0.6790
+random run 14 SV150  acc=0.7149 f1=0.6570
+random run 14 MAIN   acc=0.7240 f1=0.6815
+random run 15 SV150  acc=0.7146 f1=0.6566
+random run 15 MAIN   acc=0.7251 f1=0.6812
+random run 16 SV150  acc=0.7124 f1=0.6549
+random run 16 MAIN   acc=0.7219 f1=0.6786
+random run 17 SV150  acc=0.7111 f1=0.6534
+random run 17 MAIN   acc=0.7229 f1=0.6795
+random run 18 SV150  acc=0.7147 f1=0.6571
+random run 18 MAIN   acc=0.7242 f1=0.6818
+random run 19 SV150  acc=0.7131 f1=0.6553
+random run 19 MAIN   acc=0.7248 f1=0.6802
+random run 20 SV150  acc=0.7126 f1=0.6537
+random run 20 MAIN   acc=0.7241 f1=0.6795
+2026-11-05 01:22:41 END code=0
+2026-11-05 01:22:41 START Code/exp_allsub.py --dataset H:\Dataset\dataset_allsub_8clases.csv --protocol disjoint
+Dataset (314944, 70), view sizes [27, 32, 7, 3]
+disjoint run 01 SV150  acc=0.5596 f1=0.4957
+disjoint run 01 MAIN   acc=0.5939 f1=0.5152
+disjoint run 02 SV150  acc=0.5533 f1=0.4884
+disjoint run 02 MAIN   acc=0.5652 f1=0.4923
+disjoint run 03 SV150  acc=0.5466 f1=0.4822
+disjoint run 03 MAIN   acc=0.5630 f1=0.4883
+disjoint run 04 SV150  acc=0.5568 f1=0.5063
+disjoint run 04 MAIN   acc=0.5653 f1=0.5098
+disjoint run 05 SV150  acc=0.5961 f1=0.5288
+disjoint run 05 MAIN   acc=0.6191 f1=0.5403
+disjoint run 06 SV150  acc=0.5594 f1=0.5016
+disjoint run 06 MAIN   acc=0.5812 f1=0.5140
+disjoint run 07 SV150  acc=0.5768 f1=0.5116
+disjoint run 07 MAIN   acc=0.6049 f1=0.5241
+disjoint run 08 SV150  acc=0.4560 f1=0.4153
+disjoint run 08 MAIN   acc=0.4744 f1=0.4272
+disjoint run 09 SV150  acc=0.5614 f1=0.5090
+disjoint run 09 MAIN   acc=0.5706 f1=0.5107
+disjoint run 10 SV150  acc=0.4929 f1=0.4450
+disjoint run 10 MAIN   acc=0.5089 f1=0.4513
+disjoint run 11 SV150  acc=0.5712 f1=0.5023
+disjoint run 11 MAIN   acc=0.5985 f1=0.5172
+disjoint run 12 SV150  acc=0.5121 f1=0.4533
+disjoint run 12 MAIN   acc=0.5332 f1=0.4659
+disjoint run 13 SV150  acc=0.5695 f1=0.4967
+disjoint run 13 MAIN   acc=0.5757 f1=0.4939
+disjoint run 14 SV150  acc=0.5580 f1=0.4840
+disjoint run 14 MAIN   acc=0.5873 f1=0.4996
+disjoint run 15 SV150  acc=0.5410 f1=0.4771
+disjoint run 15 MAIN   acc=0.5459 f1=0.4742
+disjoint run 16 SV150  acc=0.4750 f1=0.4304
+disjoint run 16 MAIN   acc=0.4804 f1=0.4279
+disjoint run 17 SV150  acc=0.5581 f1=0.4978
+disjoint run 17 MAIN   acc=0.5711 f1=0.5044
+disjoint run 18 SV150  acc=0.5764 f1=0.5165
+disjoint run 18 MAIN   acc=0.5951 f1=0.5186
+disjoint run 19 SV150  acc=0.5795 f1=0.5207
+disjoint run 19 MAIN   acc=0.5994 f1=0.5325
+disjoint run 20 SV150  acc=0.5743 f1=0.5077
+disjoint run 20 MAIN   acc=0.5896 f1=0.5147
+2026-11-05 02:25:50 END code=0
+2026-11-05 02:25:50 ALL DONE
