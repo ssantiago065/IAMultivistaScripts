@@ -205,8 +205,31 @@ class FoldResampledMVS(MultiViewStacking):
 # =====================================================================
 # Models
 # =====================================================================
+class OrderedProbaMixin:
+    """predict_proba that adds the trees in a fixed order. scikit-learn adds them from
+    several threads in whatever order they finish, so the probabilities change in the last
+    bit between calls (2e-16 measured on the real data, 2026-11-04); a Random Forest
+    meta-learner splitting on those values then moves MVS results by about 0.1-0.2 pp.
+    Fitting is unchanged."""
+
+    def predict_proba(self, X):
+        X = self._validate_X_predict(X)
+        total = np.zeros((X.shape[0], self.n_classes_), dtype=np.float64)
+        for tree in self.estimators_:
+            total += tree.predict_proba(X, check_input=False)
+        return total / len(self.estimators_)
+
+
+class OrderedRandomForest(OrderedProbaMixin, RandomForestClassifier):
+    pass
+
+
+DETERMINISTIC_PROBA = False   # exp_round3.py and exp_allsub.py set it to True
+
+
 def rf(n, seed):
-    return RandomForestClassifier(n_estimators=n, random_state=seed, n_jobs=N_JOBS)
+    cls = OrderedRandomForest if DETERMINISTIC_PROBA else RandomForestClassifier
+    return cls(n_estimators=n, random_state=seed, n_jobs=N_JOBS)
 
 
 def make_meta(kind, seed):
